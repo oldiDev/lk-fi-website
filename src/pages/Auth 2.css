@@ -1,0 +1,51 @@
+.p-5{
+    height: 491px;
+    width: 442px;
+    left: 3%;
+    top: 10%;
+    border-radius: 0px;
+}
+
+.auth-input-label{
+    font-family: "GothamPro";
+    font-size: 14px;
+}
+
+.auth-input{
+    height: 40px;
+    width: 350px;
+    left: 20px;
+    top: 110px;
+    border-radius: 0px;
+    background: rgba(37, 186, 0, 0.1);;
+    outline: none;
+    color: black
+}
+
+.auth-button{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 18px 80px;
+    color: white;
+    
+    position: absolute;
+    width: 204px;
+    height: 52px;
+    left: 119px;
+    top: 392px;
+    
+    background: #25BA00;
+
+    font-family: 'GothamPro';
+    font-size: 16px;
+}
+
+/* #auth-logo{
+    text-align: center;
+    top: 50px;
+    left: 200px;
+    width: 144px;
+    height: 96px;
+} */

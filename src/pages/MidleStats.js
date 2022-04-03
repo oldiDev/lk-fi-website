@@ -40,7 +40,7 @@ export const MiddleStats = ({ stats }) => {
                         onClick={() => setShow(true)}
                         style={{ cursor: "pointer" }}
                     >
-                        <span class="text-theme">СРЕДНИЙ РЕЗУЛЬТАТ</span>
+                        <span class="text-theme">Средний результат</span>
                     </h2>
                 </section>
             </div>
@@ -63,26 +63,31 @@ export const MiddleStats = ({ stats }) => {
                                     <div>
                                         <img src="/images/middle-stats/barbell.svg" alt='barbel' style={{color:"#008CDB"}}></img>
                                     </div>
-                                    <div>Удар</div>
-                                    <div>{middle_hit}</div>
+                                    <div>Удар:</div>
+                                    <div className="middle-stats-value">{middle_hit}</div>
                                 </li>
                                 <li>
                                     <div>
-                                        <img src="/images/middle-stats/jumps.svg" style={{color:"#25BA00"}}></img>
+                                        <img src="/images/middle-stats/jumps.svg" alt="jumps" style={{color:"#25BA00"}}></img>
                                     </div>
-                                    <div>Прыжок</div>
-                                    <div>{middle_jump}</div>
+                                    <div>Прыжок:</div>
+                                    <div className="middle-stats-value">{middle_jump}</div>
+                                </li>
+                                <li>
+                                    <div>
+                                        <img src="/images/middle-stats/watch.svg" alt="time"></img>
+                                    </div>
+                                    <div>Реакция:</div>
+                                    <div className="middle-stats-value">{middle_reaction}</div>
+                                </li>
+                                <li>
+                                    <div>
+                                        <img src="/images/middle-stats/speed.svg"></img>
+                                    </div>
+                                    <div>Скорость:</div>
+                                    <div className="middle-stats-value">{middle_speed}</div>
                                 </li>
                             </ul>
-                            <h3>
-                                Прыжок: <span>{middle_jump}</span>
-                            </h3>
-                            <h3>
-                                Реакция: <span>{middle_reaction}</span>
-                            </h3>
-                            <h3>
-                                Скорость: <span>{middle_speed}</span>
-                            </h3>
                         </div>
                     </div>
                 </section>
