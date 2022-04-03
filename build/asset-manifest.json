@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/static/css/main.444e5124.chunk.css",
+    "main.js": "/static/js/main.bdd3e327.chunk.js",
+    "main.js.map": "/static/js/main.bdd3e327.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.7d561fa5.js",
+    "runtime-main.js.map": "/static/js/runtime-main.7d561fa5.js.map",
+    "static/js/2.7554a762.chunk.js": "/static/js/2.7554a762.chunk.js",
+    "static/js/2.7554a762.chunk.js.map": "/static/js/2.7554a762.chunk.js.map",
+    "static/js/3.c120033f.chunk.js": "/static/js/3.c120033f.chunk.js",
+    "static/js/3.c120033f.chunk.js.map": "/static/js/3.c120033f.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.444e5124.chunk.css.map": "/static/css/main.444e5124.chunk.css.map",
+    "static/js/2.7554a762.chunk.js.LICENSE.txt": "/static/js/2.7554a762.chunk.js.LICENSE.txt",
+    "static/media/flaticon.css": "/static/media/Flaticon.cbfefb3e.eot",
+    "static/media/main.css": "/static/media/tweet-bg.16a0da37.png",
+    "static/media/all.min.css": "/static/media/fa-solid-900.e4efd599.woff"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.7d561fa5.js",
+    "static/js/2.7554a762.chunk.js",
+    "static/css/main.444e5124.chunk.css",
+    "static/js/main.bdd3e327.chunk.js"
+  ]
+}

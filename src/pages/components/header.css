@@ -1,0 +1,164 @@
+.header{
+    font-family: 'GothamPro';
+}
+
+/* .social-icons{
+    width: 24px;
+    height: 24px;
+} */
+
+.ul-header{
+    color: black;
+    display: flex;
+    width: 590px;
+    font-family: 'GothamPro';
+    font-size: normal;   
+    line-height: 14px,    
+}
+
+.vertical-line{
+    height: 24px;
+    border-left: 1px solid black;
+    position: static;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 0px 15px
+}
+
+#last-pay-header{
+    font-size: 14px;
+    position: static;
+    width: 125px;
+    height: 14px;
+    left: 15px;
+    top: 0px; 
+    letter-spacing: 0.03em;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 0px 5px;
+}
+
+#last-pay-value{
+    font-size: 14px;
+    font-weight: bold;
+    position: static;
+    width: 84px;
+    height: 4px;
+    left: 5px;
+    top: 0px;
+    letter-spacing: 0.03em;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin: 0px 5px;
+}
+
+#count-lessons-header{
+    font-size: 14px;
+    position: static;
+    width: 101px;
+    height: 14px;
+    left: 0px;
+    top: 0px;
+    letter-spacing: 0.03em;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 0px 5px;
+}
+#count-lessons-value{
+    font-size: 14px;
+    position: static;
+    width: 46px;
+    height: 14px;
+    left: 106px;
+    top: 0px;
+    font-weight: bold;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin: 0px 5px;
+}
+
+#variant-comment-header{
+    font-size: 14px;
+    position: static;
+    width: 88px;
+    height: 14px;
+    left: 0px;
+    top: 0px;
+
+    letter-spacing: 0.03em;
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 0px 5px;
+}
+
+#main-page-button{
+    position: absolute;
+    width: 75px;
+    height: 13px;
+    left: 237px;
+    top: 36px;
+
+    font-family: 'GothamPro';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 13px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+}
+
+#green-line{
+    position: absolute;
+    width: 75px;
+    height: 1px;
+    left: 285px;
+    top: 60px;
+
+    background: #25BA00;
+    border-radius: 5px;
+    }
+
+#information-button{
+    position: absolute;
+    width: 115px;
+    height: 13px;
+    left: 362px;
+    top: 36px;
+
+    font-family: 'GothamPro';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 13px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+}
+
+#schedule-button{
+    position: absolute;
+    width: 109px;
+    height: 13px;
+    left: 527px;
+    top: 36px;
+
+    font-family: 'GothamPro';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 13px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+}
+
+.enter-header-button{
+    font-family: 'GothamPro';
+    font-size: 14px;
+    top: 36px;
+}

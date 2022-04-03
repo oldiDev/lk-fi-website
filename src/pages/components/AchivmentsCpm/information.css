@@ -1,0 +1,63 @@
+/*
+    Modal Window for information
+*/
+.inform-contaier{
+    margin-top: 25px;
+}
+.full-info-modal {
+    border-radius: 25px;
+}
+.full-info-modal h6 {
+    position: relative;
+    left:40px;
+    padding: 20px;
+    font-size: 2em;
+}
+.full-info-modal div{
+    position: relative;
+    padding-left: 20px;
+}
+.full-info-modal div ul li{
+    padding-left: 10px;
+}
+.full-info-modal div ul p{
+    font-weight: 600;
+}
+
+/*
+    Events style css
+*/
+
+.events,.grade{
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    border: 1px;
+}
+
+.inside-container{
+  
+    margin-left: 25px;
+}
+
+.inside-container ul li p{
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+.event-item{
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 10px;
+    border: 1px solid #000;
+    background: rgba(135, 135, 135,0.2);
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.item-box{
+    
+    border: 1px solid;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    padding: 10px;
+}
