@@ -34,7 +34,7 @@ export const SelectionShedule = () => {
                     <div class="section-header-2" style={{ marginBottom: "-20px" }}>
                         <div class="container">
                             <h2 class="title" onClick={() => setShow(false)} style={{ cursor: 'pointer', padding: '0!important' }}>
-                                <span class="text-theme">Расписание Занятий</span>
+                                <span class="text-theme-show">Расписание Занятий</span>
                             </h2>
                         </div>
                         <div class="history-wrapper">

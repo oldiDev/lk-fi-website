@@ -22,7 +22,7 @@ export const Stats = ({ stats }) => {
                                 <a name="myhistory" href="#0">
                                     <div class="stroke-text">Статистика</div>
                                 </a>
-                                <span class="text-theme">Моя статистика</span>
+                                <span class="text-theme-show">Моя статистика</span>
                             </h2>
                         </div>
                     </ul>

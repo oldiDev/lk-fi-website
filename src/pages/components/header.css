@@ -103,7 +103,10 @@
     width: 75px;
     height: 13px;
     left: 237px;
-    top: 36px;
+    top: 10px;
+
+    padding-bottom: 5px;
+    border-bottom-color: #25BA00;
 
     font-family: 'GothamPro';
     font-style: normal;
@@ -118,19 +121,19 @@
     position: absolute;
     width: 75px;
     height: 1px;
-    left: 285px;
-    top: 60px;
+    left: 237px;
+    top: 25px;
 
     background: #25BA00;
     border-radius: 5px;
-    }
+}
 
 #information-button{
     position: absolute;
     width: 115px;
     height: 13px;
     left: 362px;
-    top: 36px;
+    top: 10px;
 
     font-family: 'GothamPro';
     font-style: normal;
@@ -146,7 +149,7 @@
     width: 109px;
     height: 13px;
     left: 527px;
-    top: 36px;
+    top: 10px;
 
     font-family: 'GothamPro';
     font-style: normal;

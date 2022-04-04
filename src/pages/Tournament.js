@@ -56,7 +56,7 @@ export const Tournament = ({ name_id }) => {
             <section>
                 <div class="container">
                     <div class="container">
-                        <h1 class="text-theme" style={{ cursor: 'pointer' }} onClick={() => setShow(false)}>Достижения</h1>
+                        <h1 class="text-theme-show" style={{ cursor: 'pointer' }} onClick={() => setShow(false)}>Достижения</h1>
                         <div class="container">
                             <div>
                                 <Training />

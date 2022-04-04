@@ -55,20 +55,20 @@ export const MiddleStats = ({ stats }) => {
                             onClick={() => setShow(false)}
                             style={{ cursor: "pointer" }}
                         >
-                            <span class="text-theme">Средний результат</span>
+                            <span class="text-theme-show">Средний результат</span>
                         </h2>
                         <div class="middle_stats-container">
                             <ul>
                                 <li>
                                     <div>
-                                        <img src="/images/middle-stats/barbell.svg" alt='barbel' style={{color:"#008CDB"}}></img>
+                                        <img src="/images/middle-stats/barbell.svg" alt='barbel' style={{ color: "#008CDB" }}></img>
                                     </div>
                                     <div>Удар:</div>
                                     <div className="middle-stats-value">{middle_hit}</div>
                                 </li>
                                 <li>
                                     <div>
-                                        <img src="/images/middle-stats/jumps.svg" alt="jumps" style={{color:"#25BA00"}}></img>
+                                        <img src="/images/middle-stats/jumps.svg" alt="jumps" style={{ color: "#25BA00" }}></img>
                                     </div>
                                     <div>Прыжок:</div>
                                     <div className="middle-stats-value">{middle_jump}</div>
