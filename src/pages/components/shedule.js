@@ -31,7 +31,7 @@ export const SelectionShedule = () => {
 
             <section class="history-section" id="history">
                 <div class="container">
-                    <div class="section-header-2" style={{ marginBottom: "-20px" }}>
+                    <div class="section-header-2">
                         <div class="container">
                             <h2 class="title" onClick={() => setShow(false)} style={{ cursor: 'pointer', padding: '0!important' }}>
                                 <span class="text-theme-show">Расписание Занятий</span>
@@ -118,7 +118,7 @@ export const SelectionShedule = () => {
         return (
             <section class="history-section" id="history">
                 <div class="container">
-                    <div class="section-header-2" style={{ marginBottom: "-20px" }}>
+                    <div class="section-header-2" >
                         <h2 class="title" onClick={() => setShow(true)} style={{ cursor: 'pointer', padding: '0' }}>
                             <span class="text-theme">Расписание Занятий</span>
                         </h2>

@@ -34,7 +34,7 @@ export const MiddleStats = ({ stats }) => {
     if (!show) {
         return (
             <div className="container">
-                <section className="section-header-2" style={{ marginBottom: "-20px" }}>
+                <section className="section-header-2">
                     <h2
                         class="title"
                         onClick={() => setShow(true)}
@@ -48,7 +48,7 @@ export const MiddleStats = ({ stats }) => {
     } else {
         return (
             <div className="container">
-                <section className="section-header-2" style={{ marginBottom: "-20px" }}>
+                <section className="section-header-2">
                     <div class="container ">
                         <h2
                             class="title"

@@ -47,7 +47,9 @@ export const Tournament = ({ name_id }) => {
         return (
             <section>
                 <div class="container">
-                    <h1 class="text-theme" style={{ cursor: 'pointer' }} onClick={() => setShow(true)}>Достижения</h1>
+                    <section className="section-header-2">
+                        <h1 class="text-theme" style={{ cursor: 'pointer' }} onClick={() => setShow(true)}>Достижения</h1>
+                    </section>
                 </div>
             </section>
         )
@@ -55,7 +57,7 @@ export const Tournament = ({ name_id }) => {
         return (
             <section>
                 <div class="container">
-                    <div class="container">
+                    <section className="section-header-2">
                         <h1 class="text-theme-show" style={{ cursor: 'pointer' }} onClick={() => setShow(false)}>Достижения</h1>
                         <div class="container">
                             <div>
@@ -74,7 +76,7 @@ export const Tournament = ({ name_id }) => {
                                 <FullInformation />
                             </div>
                         </div>
-                    </div>
+                    </section>
                 </div>
             </section>
         )

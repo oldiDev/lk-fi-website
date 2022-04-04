@@ -1,4 +1,4 @@
-import  React from "react";
+import React from "react";
 import { useParams } from "react-router";
 
 import { BannerPlayer } from "./components/bannerPlayer";
@@ -16,55 +16,60 @@ import { Tournament } from "./Tournament";
 
 export const Home = () => {
 
-  const params = useParams()
-  const it_number = params.id;
+    const params = useParams()
+    const it_number = params.id;
 
-  const [player, setPlayer] = React.useState([]);
-  const [loading,setLoading] = React.useState([]) 
-  React.useEffect(() => {
-     // fetchDataPlayer();
+    const [player, setPlayer] = React.useState([]);
+    const [loading, setLoading] = React.useState([])
+    React.useEffect(() => {
+        // fetchDataPlayer();
 
-      const fetchStat = async () =>{
-        setLoading(true);
-        const res = await axios.get('https://cdn.lk-ft.ru/footballers');
-        setPlayer(res.data)
-        setLoading(false);
-      }
+        const fetchStat = async () => {
+            setLoading(true);
+            const res = await axios.get('https://cdn.lk-ft.ru/footballers');
+            setPlayer(res.data)
+            setLoading(false);
+        }
 
-      fetchStat();
-  }, []);
+        fetchStat();
+    }, []);
 
-  var firstname,lastname,position, avatar, birthday,lead_leg,team ;
-  
-  var star= [];
-  var name_id;
+    var firstname, lastname, position, avatar, birthday, lead_leg, team;
 
-  player.map((e,i) => {if(e.id == it_number){name_id =e.lastname+' '+e.firstname+' '+e.id+' ' ;firstname=e.firstname ; lastname = e.lastname ; position = e.playerPosition ; avatar=e.avatar?.url; star = e.Statistics ;birthday=e.birthday;lead_leg = e.lead_leg;team=e.team ;console.log(e) }})
+    var star = [];
+    var name_id;
 
-  if(avatar!=null){
-    avatar= "https://cdn.lk-ft.ru"+avatar;
-  }else{
-    avatar="/images/banner/head.png";
-  }
-  
+    player.map((e, i) => { if (e.id == it_number) { name_id = e.lastname + ' ' + e.firstname + ' ' + e.id + ' '; firstname = e.firstname; lastname = e.lastname; position = e.playerPosition; avatar = e.avatar?.url; star = e.Statistics; birthday = e.birthday; lead_leg = e.lead_leg; team = e.team; console.log(e) } })
 
-    return(
-      <>
-      
-      <SiteHeader />
-          <body>
-             
-            <BannerPlayer firstname={firstname} lastname={lastname} position={position} avatar={avatar} birthday={birthday} lead_leg={lead_leg} team={team}/>
-           {/*  <SectionAbout /> 
+    if (avatar != null) {
+        avatar = "https://cdn.lk-ft.ru" + avatar;
+    } else {
+        avatar = "/images/banner/head.png";
+    }
+
+
+    return (
+        <>
+
+            <SiteHeader />
+            <body>
+                <BannerPlayer firstname={firstname} lastname={lastname} position={position} avatar={avatar} birthday={birthday} lead_leg={lead_leg} team={team} />
+                {/*  <SectionAbout /> 
             <SectionHistory />  */}
-            <Tournament name_id={name_id} />
-            <Stats stats={star}/> 
-            <MiddleStats stats={star} />
-             <SelectionShedule />
-             <SectionBlog />
-             <SiteFooter /> 
-    </body>
-    </>
+                <div className="long-green-line"></div>
+                <Tournament name_id={name_id} />
+                <div className="long-green-line"></div>
+                <Stats stats={star} />
+                <div className="long-green-line"></div>
+                <MiddleStats stats={star} />
+                <div className="long-green-line"></div>
+                <SelectionShedule />
+                <div className="long-green-line"></div>
+                <SectionBlog />
+                <div className="long-green-line"></div>
+                <SiteFooter />
+            </body>
+        </>
     )
 }
 

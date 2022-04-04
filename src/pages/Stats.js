@@ -15,17 +15,13 @@ export const Stats = ({ stats }) => {
     if (show) {
         return (
             <div className="container">
-                <section className="section-header-2" style={{ marginBottom: "-20px" }}>
-                    <ul>
-                        <div class="container ">
-                            <h2 class="title" onClick={() => setShow(false)}>
-                                <a name="myhistory" href="#0">
-                                    <div class="stroke-text">Статистика</div>
-                                </a>
-                                <span class="text-theme-show">Моя статистика</span>
-                            </h2>
-                        </div>
-                    </ul>
+                <section className="section-header-2">
+                    <h2 class="title" onClick={() => setShow(false)}>
+                        <a name="myhistory" href="#0">
+                            <div class="stroke-text">Статистика</div>
+                        </a>
+                        <span class="text-theme-show">Моя статистика</span>
+                    </h2>
                     <ul className="stats-"
                         style={{
                             width: "100%",
@@ -175,11 +171,11 @@ export const Stats = ({ stats }) => {
     } else {
         return (
             <div className="container">
-                <section className="section-header-2" style={{ marginBottom: "-20px" }}>
-                    <h2 class="title" onClick={() => setShow(true)}>
-                        <a name="myhistory" href="#0">
+                <section className="section-header-2">
+                    <h2 class="title" onClick={() => setShow(true)} style={{ cursor: "pointer" }}>
+                        {/* <a name="myhistory" href="#0">
                             <div class="stroke-text">Статистика</div>
-                        </a>
+                        </a> */}
                         <span class="text-theme">Моя статистика</span>
                     </h2>
                 </section>

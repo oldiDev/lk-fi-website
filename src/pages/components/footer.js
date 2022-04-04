@@ -3,12 +3,12 @@ import { useHistory, useParams } from "react-router";
 
 
 
-export const SiteFooter = () =>{
+export const SiteFooter = () => {
     const params = useParams()
     const history = useHistory()
     const it_number = params.id;
-    
-    return(
+
+    return (
         <div >
             <footer class="bg_img footer-overlay" data-background="./images/footer-bg.jpg">
                 <a href="#" onClick="scroll(0,0); return false" class="banner-icon">
@@ -19,10 +19,10 @@ export const SiteFooter = () =>{
                     <div class="footer-area">
                         <div class="footer-widget widget-about">
                             <div class="logo">
-                                <img src="/images/logo/logo.png" alt="logo"/>
+                                <img src="/images/logo/logo.png" alt="logo" />
                             </div>
                         </div>
-                       {/*  <div class="footer-widget widget-link">
+                        {/*  <div class="footer-widget widget-link">
                             <h5 class="title">Полезные ссылки</h5>
                             <ul>
                                 <li>
@@ -62,16 +62,16 @@ export const SiteFooter = () =>{
                         <div class="footer-widget widget-follow">
                             <h5 class="title">Подписывайтесь на Нас</h5>
                             <ul class="social-icons choto">
-                                    <li>
-                                        <a href="https://vk.com/krasnodarfs">
-                                            <i class="fab fa-vk  fa-1x"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="https://t.me/footskill_krd" >
-                                            <i class="fab fa-telegram "></i>
-                                        </a>
-                                    </li>
+                                <li>
+                                    <a href="https://vk.com/krasnodarfs">
+                                        <i class="fab fa-vk  fa-1x"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://t.me/footskill_krd" >
+                                        <i class="fab fa-telegram "></i>
+                                    </a>
+                                </li>
                             </ul>
                         </div>
                     </div>
