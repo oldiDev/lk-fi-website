@@ -28,6 +28,7 @@
 
 #last-pay-header{
     font-size: 14px;
+    color: black;
     position: static;
     width: 125px;
     height: 14px;
@@ -42,6 +43,7 @@
 
 #last-pay-value{
     font-size: 14px;
+    color: black;
     font-weight: bold;
     position: static;
     width: 84px;
@@ -57,6 +59,7 @@
 
 #count-lessons-header{
     font-size: 14px;
+    color: black;
     position: static;
     width: 101px;
     height: 14px;
@@ -70,6 +73,7 @@
 }
 #count-lessons-value{
     font-size: 14px;
+    color: black;
     position: static;
     width: 46px;
     height: 14px;
@@ -84,6 +88,7 @@
 
 #variant-comment-header{
     font-size: 14px;
+    color: black;
     position: static;
     width: 88px;
     height: 14px;
@@ -103,45 +108,40 @@
     width: 75px;
     height: 13px;
     left: 237px;
-    top: 10px;
-
-    padding-bottom: 5px;
-    border-bottom-color: #25BA00;
+    top: 20px;
 
     font-family: 'GothamPro';
     font-style: normal;
-    font-weight: 400;
+    font-weight: bold;
     font-size: 14px;
     line-height: 13px;
     letter-spacing: 0.03em;
     text-transform: uppercase;
 }
 
-#green-line{
-    position: absolute;
-    width: 75px;
-    height: 1px;
-    left: 237px;
-    top: 25px;
-
-    background: #25BA00;
-    border-radius: 5px;
+#main-page-button:hover{
+    background-color: #25BA00;
 }
+
 
 #information-button{
     position: absolute;
     width: 115px;
     height: 13px;
     left: 362px;
-    top: 10px;
+    top: 20px;
 
     font-family: 'GothamPro';
     font-style: normal;
-    font-weight: 400;
+    font-weight: bold;
     font-size: 14px;
     line-height: 13px;
     letter-spacing: 0.03em;
     text-transform: uppercase;
+}
+
+#information-button:hover{
+    background-color: #25BA00;
 }
 
 #schedule-button{
@@ -149,19 +149,28 @@
     width: 109px;
     height: 13px;
     left: 527px;
-    top: 10px;
+    top: 20px;
 
     font-family: 'GothamPro';
     font-style: normal;
-    font-weight: 400;
+    font-weight: bold;
     font-size: 14px;
     line-height: 13px;
     letter-spacing: 0.03em;
     text-transform: uppercase;
 }
 
-.enter-header-button{
+#schedule-button:hover{
+    background-color: #25BA00;
+}
+
+/* .enter-header-button{
     font-family: 'GothamPro';
     font-size: 14px;
+    font-weight: bold;
+    color: white;
     top: 36px;
-}
+    padding: 10px;
+    background-color: #25BA00;
+    border-radius: 10%;
+} */

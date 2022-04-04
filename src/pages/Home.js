@@ -67,8 +67,8 @@ export const Home = () => {
                 <div className="long-green-line"></div>
                 <SectionBlog />
                 <div className="long-green-line"></div>
-                <SiteFooter />
             </body>
+            <SiteFooter />
         </>
     )
 }

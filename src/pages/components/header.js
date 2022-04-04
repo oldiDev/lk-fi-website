@@ -56,7 +56,7 @@ export const SiteHeader = () => {
                 <div class="container">
                     <div class="header-wrapper">
                         <div class="follow-area ml-0">
-                            <ul class="social-icons justify-content-start choto">
+                            <ul class="social-icons justify-content-start">
                                 <li>
                                     <a href="https://vk.com/krasnodarfs">
                                         <i class="fab fa-vk"></i>
@@ -67,36 +67,36 @@ export const SiteHeader = () => {
                                         <i class="fab fa-telegram"></i>
                                     </a>
                                 </li>
-                                <ul className="ul-header">
-                                    <li>
-                                        <span className="vertical-line" />
-                                        <span id="last-pay-header">Крайняя оплата:</span>
-                                        <span id="last-pay-value">{lastPay}</span>
-                                    </li>
-                                    <li>
-                                        <span className="vertical-line" />
-                                        <span id="count-lessons-header">Оплачено на:</span>
-                                        <span id="count-lessons-value">{countLessons}</span>
-                                    </li>
-                                    <li>
-                                        <span className="vertical-line" />
-                                        <span id="variant-comment-header">Абонемент:</span>
-                                        <span id="variant-comment-value">{variant_comment}</span>
-                                    </li>
-                                </ul>
+                                {/* </ul>
+                            <ul className="ul-header"> */}
+                                <li>
+                                    <span className="vertical-line" />
+                                    <span id="last-pay-header">Крайняя оплата:</span>
+                                    <span id="last-pay-value">{lastPay}</span>
+                                </li>
+                                <li>
+                                    <span className="vertical-line" />
+                                    <span id="count-lessons-header">Оплачено на:</span>
+                                    <span id="count-lessons-value">{countLessons}</span>
+                                </li>
+                                <li>
+                                    <span className="vertical-line" />
+                                    <span id="variant-comment-header">Абонемент:</span>
+                                    <span id="variant-comment-value">{variant_comment}</span>
+                                </li>
                             </ul>
                         </div>
                         <div className="icons_header_right_phone_email">
-                            <div class="header-right d-none d-lg-block">
+                            <div class="header-right">
                                 <Icon className="icon-phone-email" icon="bx:bx-phone" />
-                                <a href="#0" class="custom-button choto">
+                                <a href="#0" class="custom-button">
                                     8(918)645 90 99
                                 </a>
                             </div>
 
-                            <div class="header-right d-none d-lg-block">
+                            <div class="header-right">
                                 <Icon className="icon-phone-email" icon="bx:bx-envelope-open" />
-                                <a href="#0" class="custom-button choto">
+                                <a href="#0" class="custom-button">
                                     https://krasnodar-fs.ru/
                                 </a>
                             </div>
@@ -106,18 +106,18 @@ export const SiteHeader = () => {
                                 onClick={() => history.push(AUTH_ROUTE)}
                                 >Выход</a>
                             </div> */}
-                        <div class="ellipsis-bar ml-auto d-lg-none">
+                        {/* <div class="ellipsis-bar ml-auto d-lg-none">
                             <i class="fas fa-ellipsis-h"></i>
                         </div>
                         <div class="header-bar">
                             <span></span>
                             <span></span>
                             <span></span>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
 
-                <input type="checkbox" name="thing" value="valuable" id="slide-box" />
+                {/* <input type="checkbox" name="thing" value="valuable" id="slide-box" /> */}
                 <ul class="sub-nav">
                     <li>
                         <a
@@ -193,8 +193,8 @@ export const SiteHeader = () => {
                     <div
                         class="container "
                         style={{
-                            borderTop: "solid",
-                            marginTop: "-20px",
+                            borderTop: "solid 1px",
+                            marginTop: '-40px',
                             background: "#fff",
                         }}
                     >
@@ -216,7 +216,6 @@ export const SiteHeader = () => {
                                     >
                                         Главная
                                     </a>
-                                    <div id="green-line"></div>
                                 </li>
                                 <li>
                                     <a

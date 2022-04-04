@@ -39,52 +39,7 @@ export const BannerPlayer = ({ firstname, lastname, position, avatar, birthday, 
                         {/*  <a href="#myhistory"  class="custom-button">Моя История</a> */}
                     </div>
                     <img className="avatar" src="/images/banner/banner.png" alt="banner" />
-                    {/* <div class="banner-counter-wrapper">
-                        <div class="banner-counter-item">
-                            <div class="thumb">
-                                <img src="http://localhost:3000//images/banner/01.png" alt="banner"/>
-                            </div>
-                            <div class="content">
-                                <h6 class="title">Все Матчи</h6>
-                                <div class="counter odometer" data-odometer-final="896">0</div>
-                            </div>
-                        </div>
-                        <div class="banner-counter-item">
-                            <div class="thumb">
-                                <img src="http://localhost:3000//images/banner/02.png" alt="banner"/>
-                            </div>
-                            <div class="content">
-                                <h6 class="title">Все Голы</h6>
-                                <div class="counter odometer" data-odometer-final="209">0</div>
-                            </div>
-                        </div>
-                        <div class="banner-counter-item">
-                            <div class="thumb">
-                                <img src="http://localhost:3000//images/banner/03.png" alt="banner"/>
-                            </div>
-                            <div class="content">
-                                <h6 class="title">Игрок Года</h6>
-                                <div class="counter odometer" data-odometer-final="03">0</div>
-                            </div>
-                        </div>
-                    </div> */}
-                    {/* <div class="right-text">
-                        И
-                    </div> */}
                 </div>
-                {/* <a href="#history" class="banner-icon">
-                    <i class="flaticon-down-arrow"></i>
-                </a> */}
-                {/* <div >
-                    
-                    <img class="banner-thumb-1 d-none d-lg-block" src={avatar} alt="banner"/>
-                </div> */}
-                {/*  <div class="banner-thumb-2 d-none d-lg-block">
-                    <img src="/images/banner/head.png" alt="banner"/>
-                </div>
-                <div class="banner-thumb-3 d-none d-lg-block">
-                    <img src="/images/banner/ball.png" alt="banner"/>
-                </div> */}
             </section>
         </Fragment>
     )
