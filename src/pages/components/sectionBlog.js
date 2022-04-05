@@ -36,12 +36,13 @@ export const SectionBlog = () => {
             <>
                 <div class="container" style={{ display: "flex" }}>
                     <div class="section-header-2">
-                        <div class="container">
+                        <div>
                             <h2 class="title" onClick={() => setShow(false)} style={{ cursor: 'pointer' }}>
                                 <span class="text-theme-show">Информация</span>
+                                <img src="/images/client/down-arrow.svg" alt="right-arrow" className="client-menu-arrow"></img>
                             </h2>
                         </div>
-                        <div class="">
+                        <div>
                             {post_arr.map((e, i) => <>
                                 <div class="blog-footer-widget blog-item-2 mt-3" >
                                     <img className="blog-footer-widget-right" src={"https://cdn.lk-ft.ru" + e.Post_image?.url} />
@@ -78,6 +79,7 @@ export const SectionBlog = () => {
                 <div class="section-header-2">
                     <h2 class="title" onClick={() => setShow(true)} style={{ cursor: 'pointer' }}>
                         <span class="text-theme">Информация</span>
+                        <img src="/images/client/right-arrow.svg" alt="right-arrow" className="client-menu-arrow"></img>
                     </h2>
                 </div>
             </div>

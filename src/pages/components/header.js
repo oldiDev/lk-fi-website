@@ -91,7 +91,7 @@ export const SiteHeader = () => {
                             <div class="header-right">
                                 <a href="tel:8-918-645-90-99" class="custom-button">
                                     <Icon className="icon-phone-email" icon="bx:bx-phone" />
-                                    <span class="header-link">8(918)645 90 99</span>
+                                    <span class="header-link">8(918)645-90-99</span>
                                 </a>
                             </div>
 

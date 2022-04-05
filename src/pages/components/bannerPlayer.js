@@ -27,7 +27,7 @@ export const BannerPlayer = ({ firstname, lastname, position, avatar, birthday, 
     return (
         <Fragment>
             <section class="banner-section-2">
-                <div class="container" style={{ display: "flex" }}>
+                <div class="container-banner">
                     <div class="banner-content-2">
                         <span class="title">{firstname} {lastname}</span>
                         <h5 class="subtitle">Позиция: <span>{position}</span></h5>

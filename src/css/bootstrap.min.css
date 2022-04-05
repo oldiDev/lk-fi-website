@@ -110,10 +110,9 @@ address {
   line-height: inherit;
 }
 dl,
-ol,
-ul {
-  margin-top: 0;
-  margin-bottom: 1rem;
+ol {
+    margin-top: 0;
+    margin-bottom: 1rem;
 }
 ol ol,
 ol ul,
@@ -492,10 +491,8 @@ pre code {
 }
 .container {
   width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
+  margin-right: 8%;
+  margin-left: 8%;
 }
 @media (min-width: 576px) {
   .container {

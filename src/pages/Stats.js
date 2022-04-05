@@ -17,154 +17,91 @@ export const Stats = ({ stats }) => {
             <div className="container">
                 <section className="section-header-2">
                     <h2 class="title" onClick={() => setShow(false)}>
-                        <a name="myhistory" href="#0">
-                            <div class="stroke-text">Статистика</div>
-                        </a>
                         <span class="text-theme-show">Моя статистика</span>
+                        <img src="/images/client/down-arrow.svg" alt="right-arrow" className="client-menu-arrow"></img>
                     </h2>
-                    <ul className="stats-"
-                        style={{
-                            width: "100%",
-                            display: "flex",
-                            justifyContent: "space-around",
-                            alignItems: "center",
-                            flexWrap: "wrap",
-                        }}
-                    >
-                        <div className="title-chart">
-                            <span
-                                class="text-theme"
-                                style={{
-                                    position: "absolute",
-                                    marginTop: "-4px",
-                                    color: "#25BA00",
-                                    marginLeft: "64px",
-                                }}
-                            >
-                                Удар
-                            </span>
+                    <div className="my-stats-chart">
+                        <div>
+                            <span className="my-stats-label">Удар</span>
                             <Chart
-                                className="mt-4"
-                                width={"500px"}
-                                height={"350px"}
+                                width={"470px"}
+                                height={"357px"}
                                 chartType="LineChart"
                                 data={[
                                     [
                                         { type: "date", label: "Дата", id: "Date" },
-                                        { type: "number", label: "Удар", id: "Won/Loss" },
+                                        { type: "number", label: "", id: "Won/Loss" },
                                     ],
-                                    //   ...get()?.ReactionList
+                                    //   ...get()?.HitList
                                 ].concat(get()?.HitList || [])}
                                 options={{
-                                    chart: {
-                                        subtitle: "Оценка",
-                                    },
+                                    series: [{ color: "#25BA00" }],
+                                    curveType: "function",
                                     intervals: { color: "#ffffff" },
                                 }}
                                 rootProps={{ "data-testid": "2" }}
                             />
                         </div>
-                        <div className="title-chart">
-                            <span
-                                class="text-theme"
-                                style={{
-                                    position: "absolute",
-                                    marginTop: "-4px",
-                                    color: "#25BA00",
-                                    marginLeft: "64px",
-                                }}
-                            >
-                                Скорость
-                            </span>
+                        <div>
+                            <span className="my-stats-label">Скорость</span>
                             <Chart
-                                className="mt-4"
-                                width={"500px"}
-                                height={"350px"}
+                                className="my-stats-graph"
+                                width={"470px"}
+                                height={"357px"}
                                 chartType="LineChart"
                                 data={[
                                     [
                                         { type: "date", label: "Дата", id: "Date" },
-                                        { type: "number", label: "Скорость", id: "Won/Loss" },
+                                        { type: "number", label: "", id: "Won/Loss" },
                                     ],
-                                    //   ...get()?.ReactionList
                                 ].concat(get()?.SpeedList || [])}
                                 options={{
-                                    chart: {
-                                        subtitle: "Оценка",
-                                        chartArea: { width: "50%" },
-                                        colors: ["#ffab91"],
-                                    },
+                                    series: [{ color: "#25BA00" }],
+                                    curveType: "function",
                                 }}
                                 rootProps={{ "data-testid": "2" }}
                             />
                         </div>
-                        <div className="title-chart">
-                            <span
-                                class="text-theme"
-                                style={{
-                                    position: "absolute",
-                                    marginTop: "-4px",
-                                    color: "#25BA00",
-                                    marginLeft: "64px",
-                                }}
-                            >
-                                Прыжок
-                            </span>
+                        <div>
+                            <span className="my-stats-label">Прыжок</span>
                             <Chart
-                                className="mt-4"
-                                width={"500px"}
-                                height={"350px"}
+                                className="my-stats-chart-graph"
+                                width={"470px"}
+                                height={"357px"}
                                 chartType="LineChart"
                                 data={[
                                     [
                                         { type: "date", label: "Дата", id: "Date" },
-                                        { type: "number", label: "Прыжок", id: "Won/Loss" },
+                                        { type: "number", label: "", id: "Won/Loss" },
                                     ],
-                                    //   ...get()?.ReactionList
                                 ].concat(get()?.JumpList || [])}
                                 options={{
-                                    chart: {
-                                        subtitle: "Оценка",
-                                        chartArea: { width: "50%" },
-                                    },
+                                    series: [{ color: "#25BA00" }],
+                                    curveType: "function",
                                 }}
                                 rootProps={{ "data-testid": "2" }}
                             />
                         </div>
-                        <div className="title-chart">
-                            <span
-                                class="text-theme"
-                                style={{
-                                    position: "absolute",
-                                    marginTop: "-4px",
-                                    color: "#25BA00",
-                                    marginLeft: "64px",
-                                }}
-                            >
-                                Реакция
-                            </span>
+                        <div>
+                            <span className="my-stats-label">Реакция</span>
                             <Chart
-                                className="mt-4"
-                                width={"500px"}
-                                height={"350px"}
+                                width={"470px"}
+                                height={"357px"}
                                 chartType="LineChart"
                                 data={[
                                     [
                                         { type: "date", label: "Дата", id: "Date" },
-                                        { type: "number", label: "Реакция", id: "Won/Loss" },
+                                        { type: "number", label: "", id: "Won/Loss" },
                                     ],
-                                    //   ...get()?.ReactionList
                                 ].concat(get()?.ReactionList || [])}
                                 options={{
-                                    chart: {
-                                        subtitle: "Оценка",
-                                        chartArea: { width: "50%" },
-                                    },
+                                    series: [{ color: "#25BA00" }],
+                                    curveType: "function",
                                 }}
                                 rootProps={{ "data-testid": "2" }}
                             />
                         </div>
-                    </ul>
+                    </div>
                 </section>
             </div>
         );
@@ -173,10 +110,8 @@ export const Stats = ({ stats }) => {
             <div className="container">
                 <section className="section-header-2">
                     <h2 class="title" onClick={() => setShow(true)} style={{ cursor: "pointer" }}>
-                        {/* <a name="myhistory" href="#0">
-                            <div class="stroke-text">Статистика</div>
-                        </a> */}
                         <span class="text-theme">Моя статистика</span>
+                        <img src="/images/client/right-arrow.svg" alt="right-arrow" className="client-menu-arrow"></img>
                     </h2>
                 </section>
             </div>

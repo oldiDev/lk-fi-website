@@ -41,6 +41,7 @@ export const MiddleStats = ({ stats }) => {
                         style={{ cursor: "pointer" }}
                     >
                         <span class="text-theme">Средний результат</span>
+                        <img src="/images/client/right-arrow.svg" alt="right-arrow" className="client-menu-arrow"></img>
                     </h2>
                 </section>
             </div>
@@ -49,13 +50,14 @@ export const MiddleStats = ({ stats }) => {
         return (
             <div className="container">
                 <section className="section-header-2">
-                    <div class="container ">
+                    <div>
                         <h2
                             class="title"
                             onClick={() => setShow(false)}
                             style={{ cursor: "pointer" }}
                         >
                             <span class="text-theme-show">Средний результат</span>
+                            <img src="/images/client/down-arrow.svg" alt="right-arrow" className="client-menu-arrow"></img>
                         </h2>
                         <div class="middle_stats-container">
                             <ul>
