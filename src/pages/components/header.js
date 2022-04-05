@@ -48,23 +48,24 @@ export const SiteHeader = () => {
     /* console.log("from header",it_number); */
     return (
         <div className="header">
-            <div class="overlay"></div>
-            <a href="#0" class="scrollToTop">
+            {/* <a href="#0" class="scrollToTop">
                 <i class="fas fa-angle-up"></i>
-            </a>
+            </a> */}
             <header class="header-section-2 ">
                 <div class="container">
                     <div class="header-wrapper">
-                        <div class="follow-area ml-0">
-                            <ul class="social-icons justify-content-start">
+                        <div class="follow-area">
+                            <ul class="social-icons">
                                 <li>
                                     <a href="https://vk.com/krasnodarfs">
-                                        <i class="fab fa-vk"></i>
+                                        <img src="/images/contact/vk.svg" alt="vk-link"></img>
+                                        {/* <i class="fab fa-vk"></i> */}
                                     </a>
                                 </li>
                                 <li>
                                     <a href="https://t.me/footskill_krd">
-                                        <i class="fab fa-telegram"></i>
+                                        <img src="/images/contact/telegram.svg" alt="telegram-link"></img>
+                                        {/* <i class="fab fa-telegram"></i> */}
                                     </a>
                                 </li>
                                 {/* </ul>
@@ -88,37 +89,40 @@ export const SiteHeader = () => {
                         </div>
                         <div className="icons_header_right_phone_email">
                             <div class="header-right">
-                                <Icon className="icon-phone-email" icon="bx:bx-phone" />
-                                <a href="#0" class="custom-button">
-                                    8(918)645 90 99
+                                <a href="tel:8-918-645-90-99" class="custom-button">
+                                    <Icon className="icon-phone-email" icon="bx:bx-phone" />
+                                    <span class="header-link">8(918)645 90 99</span>
                                 </a>
                             </div>
 
                             <div class="header-right">
-                                <Icon className="icon-phone-email" icon="bx:bx-envelope-open" />
-                                <a href="#0" class="custom-button">
-                                    https://krasnodar-fs.ru/
+                                <a href="https://krasnodar-fs.ru/" class="custom-button">
+                                    <Icon className="icon-phone-email" icon="bx:bx-envelope-open" />
+                                    <span class="header-link">https://krasnodar-fs.ru/</span>
                                 </a>
                             </div>
                         </div>
-                        {/*                             <div class="header-right d-none d-lg-block">
-                                <a href="#0" class="custom-button choto ml-2" 
-                                onClick={() => history.push(AUTH_ROUTE)}
-                                >Выход</a>
-                            </div> */}
-                        {/* <div class="ellipsis-bar ml-auto d-lg-none">
-                            <i class="fas fa-ellipsis-h"></i>
-                        </div>
-                        <div class="header-bar">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div> */}
+                        <input id="menu-toggle" type="checkbox" />
+                        <label class='menu-button-container' for="menu-toggle">
+                            <div class='menu-button'></div>
+                        </label>
+                        <ul class="menu-resized">
+                            <li>
+                                <span>Крайняя оплата:</span>
+                                <span>{lastPay}</span>
+                            </li>
+                            <li>
+                                <span>Оплачено на: </span>
+                                <span>{countLessons}</span>
+                            </li>
+                            <li>
+                                <span>Абонемент: </span>
+                                <span>{variant_comment}</span>
+                            </li>
+                        </ul>
                     </div>
                 </div>
-
-                {/* <input type="checkbox" name="thing" value="valuable" id="slide-box" /> */}
-                <ul class="sub-nav">
+                {/* <ul class="sub-nav">
                     <li>
                         <a
                             href={HOMEPAGE_ROUTE + "/" + it_number}
@@ -135,10 +139,6 @@ export const SiteHeader = () => {
                             Новости
                         </a>
                     </li>
-
-                    {/* <li>
-                                            <a href="" class="custom-button choto py-0 d-lg-none">Награды</a>
-                                        </li> */}
                     <li>
                         <a
                             href={CONTACT_ROUTE + "/" + it_number}
@@ -160,9 +160,9 @@ export const SiteHeader = () => {
                             Выйти
                         </a>
                     </li>
-                </ul>
+                </ul> */}
 
-                <div class="header-troops">
+                {/* <div class="header-troops">
                     <div class="close-btn">
                         <i class="fas fa-times"></i>
                     </div>
@@ -179,13 +179,13 @@ export const SiteHeader = () => {
                             </a>
                         </li>
                     </ul>
-                    {/* <form class="header-search-form">
+                    <form class="header-search-form">
                             <input type="text" placeholder="Search Keyword"/>
                             <button type="submit">
                                 <i class="flaticon-search-interface-symbol"></i>
                             </button>
-                        </form> */}
-                </div>
+                        </form>
+                </div> */}
             </header>
 
             <section class="sticky-test">
@@ -225,9 +225,6 @@ export const SiteHeader = () => {
                                         Информация
                                     </a>
                                 </li>
-                                {/*                                         <li>
-                                                <a href={AWARD_ROUTE}>Награды</a>
-                                            </li> */}
                                 <li>
                                     <a
                                         href={CONTACT_ROUTE + "/" + it_number}
@@ -236,21 +233,13 @@ export const SiteHeader = () => {
                                         Расписание
                                     </a>
                                 </li>
-                                <div className="enter-header-button">
-                                    <li>
-                                        <a href={AUTH_ROUTE}>Выход</a>
-                                    </li>
-                                    {/*                                             <li>
+                                <li class="enter-header-button">
+                                    <a href={AUTH_ROUTE}>Выход</a>
+                                </li>
+                                {/*                                             <li>
                                                     <a href="#0" >Регистрация</a>
                                                 </li> */}
-                                </div>
                             </ul>
-                            {/* <form class="header-search-form d-none d-lg-flex">
-                                        <input type="text" placeholder="Search Keyword"/>
-                                        <button type="submit">
-                                            <i class="flaticon-search-interface-symbol"></i>
-                                        </button>
-                                    </form> */}
                         </div>
                     </div>
                 </div>

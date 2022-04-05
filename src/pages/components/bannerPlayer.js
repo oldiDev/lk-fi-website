@@ -34,11 +34,10 @@ export const BannerPlayer = ({ firstname, lastname, position, avatar, birthday, 
                         <h5 class="subtitle">Возраст: <span>{ages} лет</span></h5>
                         <h5 class="subtitle">Нога: <span>{lead_leg}</span></h5>
                         <h5 class="subtitle">Команда: <span>{team}</span></h5>
-
-
-                        {/*  <a href="#myhistory"  class="custom-button">Моя История</a> */}
                     </div>
-                    <img className="avatar" src="/images/banner/banner.png" alt="banner" />
+                    <div className="avatar-circle">
+                        <img className="avatar" src="/images/banner/banner.png" alt="banner" />
+                    </div>
                 </div>
             </section>
         </Fragment>

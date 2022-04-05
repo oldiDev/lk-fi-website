@@ -2,11 +2,6 @@
     font-family: 'GothamPro';
 }
 
-/* .social-icons{
-    width: 24px;
-    height: 24px;
-} */
-
 .ul-header{
     color: black;
     display: flex;
@@ -164,7 +159,7 @@
     background-color: #25BA00;
 }
 
-/* .enter-header-button{
+.enter-header-button{
     font-family: 'GothamPro';
     font-size: 14px;
     font-weight: bold;
@@ -173,4 +168,4 @@
     padding: 10px;
     background-color: #25BA00;
     border-radius: 10%;
-} */
+}
