@@ -36,7 +36,7 @@ export const BannerPlayer = ({ firstname, lastname, position, avatar, birthday, 
                         <h5 class="subtitle">Команда: <span>{team}</span></h5>
                     </div>
                     <div className="avatar-circle">
-                        <img className="avatar" src="/images/banner/banner.png" alt="banner" />
+                        <img className="avatar" src={avatar} alt="banner" />
                     </div>
                 </div>
             </section>

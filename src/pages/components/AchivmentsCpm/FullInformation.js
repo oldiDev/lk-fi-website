@@ -5,11 +5,8 @@ export const FullInformation = () =>{
 
     if(!show){
         return(
-       
-                <div class="container inform-contaier">
-            
-                    <h6 class="title" style={{cursor:'pointer',color:'#08c938'}} onClick={()=>setShow(true)}>Подробнее про систему Достиженй:</h6>
-            
+                <div>
+                    <div class="achivements-information" style={{cursor:'pointer'}} onClick={()=>setShow(true)}>Подробнее про "Достижения"</div>
                 </div>
         )
     }else{

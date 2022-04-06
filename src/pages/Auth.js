@@ -43,13 +43,7 @@ export const Auth = () => {
   };
 
   return (
-    <Container
-      className="d-flex justify-content-center aling-items-center"
-      style={{
-        height: window.innerHeight - 54,
-        marginTop: window.innerHeight - 700,
-      }}
-    >
+    <Container>
       <Card className="p-5">
         <div>
           <form onSubmit={handleSubmit}>

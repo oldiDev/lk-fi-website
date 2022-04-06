@@ -108,6 +108,30 @@ export const SiteHeader = () => {
                         </label>
                         <ul class="menu-resized">
                             <li>
+                                <a
+                                    href={HOMEPAGE_ROUTE + "/" + it_number}
+                                >
+                                    Главная
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href={BLOG_ROUTE + "/" + it_number}
+                                >
+                                    Информация
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href={CONTACT_ROUTE + "/" + it_number}
+                                >
+                                    Расписание
+                                </a>
+                            </li>
+                            <li>
+                                    <a href={AUTH_ROUTE}>Выход</a>
+                            </li>
+                            <li>
                                 <span>Крайняя оплата:</span>
                                 <span>{lastPay}</span>
                             </li>
@@ -122,70 +146,6 @@ export const SiteHeader = () => {
                         </ul>
                     </div>
                 </div>
-                {/* <ul class="sub-nav">
-                    <li>
-                        <a
-                            href={HOMEPAGE_ROUTE + "/" + it_number}
-                            class="custom-button choto py-0 d-lg-none"
-                        >
-                            Домашняя страница
-                        </a>
-                    </li>
-                    <li>
-                        <a
-                            href={BLOG_ROUTE + "/" + it_number}
-                            class="custom-button choto py-0 d-lg-none"
-                        >
-                            Новости
-                        </a>
-                    </li>
-                    <li>
-                        <a
-                            href={CONTACT_ROUTE + "/" + it_number}
-                            class="custom-button choto py-0 d-lg-none"
-                        >
-                            Контакты
-                        </a>
-                    </li>
-                    <li>
-                        <a
-                            href="https://vk.com/krasnodarfs"
-                            class="custom-button choto py-0 d-lg-none"
-                        >
-                            Подписывайся
-                        </a>
-                    </li>
-                    <li>
-                        <a href={AUTH_ROUTE} class="custom-button choto py-0 d-lg-none">
-                            Выйти
-                        </a>
-                    </li>
-                </ul> */}
-
-                {/* <div class="header-troops">
-                    <div class="close-btn">
-                        <i class="fas fa-times"></i>
-                    </div>
-                    <h6 class="title">Подписывайся</h6>
-                    <ul class="social-icons justify-content-start choto">
-                        <li>
-                            <a href="https://vk.com/krasnodarfs">
-                                <i class="fab fa-facebook-f"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://t.me/footskill_krd">
-                                <i class="fab fa-telegram"></i>
-                            </a>
-                        </li>
-                    </ul>
-                    <form class="header-search-form">
-                            <input type="text" placeholder="Search Keyword"/>
-                            <button type="submit">
-                                <i class="flaticon-search-interface-symbol"></i>
-                            </button>
-                        </form>
-                </div> */}
             </header>
 
             <section class="sticky-test">
@@ -200,7 +160,7 @@ export const SiteHeader = () => {
                     >
                         <div class="header-bottom-wrapper">
                             <div class="logo">
-                                <a href="index.html">
+                                <a href={HOMEPAGE_ROUTE + "/" + it_number}>
                                     <img
                                         src="/images/logo/logo_green.svg"
                                         alt="logo"
@@ -208,7 +168,7 @@ export const SiteHeader = () => {
                                     />
                                 </a>
                             </div>
-                            <ul class="menu" id="header-menu">
+                            <ul class="menu">
                                 <li>
                                     <a
                                         href={HOMEPAGE_ROUTE + "/" + it_number}

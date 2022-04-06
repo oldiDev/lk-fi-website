@@ -114,11 +114,6 @@
     text-transform: uppercase;
 }
 
-#main-page-button:hover{
-    background-color: #25BA00;
-}
-
-
 #information-button{
     position: absolute;
     width: 115px;
@@ -133,10 +128,6 @@
     line-height: 13px;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-}
-
-#information-button:hover{
-    background-color: #25BA00;
 }
 
 #schedule-button{
@@ -155,10 +146,6 @@
     text-transform: uppercase;
 }
 
-#schedule-button:hover{
-    background-color: #25BA00;
-}
-
 .enter-header-button{
     font-family: 'GothamPro';
     font-size: 14px;
@@ -167,5 +154,4 @@
     top: 36px;
     padding: 10px;
     background-color: #25BA00;
-    border-radius: 10%;
 }

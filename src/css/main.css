@@ -1627,10 +1627,15 @@ section {
 .section-header-2 {
     margin: 30px 0;
     position: relative;
-    border-top-color: black;
-    border-top-width: 30px;
-    /* background-color: #25BA00; */
 }
+
+/* .section-header-2 .achivements-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+} */
+
 .section-header-2 .title {
     margin: unset;
 }
@@ -2354,6 +2359,11 @@ footer .container {
     margin-top: 5px;
 }
 
+.header-bottom-wrapper .menu li{
+    align-items: center;
+}
+
+
 @media screen and (max-width: 1200px) {
     .header-bottom-wrapper{
         display: flex;
@@ -2361,8 +2371,9 @@ footer .container {
         align-items: center;
         justify-content: space-between;
     }
-    .header-bottom-wrapper .enter-header-button{
-        position: relative;
+
+    .enter-header-buttom{
+        color: white;
     }
 }
 
@@ -2373,8 +2384,7 @@ footer .container {
     }
 
     .header-bottom-wrapper .menu {
-        align-self: center;
-        /* width: calc(100% - 440px); */
+        align-items: center;
         padding-left: 20px;
     }
 }
@@ -2385,8 +2395,8 @@ footer .container {
     }
 
     .header-bottom-wrapper .menu {
-        width: calc(100% - 300px);
-        padding-left: 0;
+        display: flex;
+        flex-direction: row;
     }
 
     .header-bottom-wrapper .menu li a {
@@ -2605,6 +2615,63 @@ footer .container {
     .menu-resized {
         display: flex;
         position: absolute;
+        overflow: hidden;
+        top: 0;
+        margin-top: 57px;
+        left: 0;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #menu-toggle ~ .menu-resized li {
+        height: 0;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    #menu-toggle:checked ~ .menu-resized li {
+        border: 1px solid #333;
+        height: 2.5em;
+        padding: 0.5em;
+        transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    .menu-resized > li {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        padding: 0.5em 0;
+        width: 100%;
+        color: #25BA00;
+        background-color: #222;
+    }
+
+    .menu-resized > li:not(:last-child) {
+        border-bottom: 1px solid #444;
+    }
+}
+
+@media (max-width: 767px) {
+    .sticky-test{
+        display: none;
+    }
+
+    .header-wrapper{
+        width: 90%;
+        border-bottom: 1px solid #000;
+    }
+    .menu-button-container {
+        display: flex;
+    }
+
+    .menu-resized {
+        display: flex;
+        position: absolute;
+        overflow: hidden;
         top: 0;
         margin-top: 57px;
         left: 0;
@@ -2860,6 +2927,7 @@ footer .container {
 }
 
 .text-theme-show {
+    align-items: center;
     left: 135px;
     font-family: "GothamPro";
     font-weight: 700;
@@ -2948,10 +3016,12 @@ g circle {
     max-width: 1211px;
     position: relative;
     overflow: hidden;
-    padding: 100px 0 100px;
+    padding: 54px 0 100px;
+    margin: 0px auto;
 }
 
 .banner-section-2 .container-banner {
+    width: 80%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -2997,13 +3067,22 @@ g circle {
 
 @media (max-width: 991px) {
     .banner-section-2 {
-        padding: 220px 0 120px;
+        padding: 100px 0 100px;
+        margin: 0px auto;
+    }
+    .banner-section-2 .container-banner {
+        margin: 0px auto;
     }
 }
 
 @media (max-width: 767px) {
     .banner-section-2 {
-        padding: 200px 0 120px;
+        padding: 100px 0 100px;
+        margin: 0px auto;
+    }
+
+    .banner-section-2 .container-banner {
+        padding-left: 30px
     }
 }
 
@@ -6151,7 +6230,7 @@ div[class*="col"]:nth-of-type(4n + 4) .info-inner {
 
 .long-green-line {
     height: 1px;
-    width: 80%;
+    width: 83%;
     background-color: #25BA00;
     margin-left: 8% 
 }
@@ -6180,4 +6259,53 @@ div[class*="col"]:nth-of-type(4n + 4) .info-inner {
     .my-stats-chart{
         display: block;
     }
+}
+
+.achivements-container{
+    padding-top: 30px;
+}
+
+.achivements-container .achivements-value{
+    font-family: 'GothamPro';
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 0.03em;
+    color: #2D2D2D;
+    padding-left: 10px;
+}
+
+.achivements-title{
+    font-family: 'GothamPro';
+    font-size: 20px;
+    letter-spacing: 0.03em;
+    color: #2D2D2D;
+}
+
+.achivements-title-show{
+    font-family: 'GothamPro';
+    font-size: 20px;
+    letter-spacing: 0.03em;
+    color: #25BA00;
+    font-weight: bold;
+}
+
+.achivements-icons{
+    width: 30px;
+    height: 30px;
+}
+
+.achivements-information {
+    font-family: 'GothamPro';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    color: #2D2D2D;
+    text-align: right;
+}
+
+.achivements-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }

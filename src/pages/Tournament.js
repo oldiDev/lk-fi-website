@@ -48,7 +48,10 @@ export const Tournament = ({ name_id }) => {
             <section>
                 <div class="container">
                     <section className="section-header-2">
-                        <h1 class="text-theme" style={{ cursor: 'pointer' }} onClick={() => setShow(true)}>Достижения</h1>
+                        <div class="text-theme" style={{ cursor: 'pointer' }} onClick={() => setShow(true)}>
+                            <span>Достижения</span>
+                            <img src="/images/client/right-arrow.svg" alt="right-arrow" className="client-menu-arrow"></img>
+                        </div>
                     </section>
                 </div>
             </section>
@@ -58,23 +61,18 @@ export const Tournament = ({ name_id }) => {
             <section>
                 <div class="container">
                     <section className="section-header-2">
-                        <h1 class="text-theme-show" style={{ cursor: 'pointer' }} onClick={() => setShow(false)}>Достижения</h1>
-                        <div class="container">
-                            <div>
-                                <Training />
+                        <div сlass="achivements-header">
+                            <div class="text-theme-show" style={{ cursor: 'pointer' }} onClick={() => setShow(false)}>
+                                <span>Достижения</span>
+                                <img src="/images/client/down-arrow.svg" alt="right-arrow" className="client-menu-arrow"></img>
                             </div>
-                            <div>
-                                <Camp />
-                            </div>
-                            <div>
-                                <Events dva={twoVSTwo} tre={threeVsThree} penal={penalty} />
-                            </div>
-                            <div>
-                                <FullGradde two={two} tre={tre} penal={penal} />
-                            </div>
-                            <div>
-                                <FullInformation />
-                            </div>
+                            <FullInformation />
+                        </div>
+                        <div>
+                            <Training />
+                            <Camp />
+                            <Events dva={twoVSTwo} tre={threeVsThree} penal={penalty} />
+                            <FullGradde two={two} tre={tre} penal={penal} />
                         </div>
                     </section>
                 </div>
