@@ -2924,6 +2924,7 @@ footer .container {
     font-size: 30px;
     color: #2D2D2D;
     text-transform: uppercase;
+    cursor: pointer;
 }
 
 .text-theme-show {
@@ -2934,6 +2935,7 @@ footer .container {
     font-size: 30px;
     color: #25BA00;
     text-transform: uppercase;
+    cursor: pointer;
 }
 
 @media (min-width: 992px) {
@@ -6301,6 +6303,11 @@ div[class*="col"]:nth-of-type(4n + 4) .info-inner {
     font-size: 16px;
     color: #2D2D2D;
     text-align: right;
+    cursor: pointer;
+}
+
+.achivements-information:hover{
+    color: #25BA00;
 }
 
 .achivements-header {

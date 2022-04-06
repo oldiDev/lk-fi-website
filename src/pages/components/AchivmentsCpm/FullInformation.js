@@ -1,50 +1,89 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
+import "./information.css"
 
-export const FullInformation = () =>{
-    const [show,setShow] = useState(false);
+export const FullInformation = () => {
+    const [show, setShow] = useState(false);
 
-    if(!show){
-        return(
-                <div>
-                    <div class="achivements-information" style={{cursor:'pointer'}} onClick={()=>setShow(true)}>Подробнее про "Достижения"</div>
-                </div>
+    if (!show) {
+        return (
+            <div class="achivements-information" onClick={() => setShow(true)}>Подробнее про "Достижения"</div>
         )
-    }else{
-        return(
-           
-                <div style={{cursor:'pointer'}} onClick={()=>setShow(false)}>
-            
-                    <div style={{position:'fixed' , top:'0' , left:'0',width:'100%',height:'100%', background:'rgba(135, 135, 135,0.8)',zIndex:'99999998'}}>
-                        <div class="full-info-modal" style={{position:'fixed' , top:'10%' , left:'25%',width:'800px',height:'800px', background:'#fff',zIndex:'999999999'}}>
-                            <h6 class="title">Подробнее про систему Достиженй:</h6>
-                            <div>
-                                <ul> <p>Для чего нужна:</p>
-                                    <li>1. Простая система обзора посеящаемости и увлеченности вашего ребенка.</li>
-                                    <li>2. Возможность увидеть слабые и силные стороны икрока.</li>
-                                    <li>3. Индивидуальные бонусы в зависимости от активности и достижений.</li>
-                                </ul>
-                                <ul> <p>Бонусы в зависимости от индивидуальных достижений:</p>
-                                    <li>25 - Скидка на абонемент в 30%. 
-                                        1 Персональная тренировка </li>
-                                    <li>50 -  Скидка на абонемент в 50%. 
-                                        2 Персональные тренировки. 5% скидка на лагерь.</li>
-                                    <li>75 -  Скидка на абонемент в 75%. 
-                                        3 Персональнае тренировки. 15% скидка на лагерь.</li>
-                                    <li>100 - Месячный абонемент. 
-                                        5 Персональных тренировок. 25% скидка на лагерь.</li>
-                                </ul>
-                            </div>
-                            <div>
-                                + Фирменные Подарки.
-                            </div>
-                            <div style={{fontWeight:'bold', marginTop:'60px'}}>
-                                О всех подробнстях уточняйте у вашего тренера.
-                            </div>
-                        </div>
+    } else {
+        return (
+            <>
+                <div class="full-info-modal" >
+                    <div class='information-title'>
+                        <span>Достижения</span>
+                        <div class="close-button" onClick={() => setShow(false)}></div>
                     </div>
-            
+                    <div class="information-for-what">
+                        <span>Для чего нужны?</span>
+                        <ul>
+                            <li>
+                                <div class="point"></div>
+                                <span>Простая система обзора посещаемости и увлеченности вашего ребенка.</span>
+                            </li>
+                            <li>
+                                <div class="point"></div>
+                                <span>Возможность увидеть слабые и сильные стороны игрока.</span>
+                            </li>
+                            <li>
+                                <div class="point"></div>
+                                <span>Индивидуальные бонусы в зависимости от активности и достижений.</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="information-bonuses">
+                        <span>Бонусы в зависимости от индивидуальных достижений:</span>
+                        <ul>
+                            <li>
+                                <span>25</span>
+                                <div>-</div>
+                                <div class="information-bonuses-text">
+                                    <div>Скидка на абонемент 30%.</div>
+                                    <div>1 персональная тренировка.</div>
+                                </div>
+
+                            </li>
+                            <li>
+                                <span>50</span>
+                                <div>-</div>
+                                <div class="information-bonuses-text">
+                                    <div>Скидка на абонемент в 50%.</div>
+                                    <div>2 Персональные тренировки.</div>
+                                    <div>5% скидка в лагерь.</div>
+                                </div>
+
+                            </li>
+                            <li>
+                                <span>75</span>
+                                <div>-</div>
+                                <div class="information-bonuses-text">
+                                    <div>Скидка на абонемент в 75%.</div>
+                                    <div>3 Персональные тренировки.</div>
+                                    <div>15% скидка на лагерь.</div>
+                                </div>
+
+                            </li>
+                            <li>
+                                <span>100</span>
+                                <div>-</div>
+                                <div class="information-bonuses-text">
+                                    <div>Скидка на абонемент в 75%.</div>
+                                    <div>3 Персональные тренировки.</div>
+                                    <div>15% скидка в лагерь</div>
+                                </div>
+
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <span>О всех подробностях уточнайте у Вашего тренера</span>
+                    </div>
                 </div>
+                <div style={{ backgroundColor: "#2D2D2D" }}></div>
+            </>
         )
     }
-    
+
 }

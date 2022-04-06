@@ -11,6 +11,7 @@ export const Tournament = ({ name_id }) => {
 
 
     const [player, setPlayer] = React.useState([]);
+    const [showInformation, setShowInformation] = useState(false);
     React.useEffect(() => {
         const fetchStat = async () => {
             const res = await axios.get('https://cdn.lk-ft.ru/players');
@@ -42,13 +43,18 @@ export const Tournament = ({ name_id }) => {
         }
     })
 
+    let information;
+    if (!showInformation) {
+        information = <FullInformation />
+    }
+
     const [show, setShow] = useState(false);
-    if (!show) {
+    if (!show && !showInformation) {
         return (
             <section>
                 <div class="container">
                     <section className="section-header-2">
-                        <div class="text-theme" style={{ cursor: 'pointer' }} onClick={() => setShow(true)}>
+                        <div class="text-theme" onClick={() => setShow(true)}>
                             <span>Достижения</span>
                             <img src="/images/client/right-arrow.svg" alt="right-arrow" className="client-menu-arrow"></img>
                         </div>
@@ -56,17 +62,17 @@ export const Tournament = ({ name_id }) => {
                 </div>
             </section>
         )
-    } else {
+    } else if (show && !showInformation) {
         return (
             <section>
                 <div class="container">
                     <section className="section-header-2">
-                        <div сlass="achivements-header">
-                            <div class="text-theme-show" style={{ cursor: 'pointer' }} onClick={() => setShow(false)}>
+                        <div сlass="achivements-header" style={{ display: "flex", flexDirection: "row", justifyContent: "space-between", alignItems: "center" }}>
+                            <div class="text-theme-show" onClick={() => setShow(false)}>
                                 <span>Достижения</span>
                                 <img src="/images/client/down-arrow.svg" alt="right-arrow" className="client-menu-arrow"></img>
                             </div>
-                            <FullInformation />
+                            <div class="achivements-information" onClick={() => setShowInformation(true)}>Подробнее про "Достижения"</div>
                         </div>
                         <div>
                             <Training />
