@@ -4701,41 +4701,52 @@ div[class*="col"]:nth-of-type(4n + 4) .info-inner {
 }
 
 .history-wrapper {
-    display: flex;
-    margin: 30px 0px;
-    position: absolute;
-    width: 1170px;
-    height: 591px;
-
+    font-family: 'GothamPro';
+    font-weight: 400;
+    font-size: 20px;
+    position: relative;
+    width: 93%;
+    height: fit-content;
     border: 1px solid rgba(37, 186, 0, 0.5);
     box-sizing: border-box;
+    padding: 0px 1em; 
 }
 
-@media (min-width: 992px) {
-    .history-wrapper {
-        margin-bottom: -100px;
-    }
-}
-
-.common-list li {
+.history-wrapper div > span{
     position: relative;
-    padding: 0;
-    padding-left: 30px;
-    margin-bottom: 20px;
-    color: #000;
+    font-weight: bold;
 }
 
-.common-list li::before {
-    width: 8px;
-    height: 8px;
-    border-radius: 4px;
-    background: #08d565;
-    content: "";
-    display: inline-block;
-    position: absolute;
-    left: 0;
-    top: 12px;
+.shedule-day-title{
+    padding-left: unset;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75px;
 }
+.shedule-day-title span{
+    font-size: 20px;
+    text-transform: uppercase;
+    border-bottom: 1px solid #25BA00;
+}
+
+.shedule ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.shedule ul li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#shedule-second{
+    justify-content: space-around;
+}
+
 
 .about-item {
     justify-content: space-between;
@@ -6316,3 +6327,5 @@ div[class*="col"]:nth-of-type(4n + 4) .info-inner {
     justify-content: space-between;
     align-items: center;
 }
+
+

@@ -28,51 +28,66 @@ export const SelectionShedule = () => {
 
     if (show) {
         return (
-
-            <section class="history-section" id="history">
-                <div class="container">
-                    <div class="section-header-2">
-                        <div class="container">
-                            <h2 class="title" onClick={() => setShow(false)} style={{ cursor: 'pointer', padding: '0!important' }}>
-                                <span class="text-theme-show">Расписание Занятий</span>
-                            </h2>
-                        </div>
-                        <div class="history-wrapper">
-                            {shedule.map((e, i) => <>
-
-                                <div class="history-item-2">
-                                    <div class="history-content">
-                                        <h3 class="title">{e.name}</h3>
-                                        <ul class="common-list">
-                                            <li>
-                                                Понедельник: {e.MondayStart}
-                                            </li>
-                                            <li>
-                                                Вторник: {e.ThursdayStart}
-                                            </li>
-                                            <li>
-                                                Среда: {e.WednesdayStart}
-                                            </li>
-                                            <li>
-                                                Четверг: {e.ThursdayStart}
-                                            </li>
-                                            <li>
-                                                Пятница: {e.FridayStart}
-                                            </li>
-                                            <li>
-                                                Суббота: {e.SaturdayStart}
-                                            </li>
-                                            <li>
-                                                Воскресенье: {e.SundayStart}
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </>)}
-                        </div>
+            <div class="container">
+                <section class="section-header-2">
+                    <div class="text-theme-show" onClick={() => setShow(false)}>
+                        <span>Расписание занятий</span>
+                        <img src="/images/client/down-arrow.svg" alt="right-arrow" className="client-menu-arrow"></img>
                     </div>
-                </div>
-            </section>
+                    <div class="history-wrapper">
+                        {shedule.reverse().map((e, i) => <>
+                            <div className='shedule-day-title'>
+                                <span>{e.name}</span>
+                            </div>
+                            <div class="shedule">
+                                <ul>
+                                    <li>
+                                        <span>Понедельник</span>
+                                        <span>
+                                            {e.MondayStart}
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span>Вторник</span>
+                                        <span>
+                                            {e.TuesdayStart}
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span>Среда</span>
+                                        <span>
+                                            {e.WednesdayStart}
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span>Четверг</span>
+                                        <span>
+                                            {e.ThursdayStart}
+                                        </span>
+                                    </li>
+                                </ul>
+                                <ul id="shedule-second">
+                                    <li>
+                                        <span>Пятница</span>
+                                        <span>
+                                            {e.FridayStart}
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span>Суббота</span>
+                                        <span>{e.SaturdayStart}</span>
+                                    </li>
+                                    <li>
+                                        <span>Воскресенье</span>
+                                        <span>{e.SundayStart}</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div className="long-green-line"></div>
+                        </>)}
+                    </div>
+                </section>
+            </div>
             // <section class="history-section" id="history">
             //     <div class="container">
             //         <h2 class="title" onClick={() => setShow(false)} style={{ cursor: 'pointer', padding: '0!important' }}>
@@ -116,15 +131,14 @@ export const SelectionShedule = () => {
     } else {
 
         return (
-            <section class="history-section" id="history">
-                <div class="container">
-                    <div class="section-header-2" >
-                        <h2 class="title" onClick={() => setShow(true)} style={{ cursor: 'pointer', padding: '0' }}>
-                            <span class="text-theme">Расписание Занятий</span>
-                        </h2>
+            <div class="container">
+                <div class="section-header-2" >
+                    <div class="text-theme" onClick={() => setShow(true)}>
+                        <span>Расписание занятий</span>
+                        <img src="/images/client/right-arrow.svg" alt="right-arrow" className="client-menu-arrow"></img>
                     </div>
                 </div>
-            </section>
+            </div>
         )
     }
 
