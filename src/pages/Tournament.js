@@ -72,7 +72,7 @@ export const Tournament = ({ name_id }) => {
                                 <span>Достижения</span>
                                 <img src="/images/client/down-arrow.svg" alt="right-arrow" className="client-menu-arrow"></img>
                             </div>
-                            <div class="achivements-information" onClick={() => setShowInformation(true)}>Подробнее про "Достижения"</div>
+                            <FullInformation />
                         </div>
                         <div>
                             <Training />
