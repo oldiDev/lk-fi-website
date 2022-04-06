@@ -7,7 +7,7 @@ import { SiteFooter } from "./components/footer";
 import { SectionBlog } from "./components/sectionBlog";
 import { Stats } from "./Stats";
 import axios from "axios";
-import { SelectionShedule } from "./components/shedule";
+import { SelectionShedule } from "./components/schedule";
 import { MiddleStats } from "./MidleStats";
 import { Tournament } from "./Tournament";
 

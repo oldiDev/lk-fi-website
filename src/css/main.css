@@ -4717,19 +4717,19 @@ div[class*="col"]:nth-of-type(4n + 4) .info-inner {
     font-weight: bold;
 }
 
-.shedule-day-title{
+.schedule-day-title{
     padding-left: unset;
     margin-left: auto;
     margin-right: auto;
     width: 75px;
 }
-.shedule-day-title span{
+.schedule-day-title span{
     font-size: 20px;
     text-transform: uppercase;
     border-bottom: 1px solid #25BA00;
 }
 
-.shedule ul {
+.schedule ul {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -4737,14 +4737,14 @@ div[class*="col"]:nth-of-type(4n + 4) .info-inner {
 }
 
 
-.shedule ul li {
+.schedule ul li {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-#shedule-second{
-    justify-content: space-around;
+#schedule-second{
+    justify-content: space-evenly;
 }
 
 

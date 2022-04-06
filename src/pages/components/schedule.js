@@ -36,10 +36,10 @@ export const SelectionShedule = () => {
                     </div>
                     <div class="history-wrapper">
                         {shedule.reverse().map((e, i) => <>
-                            <div className='shedule-day-title'>
+                            <div className='schedule-day-title'>
                                 <span>{e.name}</span>
                             </div>
-                            <div class="shedule">
+                            <div class="schedule">
                                 <ul>
                                     <li>
                                         <span>Понедельник</span>
@@ -66,7 +66,7 @@ export const SelectionShedule = () => {
                                         </span>
                                     </li>
                                 </ul>
-                                <ul id="shedule-second">
+                                <ul id="schedule-second">
                                     <li>
                                         <span>Пятница</span>
                                         <span>
@@ -88,45 +88,6 @@ export const SelectionShedule = () => {
                     </div>
                 </section>
             </div>
-            // <section class="history-section" id="history">
-            //     <div class="container">
-            //         <h2 class="title" onClick={() => setShow(false)} style={{ cursor: 'pointer', padding: '0!important' }}>
-            //             <span class="text-theme">Расписание Занятий</span>
-            //         </h2>
-            //         <div class="history-wrapper">
-            //             {shedule.map((e, i) => <>
-            //                 <div class="history-item-2">
-            //                     <div class="history-content">
-            //                         <h3 class="title">{e.name}</h3>
-            //                         <ul class="common-list">
-            //                             <li>
-            //                                 Понедельник: {e.MondayStart}
-            //                             </li>
-            //                             <li>
-            //                                 Вторник: {e.ThursdayStart}
-            //                             </li>
-            //                             <li>
-            //                                 Среда: {e.WednesdayStart}
-            //                             </li>
-            //                             <li>
-            //                                 Четверг: {e.ThursdayStart}
-            //                             </li>
-            //                             <li>
-            //                                 Пятница: {e.FridayStart}
-            //                             </li>
-            //                             <li>
-            //                                 Суббота: {e.SaturdayStart}
-            //                             </li>
-            //                             <li>
-            //                                 Воскресенье: {e.SundayStart}
-            //                             </li>
-            //                         </ul>
-            //                     </div>
-            //                 </div>
-            //             </>)}
-            //         </div>
-            //     </div>
-            // </section>
         )
     } else {
 
