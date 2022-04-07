@@ -160,8 +160,8 @@ textarea {
 /*
  * Hide visually and from screen readers
  */
-.hidden {
-  display: none !important; }
+/* .hidden {
+  display: none !important; } */
 
 /*
 * Hide only visually, but have it available for screen readers:
@@ -4072,7 +4072,7 @@ div[class*="col"]:nth-of-type(4n + 4) .info-inner {
     }
 }
 
-.history-wrapper {
+/* .history-wrapper {
     margin-bottom: -80px;
 }
 
@@ -4080,7 +4080,7 @@ div[class*="col"]:nth-of-type(4n + 4) .info-inner {
     .history-wrapper {
         margin-bottom: -100px;
     }
-}
+} */
 
 .common-list li {
     position: relative;

@@ -44,7 +44,7 @@ export const SectionBlog = () => {
                         </div>
                         <div class="section-blog-array">
                             {post_arr.map((e, i) => <>
-                                <div class="section-blog-item">
+                                <div class="section-blog-item" onClick={() => history.push(BLOG_SINGLE_ROUTE + '/' + it_number + '/' + e.id)}>
                                     <div class="section-blog-content">
                                         <div class="blog-body-news">Новости</div>
                                         <div class="blog-body-content">
@@ -60,25 +60,6 @@ export const SectionBlog = () => {
                                         </div>
                                     </div>
                                     <img class="blog-img" src={"https://cdn.lk-ft.ru" + e.Post_image?.url} />
-                                    {/* <img className="blog-footer-widget-right" src={"https://cdn.lk-ft.ru" + e.Post_image?.url} />
-                                    <div className="blog-footer-widget-left">
-                                        <div class="blog-body">
-                                            <div className="blog-body-news">
-                                                Новости
-                                            </div>
-                                            <h5 class="title"><a href="#0">{e.Post_Title}</a></h5>
-                                            <p class="line-limit-3">{e.Post_teaser}</p>
-                                            <a href="#single-post" class="read-more" onClick={() => history.push(BLOG_SINGLE_ROUTE + '/' + it_number + '/' + e.id)}><span>Подробнее</span></a>
-                                        </div>
-                                        <div class="blog-footer">
-                                            <div class="author">
-                                                <div class="content">
-                                                    <a href="#single-post" class="title" onClick={() => history.push(BLOG_SINGLE_ROUTE + '/' + it_number + '/' + e.id)}>{e.Post_author} {e.Post_author_lastname}</a>
-                                                </div>
-                                            </div>
-                                            <a href="#single-post" onClick={() => history.push(BLOG_SINGLE_ROUTE + '/' + it_number + '/' + e.id)}><i class="flaticon-calendar"></i>{e.Post_Date}</a>
-                                        </div>
-                                    </div> */}
                                 </div>
                             </>
                             )}

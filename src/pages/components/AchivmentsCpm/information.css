@@ -105,6 +105,18 @@
     }
 }
 
+@media screen  and (max-width: 576px){
+    .inside-container{
+        width: 80%;
+        border: none;
+    }
+    .information-title{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
 .item-box{
     
     border: 1px solid;
