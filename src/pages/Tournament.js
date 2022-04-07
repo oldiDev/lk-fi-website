@@ -74,7 +74,7 @@ export const Tournament = ({ name_id }) => {
                             </div>
                             <FullInformation />
                         </div>
-                        <div>
+                        <div class="tournament-content">
                             <Training />
                             <Camp />
                             <Events dva={twoVSTwo} tre={threeVsThree} penal={penalty} />

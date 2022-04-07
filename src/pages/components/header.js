@@ -59,17 +59,13 @@ export const SiteHeader = () => {
                                 <li>
                                     <a href="https://vk.com/krasnodarfs">
                                         <img src="/images/contact/vk.svg" alt="vk-link"></img>
-                                        {/* <i class="fab fa-vk"></i> */}
                                     </a>
                                 </li>
                                 <li>
                                     <a href="https://t.me/footskill_krd">
                                         <img src="/images/contact/telegram.svg" alt="telegram-link"></img>
-                                        {/* <i class="fab fa-telegram"></i> */}
                                     </a>
                                 </li>
-                                {/* </ul>
-                            <ul className="ul-header"> */}
                                 <li>
                                     <span className="vertical-line" />
                                     <span id="last-pay-header">Крайняя оплата:</span>

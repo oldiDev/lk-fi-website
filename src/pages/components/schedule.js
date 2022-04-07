@@ -43,25 +43,29 @@ export const SelectionShedule = () => {
                                 <ul>
                                     <li>
                                         <span>Понедельник</span>
-                                        <span>
+                                        <span class="shedule-value">
+                                            <span class="point"></span>
                                             {e.MondayStart}
                                         </span>
                                     </li>
                                     <li>
                                         <span>Вторник</span>
-                                        <span>
+                                        <span class="shedule-value">
+                                            <span class="point"></span>
                                             {e.TuesdayStart}
                                         </span>
                                     </li>
                                     <li>
                                         <span>Среда</span>
-                                        <span>
+                                        <span class="shedule-value">
+                                            <span class="point"></span>
                                             {e.WednesdayStart}
                                         </span>
                                     </li>
                                     <li>
                                         <span>Четверг</span>
-                                        <span>
+                                        <span class="shedule-value">
+                                            <span class="point"></span>
                                             {e.ThursdayStart}
                                         </span>
                                     </li>
@@ -69,17 +73,24 @@ export const SelectionShedule = () => {
                                 <ul id="schedule-second">
                                     <li>
                                         <span>Пятница</span>
-                                        <span>
+                                        <span class="shedule-value">
+                                            <span class="point"></span>
                                             {e.FridayStart}
                                         </span>
                                     </li>
                                     <li>
                                         <span>Суббота</span>
-                                        <span>{e.SaturdayStart}</span>
+                                        <span class="shedule-value">
+                                            <span class="point"></span>
+                                            {e.SaturdayStart}
+                                        </span>
                                     </li>
                                     <li>
                                         <span>Воскресенье</span>
-                                        <span>{e.SundayStart}</span>
+                                        <span class="shedule-value">
+                                            <span class="point"></span>
+                                            {e.SundayStart}
+                                        </span>
                                     </li>
                                 </ul>
                             </div>

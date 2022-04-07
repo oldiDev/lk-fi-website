@@ -37,15 +37,30 @@ export const SectionBlog = () => {
                 <div class="container" style={{ display: "flex" }}>
                     <div class="section-header-2">
                         <div>
-                            <h2 class="title" onClick={() => setShow(false)} style={{ cursor: 'pointer' }}>
+                            <div class="title" onClick={() => setShow(false)}>
                                 <span class="text-theme-show">Информация</span>
                                 <img src="/images/client/down-arrow.svg" alt="right-arrow" className="client-menu-arrow"></img>
-                            </h2>
+                            </div>
                         </div>
-                        <div>
+                        <div class="section-blog-array">
                             {post_arr.map((e, i) => <>
-                                <div class="blog-footer-widget blog-item-2 mt-3" >
-                                    <img className="blog-footer-widget-right" src={"https://cdn.lk-ft.ru" + e.Post_image?.url} />
+                                <div class="section-blog-item">
+                                    <div class="section-blog-content">
+                                        <div class="blog-body-news">Новости</div>
+                                        <div class="blog-body-content">
+                                            <div id="post-title">
+                                                {e.Post_Title}
+                                            </div>
+                                            <div>{e.Post_teaser}</div>
+                                        </div>
+                                        <div class="blog-body-footer">
+                                            <div id="blog-green-line"></div>
+                                            <div>{e.Post_author} {e.Post_author_lastname}</div>
+                                            <div>{e.Post_Date}</div>
+                                        </div>
+                                    </div>
+                                    <img class="blog-img" src={"https://cdn.lk-ft.ru" + e.Post_image?.url} />
+                                    {/* <img className="blog-footer-widget-right" src={"https://cdn.lk-ft.ru" + e.Post_image?.url} />
                                     <div className="blog-footer-widget-left">
                                         <div class="blog-body">
                                             <div className="blog-body-news">
@@ -63,8 +78,7 @@ export const SectionBlog = () => {
                                             </div>
                                             <a href="#single-post" onClick={() => history.push(BLOG_SINGLE_ROUTE + '/' + it_number + '/' + e.id)}><i class="flaticon-calendar"></i>{e.Post_Date}</a>
                                         </div>
-                                    </div>
-
+                                    </div> */}
                                 </div>
                             </>
                             )}
