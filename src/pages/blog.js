@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useHistory, useParams } from "react-router-dom";
-import { BLOG_SINGLE_ROUTE, HOMEPAGE_ROUTE } from "./components/utils/consts";
+import { BLOG_SINGLE_ROUTE } from "./components/utils/consts";
 import { SiteHeader } from "./components/header";
 import { SiteFooter } from "./components/footer";
 
@@ -17,7 +17,7 @@ const PostList = () => {
                     <div class="blog-title">
                         <span>Вся информация</span>
                     </div>
-                    <div class="information-conttainer">
+                    <div class="blog-array">
                         <Pagination_Post it_number={it_number} />
                     </div>
                 </div>
@@ -39,26 +39,25 @@ const Post_Component = ({ posts, it_number }) => {
         <>
             {
                 posts.map((e, i) =>
-                
-                    // <div key={i} class="col-lg-10">
-                    //     <div class="post-item">
-                    //         <div class="post-thumb">
-                    //             <a href="blog-single.html">
-                    //                 <img src={'https://cdn.lk-ft.ru' + e.Post_image.url} alt="blog" />
-                    //             </a>
-                    //         </div>
-                    //         <div class="post-content">
-                    //             <div class="post-date">
-                    //                 <a href="#0"><i class="flaticon-clock"></i>{e.Post_Date}</a>
-                    //             </div>
-                    //             <h4 class="title">
-                    //                 <a href="/blog_single" style={{ color: "white" }}>{e.Post_Title}</a>
-                    //             </h4>
-                    //             <p>{e.Post_teaser}</p>
-                    //             <a href="#single-post" class="custom-button" style={{ color: "white" }} onClick={() => history.push(BLOG_SINGLE_ROUTE + '/' + it_number + '/' + e.id)} >Подробности</a>
-                    //         </div>
-                    //     </div>
-                    // </div>
+                    <div key={i} class="information-page-array">
+                        <div class="information-page-item" onClick={() => history.push(BLOG_SINGLE_ROUTE + '/' + it_number + '/' + e.id)}>
+                            <div class="section-blog-content">
+                                <div class="blog-body-news">Новости</div>
+                                <div class="blog-body-content">
+                                    <div id="post-title">
+                                        {e.Post_Title}
+                                    </div>
+                                    <div>{e.Post_teaser}</div>
+                                </div>
+                                <div class="blog-body-footer">
+                                    <div id="blog-green-line"></div>
+                                    <div>{e.Post_author} {e.Post_author_lastname}</div>
+                                    <div>{e.Post_Date}</div>
+                                </div>
+                            </div>
+                            <img class="blog-img" src={"https://cdn.lk-ft.ru" + e.Post_image?.url} />
+                        </div>
+                    </div>
                 )
             }
 
