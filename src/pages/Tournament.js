@@ -11,7 +11,6 @@ export const Tournament = ({ name_id }) => {
 
 
     const [player, setPlayer] = React.useState([]);
-    const [showInformation, setShowInformation] = useState(false);
     React.useEffect(() => {
         const fetchStat = async () => {
             const res = await axios.get('https://cdn.lk-ft.ru/players');
@@ -26,30 +25,42 @@ export const Tournament = ({ name_id }) => {
     var threeVsThree = [];
     var penalty = [];
 
+
     player.map((e, i) => {
         if (e.fullname == name_id) {
             if (e.last_statements == "2 VS 2") {
-                twoVSTwo.push({ date: e.age, zabito: e.phone, propush: e.insta, mark: e.adresse })
+                twoVSTwo.push({
+                    date: e.age,
+                    zabito: e.phone,
+                    propush: e.insta,
+                    mark: e.adresse
+                })
                 two += Number(e.adresse);
             }
             if (e.last_statements == '3 VS 3') {
-                threeVsThree.push({ date: e.age, zabito: e.phone, propush: e.insta, mark: e.adresse })
+                threeVsThree.push({
+                    date: e.age,
+                    zabito: e.phone,
+                    propush: e.insta,
+                    mark: e.adresse
+                })
                 tre += Number(e.adresse)
             }
             if (e.last_statements == "Пенальти") {
-                penalty.push({ date: e.age, zabito: e.phone, propush: e.insta, mark: e.adresse })
+                penalty.push({
+                    date: e.age,
+                    zabito: e.phone,
+                    propush: e.insta,
+                    mark: e.adresse
+                })
                 penal += Number(e.adresse)
             }
         }
     })
 
-    let information;
-    if (!showInformation) {
-        information = <FullInformation />
-    }
 
     const [show, setShow] = useState(false);
-    if (!show && !showInformation) {
+    if (!show) {
         return (
             <section>
                 <div class="container">
@@ -62,12 +73,12 @@ export const Tournament = ({ name_id }) => {
                 </div>
             </section>
         )
-    } else if (show && !showInformation) {
+    } else if (show) {
         return (
             <section>
                 <div class="container">
                     <section className="section-header-2">
-                        <div сlass="achivements-header" style={{ display: "flex", flexDirection: "row", justifyContent: "space-between", alignItems: "center" }}>
+                        <div сlass="achivements-header">
                             <div class="text-theme-show" onClick={() => setShow(false)}>
                                 <span>Достижения</span>
                                 <img src="/images/client/down-arrow.svg" alt="right-arrow" className="client-menu-arrow"></img>

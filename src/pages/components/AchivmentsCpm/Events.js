@@ -2,8 +2,6 @@ import React, { useState } from "react";
 
 export const Events = ({ dva, tre, penal }) => {
 
-    console.log(dva, tre, penal)
-
     const [show, setShow] = useState(false);
 
     if (!show) {
@@ -22,7 +20,7 @@ export const Events = ({ dva, tre, penal }) => {
             <section>
                 <div>
                     <div class="achivements-container" onClick={() => setShow(false)}>
-                        <div class="achivements-title-show" style={{ cursor: 'pointer' }}>
+                        <div class="achivements-title-show">
                             <span>Мероприятия</span>
                             <img src="/images/client/down-arrow.svg" alt="right-arrow" className="client-menu-arrow"></img>
                         </div>
@@ -33,125 +31,128 @@ export const Events = ({ dva, tre, penal }) => {
                                 <p>Соревнования 2vs2</p>
                                 <div class="events-repeateable">
                                     {
-                                        // dva.map((e, i) =>
-                                        <ul class='event-item'>
-                                            <li>
-                                                <span>
-                                                    <img src="/images/achivements-event/calendar.svg" alt="data" className="achivements-icons"></img>
-                                                </span>
-                                                <span>Дата:</span>
-                                                <span class="event-item-value">12.02.2022</span>
-                                            </li>
+                                        dva.map((e, i) =>
+                                            <ul class='event-item'>
+                                                <li>
+                                                    <span>
+                                                        <img src="/images/achivements-event/calendar.svg" alt="data" className="achivements-icons"></img>
+                                                    </span>
+                                                    <span>Дата:</span>
+                                                    <span class="event-item-value">{e.date.split('-').reverse().join('.')}</span>
+                                                </li>
 
-                                            <li>
-                                                <span>
-                                                    <img src="/images/achivements-event/goal.svg" alt="goal"></img>
-                                                </span>
-                                                <span>Забито:</span>
-                                                <span class="event-item-value">12</span>
-                                            </li>
+                                                <li>
+                                                    <span>
+                                                        <img src="/images/achivements-event/goal.svg" alt="goal"></img>
+                                                    </span>
+                                                    <span>Забито:</span>
+                                                    <span class="event-item-value">{e.zabito}</span>
+                                                </li>
 
-                                            <li>
-                                                <span>
-                                                    <img src="/images/achivements-event/spin.svg" alt="spin"></img>
-                                                </span>
-                                                <span>Пропущенно:</span>
-                                                <span class="event-item-value">22</span>
-                                            </li>
+                                                <li>
+                                                    <span>
+                                                        <img src="/images/achivements-event/spin.svg" alt="spin"></img>
+                                                    </span>
+                                                    <span>Пропущенно:</span>
+                                                    <span class="event-item-value">{e.propush}</span>
+                                                </li>
 
-                                            <li>
-                                                <span>
-                                                    <img src="/images/achivements-event/badge.svg" alt="badge"></img>
-                                                </span>
-                                                <span>Общая оценка:</span>
-                                                <span class="event-item-value">2</span>
-                                            </li>
-                                        </ul>
-                                        // )
+                                                <li>
+                                                    <span>
+                                                        <img src="/images/achivements-event/badge.svg" alt="badge"></img>
+                                                    </span>
+                                                    <span>Общая оценка:</span>
+                                                    <span class="event-item-value">{e.mark}</span>
+                                                </li>
+                                            </ul>
+                                        )
                                     }
                                 </div>
                             </li>
                             <li>
                                 <p>Соревнования 3vs3</p>
-                                {
-                                    tre.map((e, i) =>
-                                        <ul class='event-item'>
-                                            <li>
-                                                <span>
-                                                    <img src="/images/achivements-event/calendar.svg" alt="data" className="achivements-icons"></img>
-                                                </span>
-                                                <span>Дата:</span>
-                                                <span class="event-item-value">{e.date}</span>
-                                            </li>
+                                <div class="events-repeateable">
+                                    {
+                                        tre.map((e, i) =>
+                                            <ul class='event-item'>
+                                                <li>
+                                                    <span>
+                                                        <img src="/images/achivements-event/calendar.svg" alt="data" className="achivements-icons"></img>
+                                                    </span>
+                                                    <span>Дата:</span>
+                                                    <span class="event-item-value">{e.date.split('-').reverse().join('.')}</span>
+                                                </li>
 
-                                            <li>
-                                                <span>
-                                                    <img src="/images/achivements-event/goal.svg" alt="goal"></img>
-                                                </span>
-                                                <span>Забито:</span>
-                                                <span class="event-item-value">{e.zabito}</span>
-                                            </li>
+                                                <li>
+                                                    <span>
+                                                        <img src="/images/achivements-event/goal.svg" alt="goal"></img>
+                                                    </span>
+                                                    <span>Забито:</span>
+                                                    <span class="event-item-value">{e.zabito}</span>
+                                                </li>
 
-                                            <li>
-                                                <span>
-                                                    <img src="/images/achivements-event/spin.svg" alt="spin"></img>
-                                                </span>
-                                                <span>Пропущенно:</span>
-                                                <span class="event-item-value">{e.propush}</span>
-                                            </li>
+                                                <li>
+                                                    <span>
+                                                        <img src="/images/achivements-event/spin.svg" alt="spin"></img>
+                                                    </span>
+                                                    <span>Пропущенно:</span>
+                                                    <span class="event-item-value">{e.propush}</span>
+                                                </li>
 
-                                            <li>
-                                                <span>
-                                                    <img src="/images/achivements-event/badge.svg" alt="badge"></img>
-                                                </span>
-                                                <span>Общая оценка:</span>
-                                                <span class="event-item-value">{e.mark}</span>
-                                            </li>
-                                        </ul>
-                                    )
-                                }
+                                                <li>
+                                                    <span>
+                                                        <img src="/images/achivements-event/badge.svg" alt="badge"></img>
+                                                    </span>
+                                                    <span>Общая оценка:</span>
+                                                    <span class="event-item-value">{e.mark}</span>
+                                                </li>
+                                            </ul>
+                                        )
+                                    }
+                                </div>
+
                             </li>
-
                             <li>
                                 <p>Пенальти</p>
-                                <div class="evenets-repeateable"></div>
-                                {
-                                    penal.map((e, i) =>
-                                        <ul class='event-item'>
-                                            <li>
-                                                <span>
-                                                    <img src="/images/achivements-event/calendar.svg" alt="data" className="achivements-icons"></img>
-                                                </span>
-                                                <span>Дата:</span>
-                                                <span class="event-item-value">{e.date}</span>
-                                            </li>
+                                <div class="events-repeateable">
+                                    {
+                                        penal.map((e, i) =>
+                                            <ul class='event-item'>
+                                                <li>
+                                                    <span>
+                                                        <img src="/images/achivements-event/calendar.svg" alt="data" className="achivements-icons"></img>
+                                                    </span>
+                                                    <span>Дата:</span>
+                                                    <span class="event-item-value">{e.date.split('-').reverse().join('.')}</span>
+                                                </li>
 
-                                            <li>
-                                                <span>
-                                                    <img src="/images/achivements-event/goal.svg" alt="goal"></img>
-                                                </span>
-                                                <span>Забито:</span>
-                                                <span class="event-item-value">{e.zabito}</span>
-                                            </li>
+                                                <li>
+                                                    <span>
+                                                        <img src="/images/achivements-event/goal.svg" alt="goal"></img>
+                                                    </span>
+                                                    <span>Забито:</span>
+                                                    <span class="event-item-value">{e.zabito}</span>
+                                                </li>
 
-                                            <li>
-                                                <span>
-                                                    <img src="/images/achivements-event/spin.svg" alt="spin"></img>
-                                                </span>
-                                                <span>Пропущенно:</span>
-                                                <span class="event-item-value">{e.propush}</span>
-                                            </li>
+                                                <li>
+                                                    <span>
+                                                        <img src="/images/achivements-event/spin.svg" alt="spin"></img>
+                                                    </span>
+                                                    <span>Пропущенно:</span>
+                                                    <span class="event-item-value">{e.propush}</span>
+                                                </li>
 
-                                            <li>
-                                                <span>
-                                                    <img src="/images/achivements-event/badge.svg" alt="badge"></img>
-                                                </span>
-                                                <span>Общая оценка:</span>
-                                                <span class="event-item-value">{e.mark}</span>
-                                            </li>
-                                        </ul>
-                                    )
-                                }
+                                                <li>
+                                                    <span>
+                                                        <img src="/images/achivements-event/badge.svg" alt="badge"></img>
+                                                    </span>
+                                                    <span>Общая оценка:</span>
+                                                    <span class="event-item-value">{e.mark}</span>
+                                                </li>
+                                            </ul>
+                                        )
+                                    }
+                                </div>
                             </li>
                         </ul>
                     </div>

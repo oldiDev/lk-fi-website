@@ -26,6 +26,7 @@
     font-weight: bold;
 }
 
+
 /*
     Events style css
 */
@@ -66,7 +67,7 @@
 }
 
 .inside-container .events-repeateable ul {
-    margin: 0px 1em;
+    margin: .5em 1em;
 }
 
 .inside-container ul li p{

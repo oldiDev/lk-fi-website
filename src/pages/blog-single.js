@@ -95,35 +95,6 @@ export const Blog_Single = () => {
                     </div>
                 </div>
             </section>
-            {/* <section class="blog-section padding-top padding-bottom" id="about" style={{ background: "#212529", marginBottom: "-46px" }}>
-                <div class="container">
-                    <div class="row justify-content-center">
-                        <div class="col-lg-10">
-                            <div class="post-item post-details">
-                                <div class="post-thumb">
-                                    <img src={"https://cdn.lk-ft.ru" + post_img?.url} alt="blog" />
-                                </div>
-                                <div class="post-content">
-                                    <h4 class="title">
-                                        {post_title_text}
-                                    </h4>
-                                    <p>
-                                        {post_rich_text}
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="post-author">
-                                <div class="thumb">
-                                    <img src={"https://cdn.lk-ft.ru" + author_icon?.url} alt="blog" />
-                                </div>
-                                <h6 class="title">{post_author}</h6>
-                                <span class="info">Автор</span>
-                                <p>{post_teaser}</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section> */}
             <SiteFooter />
         </>
     );
