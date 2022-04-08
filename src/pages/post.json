@@ -1,0 +1,70 @@
+{
+    "posts": [
+        {
+            "id": "0" ,
+            "title": "Новость 0",
+            "img":"./images/blog/blog7.jpg",
+            "rich_text":"t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like). ",
+            "description":"Lorem ipsum dolor sit amet, cras non sagittis pellentesque donec, nunc eleifend turpmes eu, sed ullamcorper libero magna ac mauris, mollis sem vivamus ut commodo id. Vestibulum cursus vestibulumviverra fusce justo, quisque id porttitor ullamcor",
+            "published_at":"25 Декабря",
+            "author":"Имя Автора",
+            "author_icon": "./images/blog/author.png",
+            "author_description": "Об авторе"
+        },
+        {
+            "id": "1" ,
+            "title": "Новость 1",
+            "img":"./images/blog/blog7.jpg",
+            "rich_text":"t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like). ",
+            "description":"Lorem ipsum dolor sit amet, cras non sagittis pellentesque donec, nunc eleifend turpmes eu, sed ullamcorper libero magna ac mauris, mollis sem vivamus ut commodo id. Vestibulum cursus vestibulumviverra fusce justo, quisque id porttitor ullamcor",
+            "published_at":"25 Декабря",
+            "author":"Имя Автора",
+            "author_icon": "./images/blog/author.png",
+            "author_description": "Об авторе"
+        },
+        {
+            "id": "2" ,
+            "title": "Новость 2",
+            "img":"./images/blog/blog7.jpg",
+            "rich_text":"t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like). ",
+            "description":"Lorem ipsum dolor sit amet, cras non sagittis pellentesque donec, nunc eleifend turpmes eu, sed ullamcorper libero magna ac mauris, mollis sem vivamus ut commodo id. Vestibulum cursus vestibulumviverra fusce justo, quisque id porttitor ullamcor",
+            "published_at":"25 Декабря",
+            "author":"Имя Автора1",
+            "author_icon": "./images/blog/author.png",
+            "author_description": "Об авторе"
+        },
+        {
+            "id": "3" ,
+            "title": "Новость 3",
+            "img":"./images/blog/blog7.jpg",
+            "rich_text":"t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like). ",
+            "description":"Lorem ipsum dolor sit amet, cras non sagittis pellentesque donec, nunc eleifend turpmes eu, sed ullamcorper libero magna ac mauris, mollis sem vivamus ut commodo id. Vestibulum cursus vestibulumviverra fusce justo, quisque id porttitor ullamcor",
+            "published_at":"25 Декабря",
+            "author":"Имя Автора2",
+            "author_icon": "./images/blog/author.png",
+            "author_description": "Об авторе"
+        },
+        {
+            "id": "4" ,
+            "title": "Новость 4",
+            "img":"./images/blog/blog7.jpg",
+            "rich_text":"t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like). ",
+            "description":"Lorem ipsum dolor sit amet, cras non sagittis pellentesque donec, nunc eleifend turpmes eu, sed ullamcorper libero magna ac mauris, mollis sem vivamus ut commodo id. Vestibulum cursus vestibulumviverra fusce justo, quisque id porttitor ullamcor",
+            "published_at":"25 Декабря",
+            "author":"Имя Автора3",
+            "author_icon": "./images/blog/author.png",
+            "author_description": "Об авторе"
+        },
+        {
+            "id": "5" ,
+            "title": "Новость 5",
+            "img":"./images/blog/blog7.jpg",
+            "rich_text":"t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like). ",
+            "description":"Lorem ipsum dolor sit amet, cras non sagittis pellentesque donec, nunc eleifend turpmes eu, sed ullamcorper libero magna ac mauris, mollis sem vivamus ut commodo id. Vestibulum cursus vestibulumviverra fusce justo, quisque id porttitor ullamcor",
+            "published_at":"25 Декабря",
+            "author":"Имя Автора4",
+            "author_icon": "./images/blog/author.png",
+            "author_description": "Об авторе"
+        }
+    ]
+}

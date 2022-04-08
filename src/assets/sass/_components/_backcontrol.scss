@@ -1,0 +1,19 @@
+
+.section-bg {
+    .skill-full,
+    .video-wrapper::after,
+    .tweet-item,
+    .award-item {
+        background: $body-bg;
+    }
+    .section-header {
+        .title {
+            &::after {
+                background: $section-bg;
+            }
+            &::before {
+                background: $body-bg;
+            }
+        }
+    }
+}

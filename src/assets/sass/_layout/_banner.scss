@@ -1,0 +1,368 @@
+/*Banner Section*/
+.banner-section {
+    padding: 290px 0 210px;
+    position: relative;
+    overflow: hidden;
+    @include breakpoint(max-lg) {
+        padding: 250px 0 0;
+    }
+    @include breakpoint(max-md) {
+        padding: 200px 0 0;
+    }
+    @include breakpoint(max-sm) {
+        padding: 180px 0 0;
+    }
+}
+.banner-shape {
+    position: absolute;
+    top: 0;
+    left: 14%;
+    width: 1px;
+    height: 100%;
+    background: rgba(255, 255, 255, .102);
+    &::after, &::before {
+        @extend %pa;
+        width: 1px;
+        height: 30px;
+    }
+    &::before {
+        background: $theme-color;
+    }
+    &::after {
+        background: $white-color;
+    }
+    &.shape-2 {
+        left: 30%;
+    }
+    &.shape-3 {
+        left: 42%;
+    }
+    &.shape-4 {
+        left: 56%;
+    }
+    &.shape-5 {
+        left: 70%;
+    }
+    &.shape-6 {
+        left: 85%;
+    }
+    &:nth-of-type(odd) {
+        &::before {
+            animation: 13s linear nama_utha infinite;
+            -webkit-animation: 13s linear nama_utha infinite;
+            -moz-animation: 13s linear nama_utha infinite;
+        }
+    }
+    &:nth-of-type(even) {
+        &::after {
+            animation: 15s linear nama_utha infinite;
+            -webkit-animation: 15s linear nama_utha infinite;
+            -moz-animation: 15s linear nama_utha infinite;
+        }
+    }
+    &:nth-of-type(even) {
+        &::before {
+            animation: 13s linear utha_nama infinite;
+            -webkit-animation: 13s linear utha_nama infinite;
+            -moz-animation: 13s linear utha_nama infinite;
+        }
+    }
+    &:nth-of-type(odd) {
+        &::after {
+            animation: 15s linear utha_nama infinite;
+            -webkit-animation: 15s linear utha_nama infinite;
+            -moz-animation: 15s linear utha_nama infinite;
+        }
+    }
+    @include breakpoint(max-sm) {
+        &.shape-1 {
+            left: 16px;            
+        }
+        &.shape-2 {
+            left: 50%;
+        }
+        &.shape-3 {
+            left: calc(100% - 16px);            
+        }
+        &.shape-4, &.shape-5, &.shape-6 {
+            display: none;
+        }
+    }
+}
+@keyframes nama_utha {
+    0% {
+        bottom: 0;
+        @include transform(translateY(100%));
+    }
+    100% {
+        bottom: 100%;
+        @include transform(translateY(-100%));
+    }
+}
+@keyframes utha_nama {
+    0% {
+        top: 0;
+        @include transform(translateY(-100%));
+    }
+    100% {
+        top: 100%;
+        @include transform(translateY(100%));
+    }
+}
+.banner-content {
+    position: relative;
+    max-width: 500px;
+    .title {
+        text-transform: uppercase;
+        margin-bottom: 50px;
+        font-size: 93px;
+        line-height: 96px;
+    }
+    .sign {
+        margin-bottom: 80px;
+        img {
+            max-width: 100%;
+        }
+    }
+    @include breakpoint(max-lg) {
+        max-width: 100%;
+        .title {
+            font-size: 70px;
+            line-height: 80px;
+            margin-bottom: 20px;
+        }
+        .sign {
+            margin-bottom: 40px;
+        }
+    }
+    @include breakpoint(max-sm) {
+        margin-bottom: 40px;
+        .title {
+            font-size: 50px;
+            line-height: 65px;
+        }
+        .sign {
+            margin-bottom: 30px;
+        }
+    }
+}
+.text-theme {
+    color: $theme-color;
+}
+.banner-thumb {
+    @include breakpoint(lg) {
+        position: absolute;
+        bottom: 0;
+        left: calc(50% - 183px);
+    }
+    @include breakpoint(max-lg) {
+        margin: 0 auto;
+        max-width: 450px;
+        img {
+            max-width: 100%;
+        }
+    }
+}
+.banner-content-2 {
+    padding-left: 35px;
+    border-left: 2px solid $theme-color;
+    max-width: 400px;
+    margin-bottom: 100px;
+    .title {
+        font-size: 70px;
+        line-height: 75px;
+        text-transform: uppercase;
+        margin-bottom: 15px;
+    }
+    .subtitle {
+        text-transform: uppercase;
+        font-weight: 400;
+        position: relative;
+        margin-bottom: 72px;
+        &::before {
+            @extend %pa;
+            height: 1px;
+            width: 100%;
+            top: 10px;
+            left: 0;
+            background: $theme-color;
+        }
+        span {
+            position: relative;
+            z-index: 1;
+            background: $section-bg;
+            padding-right: 10px;
+        }
+    }
+    @include breakpoint(max-sm) {
+        padding-left: 15px;
+        margin-bottom: 60px;
+        .title {
+            font-size: 42px;
+            line-height: 50px;
+        }
+        .subtitle {
+            font-size: 18px;
+            margin-bottom: 40px;
+        }
+    }
+}
+.banner-section-2 {
+    position: relative;
+    overflow: hidden;
+    .container {
+        position: relative;
+        z-index: 2;
+    }
+    &::before, &::after {
+        @extend %pa;
+        top: 0;
+        height: 100%;
+        width: 50%;
+        background: $section-bg;
+    }
+    &::before {
+        left: 0;
+        @include border-radius(0 0 75px 0);
+    }
+    &::after {
+        right: 0;
+        @include border-radius(0 0 0 75px);
+    }
+    padding: 410px 0 120px;
+    .right-text {
+        color: transparent;
+        -webkit-text-stroke: rgba($color:$white-color, $alpha:.1) 1px;
+        position: absolute;
+        z-index: 1;
+        font-size: 420px;
+        top: -50px;
+        line-height: 400px;
+        right: calc(50% + 650px);
+        font-weight: 700;
+    }
+    @include breakpoint(max-lg) {
+        padding: 220px 0 120px;
+    }
+    @include breakpoint(max-md) {
+        padding: 200px 0 120px;
+    }
+    @include breakpoint(max-sm) {
+        padding: 180px 0 100px;
+    }
+}
+.banner-icon {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    position: relative;
+    z-index: 3;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    color: $theme-color;
+    &::before {
+        @extend %pa;
+        width: 12px;
+        height: 12px;
+        @include border-radius(50%);
+        background: $theme-color;
+        top: -3px;
+        left: 50%;
+        @include transform(translateX(-50%));
+    }
+    animation: up_icon 2s alternate infinite;
+}
+@keyframes up_icon {
+    0% {
+        @include transform(translateY(-5px)translateX(-50%));
+    }
+    100% {
+        @include transform(translateY(15px)translateX(-50%));
+    }
+}
+.banner-counter-wrapper {
+    max-width: 930px;
+    @extend %flex;
+    margin: 0 -15px -30px;
+    @include breakpoint(max-xl) {
+        @include breakpoint(lg) {
+            max-width: 850px;
+        }
+    }
+}
+.banner-counter-item {
+    @extend %flex;
+    flex-grow: 1;
+    padding: 0 15px 30px;
+    .thumb {
+        width: 74px;
+        img {
+            width: 100%;
+        }
+    }
+    .content {
+        max-width: calc(100% - 74px);
+        padding-left: 15px;
+        .title {
+            margin: 0;
+        }
+        .counter {
+            font-size: 45px;
+            line-height: 1;
+        }
+    }
+    @include breakpoint(max-sm) {
+        align-items: center;
+        .content {
+            .counter {
+                font-size: 30px;
+            }
+        }
+    }
+}
+.banner-thumb-1 {
+    position: absolute;
+    top:327px;
+    left: calc(50% + 150px);
+    z-index: 1;
+}
+.banner-thumb-2 {
+    position: absolute;
+    top:327px;
+    left: calc(50% + 270px);
+    z-index: 1;
+    animation: head_man 3s alternate infinite;
+    animation-delay: 1.5s;
+    @include transform(translateY(15px)rotate(0deg));
+}
+.banner-thumb-3 {
+    position: absolute;
+    top: 265px;
+    left: calc(50% + 112px);
+    z-index: 1;
+    animation: head_dibe 3s linear infinite;
+}
+@keyframes head_dibe {
+    0% {
+        @include transform(translate(130px, 20px));
+    }
+    50% {
+        @include transform(translate(0,0));
+    }
+    100% {
+        @include transform(translate(130px, 20px));
+    }
+}
+@keyframes head_man {
+    0% {
+        @include transform(translateY(15px)rotate(0deg));
+    }
+    50% {
+        @include transform(translateY(-15px)rotate(-3deg));
+    }
+    100% {
+        @include transform(translateY(15px)rotate(0deg));
+    }
+}
