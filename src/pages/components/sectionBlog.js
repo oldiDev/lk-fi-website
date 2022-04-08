@@ -56,7 +56,7 @@ export const SectionBlog = () => {
                                         <div class="blog-body-footer">
                                             <div id="blog-green-line"></div>
                                             <div>{e.Post_author} {e.Post_author_lastname}</div>
-                                            <div>{e.Post_Date}</div>
+                                            <div>{e.Post_Date.split('-').reverse().join('.')}</div>
                                         </div>
                                     </div>
                                     <img class="blog-img" src={"https://cdn.lk-ft.ru" + e.Post_image?.url} />
