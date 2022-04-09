@@ -122,6 +122,19 @@ html {
         max-width: 1400px;
     }
 }
+
+@media screen and (min-width: 1630px) {
+    .container{
+        max-width: 1580px;
+    }
+}
+
+@media screen and (min-width: 1960px){
+    .container{
+        max-width: 1800px;
+    }
+}
+
 .enter-header-buttom {
     border: 1px solid rgba(255, 255, 255, 0.18);
 }

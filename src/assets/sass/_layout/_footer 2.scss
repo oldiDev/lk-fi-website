@@ -1,0 +1,185 @@
+.social-icons {
+    @extend %flex;
+    justify-content: center;
+    margin: -4px;
+    li {
+        padding: 4px;
+        a {
+            width: 62px;
+            height: 62px;
+            line-height: 62px;
+            text-align: center;
+            @include border-radius(50%);
+            font-size: 20px;
+            background: #3b3952;
+            color: $title-color;
+            &.active, &:hover {
+                background: $theme-color;
+            }
+            @include breakpoint(max-sm) {
+                font-size: 16px;
+                height: 50px;
+                line-height: 50px;
+                width: 50px;
+            }
+        }
+    }
+}
+.footer-top {
+    border-bottom: 1px solid rgba($color:$white-color, $alpha:.1);
+    text-align: center;
+    .title {
+        margin-bottom: 20px;
+    }
+}
+.copyright {
+    text-align: center;
+    padding: 30px 0 40px;
+    font-family: $heading;
+    @include breakpoint(md) {
+        font-size: 18px;
+    }
+}
+footer {
+    position: relative;
+    .container {
+        position: relative;
+        z-index: 1;
+    }
+}
+.footer-shape-bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+}
+.footer-bottom {
+    padding: 40px 0 0;
+    font-family: $heading;
+    @include breakpoint(xl) {
+        padding-bottom: 40px;
+    }
+    .links {
+        @extend %flex;
+        justify-content: center;
+        margin: 0 -5px;
+        li {
+            padding: 0 5px;
+            a {
+                padding: 5px;
+                color: $title-color;
+                text-transform: uppercase;
+                @include breakpoint(md) {
+                    font-size: 18px;
+                }
+                @include breakpoint(max-sm) {
+                    font-size: 14px;
+                }
+                &.active, &:hover {
+                    color: $theme-color;
+                }
+            }
+        }
+    }
+}
+.footer-area {
+    padding-top: 100px;
+    @extend %flex;
+    margin: 0 -15px -20px;
+    justify-content: space-between;
+    .footer-widget {
+        width: 100%;
+        padding: 0 15px 40px;
+        .title {
+            margin-bottom: 25px;
+            font-size: 24px;
+            @include breakpoint(max-lg) {
+                margin-bottom: 10px;
+            }
+        }
+        p {
+            margin: 0;
+            margin-bottom: 20px;
+        }
+        .logo {
+            margin-bottom: 30px;
+        }
+        &.widget-about {
+            max-width: 360px;
+        }
+        &.widget-link {
+            max-width: 200px;
+            ul {
+                li {
+                    padding: 0;
+                    a {
+                        padding: 4px 0;
+                        color: rgba($color:$white-color, $alpha:.9);
+                        &:hover {
+                            color: $theme-color;
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+        &.widget-follow {
+            max-width: 350px;
+        }
+        @include breakpoint(max-xl) {
+            @include breakpoint(lg) {
+                &.widget-about {
+                    max-width: 300px;
+                }
+                &.widget-follow {
+                    max-width: 260px;
+                }
+            }
+        }
+    }
+}
+.social-icons.choto {
+    margin: -3px;
+    justify-content: flex-start;
+    li {
+        padding: 3px;
+        a {
+            line-height: 42px;
+            height: 42px;
+            width: 42px;
+            font-size: 14px;
+        }
+    }
+}
+.footer-overlay {
+    position: relative;
+    overflow: hidden;
+    &::before, &::after {
+        @extend %pa;
+        width: 50%;
+        height: 100%;
+        top: 0;
+        background: $section-bg;
+        opacity: .97;
+    }
+    &::before {
+        left: 0;
+        @include border-radius(0 0 40px 0)
+    }
+    &::after {
+        right: 0;
+        @include border-radius(0 0 0 40px)
+    }
+    .container {
+        position: relative;
+        z-index: 1;
+    }
+    .banner-icon {
+        bottom: 15px;
+        &::before {
+            bottom: 0;
+            top: unset;
+        }
+    }
+}
