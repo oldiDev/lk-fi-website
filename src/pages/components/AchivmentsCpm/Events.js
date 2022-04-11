@@ -2,7 +2,6 @@ import React, { useState } from "react";
 
 export const Events = ({ dva, tre, penal }) => {
 
-    console.log(dva, tre, penal)
 
     const [show, setShow] = useState(false);
 

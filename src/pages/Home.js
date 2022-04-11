@@ -76,17 +76,29 @@ export const Home = () => {
                     lead_leg={lead_leg}
                     team={team}
                 />
-                <div className="long-green-line"></div>
+                <div className="container">
+                    <div className="long-green-line"></div>
+                </div>
                 <Tournament name_id={name_id} />
-                <div className="long-green-line"></div>
+                <div className="container">
+                    <div className="long-green-line"></div>
+                </div>
                 <Stats stats={star} />
-                <div className="long-green-line"></div>
+                <div className="container">
+                    <div className="long-green-line"></div>
+                </div>
                 <MiddleStats stats={star} />
-                <div className="long-green-line"></div>
+                <div className="container">
+                    <div className="long-green-line"></div>
+                </div>
                 <SelectionShedule />
-                <div className="long-green-line"></div>
+                <div className="container">
+                    <div className="long-green-line"></div>
+                </div>
                 <SectionBlog />
-                <div className="long-green-line"></div>
+                <div className="container">
+                    <div className="long-green-line"></div>
+                </div>
             </body>
             <SiteFooter />
         </>

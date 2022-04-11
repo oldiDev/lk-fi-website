@@ -29,7 +29,8 @@ export const Contact = () => {
             <body>
                 <div class="container" id="container-shedule">
                     <div class="history-wrapper">
-                        {shedule.reverse().map((e, i) => <>
+                        {shedule.reverse().map((e, i) => 
+                        <>
                             <div className='schedule-day-title'>
                                 <span>{e.name}</span>
                             </div>
@@ -89,7 +90,8 @@ export const Contact = () => {
                                 </ul>
                             </div>
                             <div className="long-green-line"></div>
-                        </>)}
+                        </>
+                        )}
                     </div>
                 </div>
 

@@ -101,7 +101,7 @@ html {
 
 @media (min-width: 768px) {
     .container {
-        max-width: 720px;
+        max-width: 695px;
     }
 }
 
@@ -6065,17 +6065,10 @@ div[class*="col"]:nth-of-type(4n + 4) .info-inner {
 
 .long-green-line {
     height: 1px;
-    width: 80%;
+    width: 100%;
     background-color: #25BA00;
-    margin-left: 8% 
 }
 
-@media screen and (max-width: 430px) {
-    .long-green-line {
-        margin-left: 3%;
-        width: 90%
-    }
-}
 
 .my-stats-chart{
     display: flex;
@@ -6311,12 +6304,18 @@ div[class*="col"]:nth-of-type(4n + 4) .info-inner {
 
 @media screen and (max-width: 1200px) {
     .section-blog-array{
-        flex-direction: column;
+        flex-direction: row;
         align-items: flex-start;
     }
     .section-blog-item{
         width: 80%;
         height: 360px;
+    }
+}
+
+@media screen and (max-width: 769px) {
+    .section-blog-array{
+        flex-direction: column;
     }
 }
 
