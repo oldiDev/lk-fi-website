@@ -2940,7 +2940,7 @@ footer {
     }
 }
 
-@media screen and (max-width: 426px) {
+@media screen and (max-width: 430px) {
     .text-theme {
         font-size: 22px;
     }
@@ -3032,7 +3032,7 @@ footer {
     }
 }
 
-@media (max-width: 426px) {
+@media (max-width: 430px) {
     .banner-content-2 .title {
         font-size: 35px;
         line-height: 45px;
@@ -6093,7 +6093,7 @@ div[class*="col"]:nth-of-type(4n + 4) .info-inner {
     }
 }
 
-@media screen  and (max-width: 426px) {
+@media screen  and (max-width: 430px) {
     .my-stats-chart .my-stats-label {
         font-size: 17px;
         padding-bottom: 3px;
@@ -6128,7 +6128,7 @@ div[class*="col"]:nth-of-type(4n + 4) .info-inner {
     font-weight: bold;
 }
 
-@media screen and (max-width: 426px) {
+@media screen and (max-width: 430px) {
     .achivements-title-show {
         font-size: 18px;
     }
@@ -6178,7 +6178,7 @@ div[class*="col"]:nth-of-type(4n + 4) .info-inner {
     padding-left: 1em;
 }
 
-@media screen and (max-width: 426px) {
+@media screen and (max-width: 430px) {
     .single-tournament-content{
         margin-top: 5.2em
     }
@@ -6240,7 +6240,7 @@ div[class*="col"]:nth-of-type(4n + 4) .info-inner {
     color: white;
 }
 
-@media screen and (max-width: 426px) {
+@media screen and (max-width: 430px) {
     .blog-body-news{
         padding: 10px;
         font-size: 12px;
@@ -6325,7 +6325,7 @@ div[class*="col"]:nth-of-type(4n + 4) .info-inner {
     font-weight: bold;
 }
 
-@media screen and (max-width: 426px) {
+@media screen and (max-width: 430px) {
     .blog-title{
         font-size: 20px;
         line-height: 20px;
@@ -6350,7 +6350,7 @@ div[class*="col"]:nth-of-type(4n + 4) .info-inner {
     align-items: center;
 }
 
-@media screen and (max-width: 426px) {
+@media screen and (max-width: 430px) {
     .single-blog-date{
         font-size: 15px;
     }
@@ -6386,7 +6386,7 @@ div[class*="col"]:nth-of-type(4n + 4) .info-inner {
     color: #1D2130;
 }
 
-@media screen and (max-width: 426px) {
+@media screen and (max-width: 430px) {
 
     .single-blog-content {
         max-width: 80%;
@@ -6453,7 +6453,7 @@ div[class*="col"]:nth-of-type(4n + 4) .info-inner {
     height: 15em;
 }
 
-@media screen and (max-width:426px){
+@media screen and (max-width:430px){
     .before-footer{
         height: 10em;
     }
