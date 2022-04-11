@@ -1,0 +1,246 @@
+/*
+    Modal Window for information
+*/
+.inform-contaier{
+    margin-top: 25px;
+}
+.full-info-modal {
+    font-family: 'GothamPro';
+    font-weight: 400;
+    border-radius: 10px;
+    background-color: #fff;
+    z-index: 999999999 ;
+    width: 60%;
+    height: fit-content;
+    overflow: scroll;
+    left: 20%;
+    top: 5%;
+    position: fixed;
+    padding: 1.5em 1.5em;
+    z-index: 99;
+
+}
+
+.full-info-modal div > span{
+    position: relative;
+    font-weight: bold;
+}
+
+/*
+    Events style css
+*/
+
+.events,.grade{
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    border: 1px;
+}
+
+.inside-container{
+   width: 100%;
+   border: 1px solid #25BA00;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-around;
+   align-items: center;
+   padding: 1.5em 0px;
+}
+
+
+.inside-container ul li{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    font-family: 'GothamPro';
+    font-style: normal;
+    font-size: 20px;
+    letter-spacing: 0.03em;
+}
+
+.inside-container .events-repeateable{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.inside-container .events-repeateable ul {
+    margin: 0px 1em;
+}
+
+.inside-container ul li p{
+    font-weight: bold;
+}
+
+.event-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 342px;
+    flex-wrap: wrap;
+    background-color: #F3FFF4;
+    border: 1px solid #25BA00;
+}
+
+.event-item .event-item-value{
+    font-weight: bold;
+}
+
+.inside-container .event-item li {
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5em 0px;
+}
+
+@media screen and (max-width: 1200px) {
+    .inside-container .events-repeateable{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+@media screen  and (max-width: 576px){
+    .inside-container{
+        width: 80%;
+        border: none;
+    }
+    .information-title{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.item-box{
+    
+    border: 1px solid;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.achivements-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.information-backround{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(135, 135, 135,0.8);
+}
+
+.information-title{
+    padding-left: unset;
+    margin-left: auto;
+    margin-right: auto;
+    width: 250px;
+}
+.information-title span{
+    font-size: 30px;
+    text-transform: uppercase;
+    border-bottom: 1px solid #25BA00;
+}
+
+.information-for-what > span {
+    font-size: 20px;
+    
+}
+
+.information-for-what ul{
+    font-size: 18px;
+    color: #2D2D2D;
+}
+
+.information-for-what ul li{
+    align-items: center;
+    padding: 0.5em 0px;
+}
+.information-bonuses{
+    padding-top: 1.5em;
+}
+.information-bonuses > span{
+    font-size: 20px;
+    color: #2D2D2D;
+}
+.information-bonuses ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-size: 18px;
+}
+
+.information-bonuses ul li{
+    padding: 1em 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.information-bonuses ul li span {
+    color:#25BA00;
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    padding-right: 10px;
+}
+
+.information-bonuses ul li div{
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    padding-right: 10px;
+}
+
+.information-bonuses .information-bonuses-text{
+    display: flex;
+    flex-direction: column;
+}
+
+.point{
+    display: inline-block;
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    border: #25BA00;
+    background-color: #25BA00;
+    margin: 2px 5px;
+}
+
+.close-button {
+    position: absolute;
+    right: 32px;
+    top: 32px;
+    width: 32px;
+    height: 32px;
+    opacity: 0.3;
+  }
+  .close-button:hover {
+    opacity: 1;
+  }
+  .close-button:before, .close-button:after {
+    position: absolute;
+    left: 15px;
+    content: ' ';
+    height: 33px;
+    width: 2px;
+    background-color: #333;
+  }
+  .close-button:before {
+    transform: rotate(45deg);
+  }
+  .close-button:after {
+    transform: rotate(-45deg);
+  }
