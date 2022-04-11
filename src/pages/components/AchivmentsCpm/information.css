@@ -110,10 +110,22 @@
         width: 80%;
         border: none;
     }
+
+    .inside-container ul li{
+        font-size: 17px;
+    }
     .information-title{
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+    }
+
+    .inside-container .events-repeateable ul{
+        margin: .5em 0px
+    }
+
+    .achivements-title {
+        font-size: 18px;
     }
 }
 

@@ -129,9 +129,25 @@ html {
     }
 }
 
-@media screen and (min-width: 1960px){
+@media  and (min-width: ) {
+    
+}
+
+@media screen and (min-width: 1959px){
     .container{
         max-width: 1800px;
+    }
+}
+
+@media screen and (min-width: 2140px){
+    .container{
+        max-width: 2000px
+    }
+}
+
+@media screen and (min-width: 2549px ){
+    .container{
+        max-width: 2300px;
     }
 }
 

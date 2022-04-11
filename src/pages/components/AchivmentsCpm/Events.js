@@ -40,7 +40,7 @@ export const Events = ({ dva, tre, penal }) => {
                                                         <img src="/images/achivements-event/calendar.svg" alt="data" className="achivements-icons"></img>
                                                     </span>
                                                     <span>Дата:</span>
-                                                    <span class="event-item-value">12.02.2022</span>
+                                                    <span class="event-item-value">{e.date}</span>
                                                 </li>
 
                                                 <li>
@@ -48,7 +48,7 @@ export const Events = ({ dva, tre, penal }) => {
                                                         <img src="/images/achivements-event/goal.svg" alt="goal"></img>
                                                     </span>
                                                     <span>Забито:</span>
-                                                    <span class="event-item-value">12</span>
+                                                    <span class="event-item-value">{e.zabito}</span>
                                                 </li>
 
                                                 <li>
@@ -56,7 +56,7 @@ export const Events = ({ dva, tre, penal }) => {
                                                         <img src="/images/achivements-event/spin.svg" alt="spin"></img>
                                                     </span>
                                                     <span>Пропущенно:</span>
-                                                    <span class="event-item-value">22</span>
+                                                    <span class="event-item-value">{e.propush}</span>
                                                 </li>
 
                                                 <li>
@@ -64,7 +64,7 @@ export const Events = ({ dva, tre, penal }) => {
                                                         <img src="/images/achivements-event/badge.svg" alt="badge"></img>
                                                     </span>
                                                     <span>Общая оценка:</span>
-                                                    <span class="event-item-value">2</span>
+                                                    <span class="event-item-value">{e.mark}</span>
                                                 </li>
                                             </ul>
                                         )
