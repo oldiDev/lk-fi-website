@@ -24,6 +24,7 @@ export const Stats = ({ stats }) => {
                         <div>
                             <span className="my-stats-label">Удар</span>
                             <Chart
+                                className="stats-chart"
                                 width={"470px"}
                                 height={"357px"}
                                 chartType="LineChart"
@@ -45,7 +46,7 @@ export const Stats = ({ stats }) => {
                         <div>
                             <span className="my-stats-label">Скорость</span>
                             <Chart
-                                className="my-stats-graph"
+                                className="stats-chart"
                                 width={"470px"}
                                 height={"357px"}
                                 chartType="LineChart"
@@ -65,7 +66,7 @@ export const Stats = ({ stats }) => {
                         <div>
                             <span className="my-stats-label">Прыжок</span>
                             <Chart
-                                className="my-stats-chart-graph"
+                                className="stats-chart"
                                 width={"470px"}
                                 height={"357px"}
                                 chartType="LineChart"
@@ -85,6 +86,7 @@ export const Stats = ({ stats }) => {
                         <div>
                             <span className="my-stats-label">Реакция</span>
                             <Chart
+                                className="stats-chart"
                                 width={"470px"}
                                 height={"357px"}
                                 chartType="LineChart"

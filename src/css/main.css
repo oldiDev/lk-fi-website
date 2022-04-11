@@ -6054,12 +6054,6 @@ div[class*="col"]:nth-of-type(4n + 4) .info-inner {
     border-bottom: 1px solid #25BA00;
 }
 
-.my-stats-graph{
-    /* width: 428px;
-    height: 252px; */
-    justify-content: left;
-}
-
 @media screen and (max-width: 992px){
     .my-stats-chart{
         display: block;
@@ -6427,13 +6421,15 @@ div[class*="col"]:nth-of-type(4n + 4) .info-inner {
     height: 15em;
 }
 
-@media screen and (max-width:425px){
+@media screen and (max-width:426px){
     .before-footer{
         height: 10em;
     }
 
-    .{
-
+    .stats-chart{
+        transform: scale(0.8, 0.8);
+        margin-left: -10%;
     }
     
 }
+
