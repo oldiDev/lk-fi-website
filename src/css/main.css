@@ -111,6 +111,7 @@ html {
     }
 }
 
+
 @media (min-width: 1200px) {
     .container {
         max-width: 1150px;
@@ -129,10 +130,6 @@ html {
     }
 }
 
-@media  and (min-width: ) {
-    
-}
-
 @media screen and (min-width: 1959px){
     .container{
         max-width: 1800px;
@@ -148,6 +145,12 @@ html {
 @media screen and (min-width: 2549px ){
     .container{
         max-width: 2300px;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .container{
+        margin-left: 3%;
     }
 }
 
@@ -187,7 +190,7 @@ html {
 
 @media screen and (max-width: 576px) {
     .middle_stats-container{
-        width: 80%;
+        width: 90%;
     }
     .middle_stats-container ul{
         flex-direction: column;
@@ -1822,18 +1825,13 @@ section {
 }
 
 @media screen and (max-width: 1200px) {
-    .header-wrapper {
-       
-    }
-
-    .header-wrapper>.follow-area {}
 
     .header-wrapper .icons_header_right_phone_email {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        width: 100px;
+        /* width: 100px; */
         height: 24px;
         left: 108px;
         top: 15px;
@@ -1855,7 +1853,7 @@ section {
     justify-content: space-between;
     align-items: center;
     padding: 0px;
-    width: 377px;
+    width: fit-content;
     height: 24px;
     left: 108px;
     top: 15px;
@@ -1956,6 +1954,12 @@ footer {
 @media screen and (max-width: 991px) {
     .footer-content{
         display: none;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .social-text{
+        font-size: 16px;
     }
 }
 
@@ -5623,6 +5627,7 @@ div[class*="col"]:nth-of-type(4n + 4) .info-inner {
 }
 
 .custom-button:hover {
+    color: #25BA00;
     transition: all ease-in-out 100ms;
     transform: scale(1);
 }
@@ -6065,6 +6070,13 @@ div[class*="col"]:nth-of-type(4n + 4) .info-inner {
     margin-left: 8% 
 }
 
+@media screen and (max-width: 430px) {
+    .long-green-line {
+        margin-left: 3%;
+        width: 90%
+    }
+}
+
 .my-stats-chart{
     display: flex;
     justify-content: space-between;
@@ -6105,6 +6117,12 @@ div[class*="col"]:nth-of-type(4n + 4) .info-inner {
     letter-spacing: 0.03em;
     color: #2D2D2D;
     padding-left: 10px;
+}
+
+@media screen and (max-width: 430px) {
+    .achivements-container .achivements-value {
+        font-size: 16px;
+    }
 }
 
 .achivements-title{
@@ -6169,12 +6187,17 @@ div[class*="col"]:nth-of-type(4n + 4) .info-inner {
 }
 
 .single-tournament-content{
+    margin-top: 2em;
     padding-left: 1em;
 }
 
 @media screen and (max-width: 430px) {
     .single-tournament-content{
         margin-top: 5.2em
+    }
+
+    .tournament-content {
+        padding-left: unset;
     }
 }
 
@@ -6444,13 +6467,10 @@ div[class*="col"]:nth-of-type(4n + 4) .info-inner {
 }
 
 .before-footer{
-    height: 15em;
+    height: 40vh;
 }
 
 @media screen and (max-width:430px){
-    .before-footer{
-        height: 10em;
-    }
 
     .stats-chart{
         transform: scale(0.8, 0.8);
