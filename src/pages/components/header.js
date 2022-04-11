@@ -97,8 +97,8 @@ export const SiteHeader = () => {
                             <div class='menu-button'></div>
                         </label>
                         <ul class="menu-resized">
-                            <li>
-                                <a href={HOMEPAGE_ROUTE + "/" + it_number} >
+                            <li id="menu-resized-first">
+                                <a href={HOMEPAGE_ROUTE + "/" + it_number}>
                                     Главная
                                 </a>
                             </li>

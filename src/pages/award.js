@@ -90,7 +90,7 @@ export const Award = () => {
             <SiteHeader />
             <body>
                 <div class="container">
-                    <div class="tournament-content">
+                    <div class="single-tournament-content">
                         <div class="achivements-header">
                             <Training />
                             <FullInformation />
