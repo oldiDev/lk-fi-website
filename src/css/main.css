@@ -3121,12 +3121,13 @@ g circle {
     }
 }
 
-@media (max-width: 575px) {
+@media (max-width: 576px) {
     .banner-section-2 {
         padding: 100px 0 50px;
     }
     .banner-section-2 .container-banner {
-        display: block;
+        /* display: block; */
+        flex-direction:  column-reverse;
         padding-left: 30px
     }
 }
@@ -3153,7 +3154,10 @@ g circle {
 
 @media screen and (max-width: 576px) {
     .avatar{
-        display: none;
+        height: 200px;
+        width: 200px;
+        border-width: 10px;
+        margin-bottom: 20px;
     }
 }
 
@@ -5610,14 +5614,6 @@ div[class*="col"]:nth-of-type(4n + 4) .info-inner {
 }
 
 
-.custom-button:hover {
-    color: #000;
-    padding: 5px;
-    background-color: #25BA00;
-    border-color: #25BA00;
-    box-shadow: none;
-}
-
 
 @media (max-width: 575px) {
     .custom-button {
@@ -5626,17 +5622,15 @@ div[class*="col"]:nth-of-type(4n + 4) .info-inner {
     }
 }
 
-.custom-button.active {
-    color: #000;
-    background-color: #25BA00;
-    border-color: #25BA00;
-    box-shadow: none;
+.custom-button:hover {
+    transition: all ease-in-out 100ms;
+    transform: scale(1);
 }
 
-.custom-button.active:hover {
-    background: transparent;
-    border: 1px solid rgba(255, 255, 255, 0.18);
+.custom-button:active {
+    transform: scale(0.98);
 }
+
 
 .load-wrapper {
     margin-top: 40px;

@@ -86,9 +86,9 @@ export const SiteHeader = () => {
                             </div>
 
                             <div class="header-right">
-                                <a href="https://krasnodar-fs.ru/" class="custom-button">
+                                <a href="mailto: footme@gmail.com" class="custom-button">
                                     <Icon className="icon-phone-email" icon="bx:bx-envelope-open" />
-                                    <span class="header-link">https://krasnodar-fs.ru/</span>
+                                    <span class="header-link">footme@gmail.com</span>
                                 </a>
                             </div>
                         </div>
