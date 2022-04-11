@@ -1,4 +1,4 @@
-/*!
+!
  * Bootstrap v4.3.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors
  * Copyright 2011-2019 Twitter, Inc.
@@ -208,10 +208,10 @@ caption {
 th {
   text-align: inherit;
 }
-label {
+/* label {
   display: inline-block;
   margin-bottom: 0.5rem;
-}
+} */
 button {
   border-radius: 0;
 }
@@ -489,7 +489,7 @@ pre code {
   max-height: 340px;
   overflow-y: scroll;
 }
-.container {
+/* .container {
   width: 100%;
   margin-right: 8%;
   margin-left: 8%;
@@ -511,9 +511,10 @@ pre code {
 }
 @media (min-width: 1200px) {
   .container {
-    max-width: 1200px;
+    max-width: 1150px;
   }
-}
+} */
+
 .container-fluid {
   width: 100%;
   padding-right: 15px;
@@ -9213,4 +9214,4 @@ a.text-dark:hover {
     border-color: #dee2e6;
   }
 }
-/*# sourceMappingURL=bootstrap.min.css.map */
+

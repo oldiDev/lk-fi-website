@@ -84,11 +84,76 @@ html {
 #root{
     overflow: hidden;
 }
+
+.container {
+    width: 100%;
+    margin-right: 8%;
+    margin-left: 8%;
+    align-self: center;
+    align-items: center;
+}
+
+@media (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1150px;
+    }
+}
+
+@media (min-width: 1450px){
+    .container{
+        max-width: 1400px;
+    }
+}
+
+@media screen and (min-width: 1630px) {
+    .container{
+        max-width: 1580px;
+    }
+}
+
+@media  and (min-width: ) {
+    
+}
+
+@media screen and (min-width: 1959px){
+    .container{
+        max-width: 1800px;
+    }
+}
+
+@media screen and (min-width: 2140px){
+    .container{
+        max-width: 2000px
+    }
+}
+
+@media screen and (min-width: 2549px ){
+    .container{
+        max-width: 2300px;
+    }
+}
+
+
 .enter-header-buttom {
     border: 1px solid rgba(255, 255, 255, 0.18);
-
-
-
 }
 
 .middle_stats-container {
@@ -475,9 +540,10 @@ html {
  * Remove the margin in all browsers.
  */
 body {
+    align-items: center;
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", "GothamPro";
-    max-width: 1400;
+    max-width: 2000;
 }
 
 /**
@@ -1671,7 +1737,7 @@ section {
 @media (max-width: 575px) {
     .section-header-2 {
         padding: 15px 0;
-        margin-bottom: 25px;
+        margin: 15px 0;
     }
 
     .section-header-2 .stroke-text {
@@ -1818,6 +1884,8 @@ section {
 }
 
 footer {
+    position: relative;
+    bottom: 0;
     font: normal 18px 'GothamPro' white;
     background-color: #2D2D2D;
 }
@@ -2504,6 +2572,10 @@ footer {
   }
 
 @media (max-width: 991px) {
+
+    #menu-resized-first{
+        border-top: 1px solid black
+    }
     .sticky-test{
         display: none;
     }
@@ -2526,6 +2598,7 @@ footer {
         width: 100%;
         justify-content: center;
         align-items: center;
+        border-top: 1px solid black
     }
 
     #menu-toggle ~ .menu-resized li {
@@ -2537,7 +2610,7 @@ footer {
     }
 
     #menu-toggle:checked ~ .menu-resized li {
-        border: 1px solid #333;
+        border-bottom: 1px solid black;
         height: 2.5em;
         padding: 0.5em;
         transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
@@ -2550,15 +2623,28 @@ footer {
         padding: 0.5em 0;
         width: 100%;
         color: #25BA00;
-        background-color: #222;
+        background-color: white;
+    }
+
+    .menu-resized > li span{
+        color: black;
+        padding: 0px 5px;
+    }
+
+    .menu-resized > li a:hover{
+        color: white;
     }
 
     .menu-resized > li:not(:last-child) {
-        border-bottom: 1px solid #444;
+        border-bottom: 1px solid black;
     }
 }
 
 @media (max-width: 767px) {
+
+    #menu-resized-first{
+        border-top: 1px solid black
+    }
     .sticky-test{
         display: none;
     }
@@ -2582,6 +2668,7 @@ footer {
         width: 100%;
         justify-content: center;
         align-items: center;
+        border-top: 1px solid black;
     }
 
     #menu-toggle ~ .menu-resized li {
@@ -2593,7 +2680,7 @@ footer {
     }
 
     #menu-toggle:checked ~ .menu-resized li {
-        border: 1px solid #333;
+        border-bottom: 1px solid black;
         height: 2.5em;
         padding: 0.5em;
         transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
@@ -2606,12 +2693,13 @@ footer {
         padding: 0.5em 0;
         width: 100%;
         color: #25BA00;
-        background-color: #222;
+        background-color: white;
     }
 
     .menu-resized > li:not(:last-child) {
-        border-bottom: 1px solid #444;
+        border-bottom: 1px solid black;
     }
+
 }
 
 
@@ -2839,6 +2927,27 @@ footer {
     color: #25BA00;
     text-transform: uppercase;
     cursor: pointer;
+}
+
+@media screen and (max-width: 576px) {
+    .text-theme {
+        font-size: 25px;
+    }
+    
+    .text-theme-show{
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width: 426px) {
+    .text-theme {
+        font-size: 22px;
+    }
+    
+    .text-theme-show{
+        font-size: 22px;
+    }
+
 }
 
 @media (min-width: 992px) {
@@ -4654,6 +4763,20 @@ div[class*="col"]:nth-of-type(4n + 4) .info-inner {
     align-items: center;
 }
 
+@media screen and (max-width: 576px) {
+    .schedule ul {
+        flex-direction: column;
+    }
+
+    .schedule ul li {
+        margin: .5em;
+    }
+
+    #schedule-second{
+        padding: unset !important;
+    }
+}
+
 
 .schedule ul li {
     display: flex;
@@ -5911,7 +6034,7 @@ div[class*="col"]:nth-of-type(4n + 4) .info-inner {
 
 .long-green-line {
     height: 1px;
-    width: 83%;
+    width: 80%;
     background-color: #25BA00;
     margin-left: 8% 
 }
@@ -5940,6 +6063,14 @@ div[class*="col"]:nth-of-type(4n + 4) .info-inner {
 @media screen and (max-width: 992px){
     .my-stats-chart{
         display: block;
+        padding-left: 0;
+    }
+}
+
+@media screen  and (max-width: 426px) {
+    .my-stats-chart .my-stats-label {
+        font-size: 17px;
+        padding-bottom: 3px;
     }
 }
 
@@ -5971,6 +6102,12 @@ div[class*="col"]:nth-of-type(4n + 4) .info-inner {
     font-weight: bold;
 }
 
+@media screen and (max-width: 426px) {
+    .achivements-title-show {
+        font-size: 18px;
+    }
+}
+
 .achivements-icons{
     width: 30px;
     height: 30px;
@@ -5994,6 +6131,10 @@ div[class*="col"]:nth-of-type(4n + 4) .info-inner {
     .achivements-header{
         flex-direction: column;
     }
+
+    .achivements-information {
+        display: none;
+    }
 }
 
 .achivements-header {
@@ -6005,6 +6146,16 @@ div[class*="col"]:nth-of-type(4n + 4) .info-inner {
 
 .tournament-content{
     padding-left: 1em;
+}
+
+.single-tournament-content{
+    padding-left: 1em;
+}
+
+@media screen and (max-width: 426px) {
+    .single-tournament-content{
+        margin-top: 5.2em
+    }
 }
 
 .section-blog-array{
@@ -6063,6 +6214,18 @@ div[class*="col"]:nth-of-type(4n + 4) .info-inner {
     color: white;
 }
 
+@media screen and (max-width: 426px) {
+    .blog-body-news{
+        padding: 10px;
+        font-size: 12px;
+        margin-top: 5px;
+    }
+
+    .section-blog-content{
+        margin-left: .5em;
+    }
+}
+
 .blog-body-content{
     font-family: 'GothamPro';
     font-size: 14px;
@@ -6076,6 +6239,17 @@ div[class*="col"]:nth-of-type(4n + 4) .info-inner {
     letter-spacing: 0.05em;
     text-transform: uppercase;
     margin-bottom: 5px;
+}
+
+@media screen and (max-width: 576px) {
+    #post-title{
+        font-size: 15px;
+        line-height: 21px;
+    }
+
+    .blog-body-content {
+        font-size: 12px;
+    }
 }
 
 #blog-green-line{
@@ -6099,6 +6273,7 @@ div[class*="col"]:nth-of-type(4n + 4) .info-inner {
     }
     .section-blog-item{
         width: 80%;
+        height: 360px;
     }
 }
 
@@ -6116,12 +6291,20 @@ div[class*="col"]:nth-of-type(4n + 4) .info-inner {
     letter-spacing: 0.05em;
     text-transform: uppercase;
     position: relative;
-    margin: 1.5em auto .5em auto;
+    margin: 2.5em auto .5em auto;
     justify-self: center;
     width: fit-content;
 }
 .blog-title span{
     font-weight: bold;
+}
+
+@media screen and (max-width: 426px) {
+    .blog-title{
+        font-size: 20px;
+        line-height: 20px;
+        margin-top: 3.5em;
+    }
 }
 
 .single-blog-date{
@@ -6139,6 +6322,12 @@ div[class*="col"]:nth-of-type(4n + 4) .info-inner {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+@media screen and (max-width: 426px) {
+    .single-blog-date{
+        font-size: 15px;
+    }
 }
 
 
@@ -6169,6 +6358,18 @@ div[class*="col"]:nth-of-type(4n + 4) .info-inner {
     line-height: 24px;
     letter-spacing: 0.03em;
     color: #1D2130;
+}
+
+@media screen and (max-width: 426px) {
+
+    .single-blog-content {
+        max-width: 80%;
+    }
+
+    .single-blog-content span{
+        font-size: 15px;
+        line-height: 22px;
+    }
 }
 
 .information-page-item{
@@ -6220,4 +6421,19 @@ div[class*="col"]:nth-of-type(4n + 4) .info-inner {
 #container-shedule {
     margin-top: 1.5em;
     margin-bottom: 1.5em;
+}
+
+.before-footer{
+    height: 15em;
+}
+
+@media screen and (max-width:425px){
+    .before-footer{
+        height: 10em;
+    }
+
+    .{
+
+    }
+    
 }

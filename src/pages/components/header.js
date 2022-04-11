@@ -1,6 +1,6 @@
 import {
   /* ADMIN_ROUTE, */ AUTH_ROUTE,
-  /* AWARD_ROUTE, */ BLOG_ROUTE,
+    AWARD_ROUTE, BLOG_ROUTE,
     CONTACT_ROUTE,
     HOMEPAGE_ROUTE,
 } from "./utils/consts";
@@ -38,19 +38,13 @@ export const SiteHeader = () => {
 
     payDay.map((e, i) => {
         if (it_number == e.id) {
-            lastPay = e.date_of_last_pay;
+            lastPay = e.date_of_last_pay.split('-').reverse().join('.');
             countLessons = e.number_of_lessons;
             variant_comment = e.variant_of_subscription;
         }
     });
-    /* console.log(lastPay , " " , variant_comment); */
-
-    /* console.log("from header",it_number); */
     return (
         <div className="header">
-            {/* <a href="#0" class="scrollToTop">
-                <i class="fas fa-angle-up"></i>
-            </a> */}
             <header class="header-section-2 ">
                 <div class="container">
                     <div class="header-wrapper">
@@ -103,29 +97,28 @@ export const SiteHeader = () => {
                             <div class='menu-button'></div>
                         </label>
                         <ul class="menu-resized">
-                            <li>
-                                <a
-                                    href={HOMEPAGE_ROUTE + "/" + it_number}
-                                >
+                            <li id="menu-resized-first">
+                                <a href={HOMEPAGE_ROUTE + "/" + it_number}>
                                     Главная
                                 </a>
                             </li>
                             <li>
-                                <a
-                                    href={BLOG_ROUTE + "/" + it_number}
-                                >
+                                <a href={BLOG_ROUTE + "/" + it_number} >
                                     Информация
                                 </a>
                             </li>
                             <li>
-                                <a
-                                    href={CONTACT_ROUTE + "/" + it_number}
-                                >
+                                <a href={CONTACT_ROUTE + "/" + it_number}>
                                     Расписание
                                 </a>
                             </li>
                             <li>
-                                    <a href={AUTH_ROUTE}>Выход</a>
+                                <a href={AWARD_ROUTE + '/' + it_number}>
+                                    Достижения
+                                </a>
+                            </li>
+                            <li>
+                                <a href={AUTH_ROUTE}>Выход</a>
                             </li>
                             <li>
                                 <span>Крайняя оплата:</span>
@@ -164,38 +157,37 @@ export const SiteHeader = () => {
                                     />
                                 </a>
                             </div>
-                            <ul class="menu">
+                            <ul class="header-menu">
                                 <li>
-                                    <a
-                                        href={HOMEPAGE_ROUTE + "/" + it_number}
-                                        id="main-page-button"
-                                    >
+                                    <a href={HOMEPAGE_ROUTE + "/" + it_number} id="main-page-button" >
                                         Главная
                                     </a>
                                 </li>
                                 <li>
-                                    <a
-                                        href={BLOG_ROUTE + "/" + it_number}
-                                        id="information-button"
-                                    >
+                                    <a href={BLOG_ROUTE + "/" + it_number} id="information-button">
                                         Информация
                                     </a>
                                 </li>
                                 <li>
-                                    <a
-                                        href={CONTACT_ROUTE + "/" + it_number}
-                                        id="schedule-button"
-                                    >
+                                    <a href={CONTACT_ROUTE + "/" + it_number} id="schedule-button">
                                         Расписание
                                     </a>
                                 </li>
-                                <li class="enter-header-button">
-                                    <a href={AUTH_ROUTE}>Выход</a>
+                                <li>
+                                    <a href={AWARD_ROUTE + '/' + it_number} id='award-button'>
+                                        Достижения
+                                    </a>
                                 </li>
+                                {/* <li class="enter-header-button">
+                                    <a href={AUTH_ROUTE}>Выход</a>
+                                </li> */}
                                 {/*                                             <li>
                                                     <a href="#0" >Регистрация</a>
                                                 </li> */}
                             </ul>
+                            <div class="enter-header-button">
+                                <a href={AUTH_ROUTE}>Выход</a>
+                            </div>
                         </div>
                     </div>
                 </div>

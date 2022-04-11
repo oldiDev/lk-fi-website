@@ -1,6 +1,6 @@
 
 import { Auth } from "../Auth"
-import { award } from "../award"
+import { Award } from "../award"
 import PostList from "../blog"
 import { Blog_Single } from "../blog-single"
 import { Contact } from "../contact"
@@ -23,8 +23,8 @@ export const publicRoutes = [
         Component : PostList
     },
     {
-        path: AWARD_ROUTE ,
-        Component : award  
+        path: AWARD_ROUTE + '/:id',
+        Component : Award  
     },
     {
         path: CONTACT_ROUTE + '/:id',

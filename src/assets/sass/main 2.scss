@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;0,500;0,600;0,700;1,500;1,600;1,700&family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap');
+/*
+Template Name: Footme - Football Player Portfolio HTML Template
+Template URI: http://template.viserlab.com/footme
+Author: viserlab
+Author URI: https://themeforest.net/user/viserlab
+Version: 1.0.0
+Text Domain: 
+*/
+/*
+///// CSS Index \\
+01. Reset CSS Start
+---------------------------
+02. General CSS
+---------------------------
+03. Section Header CSS
+---------------------------
+04. Social Icons CSS
+---------------------------
+05. Partner  Section CSS
+---------------------------
+06. Award Section CSS
+---------------------------
+----Award Section 2 CSS
+---------------------------
+07. Banner  Section CSS
+---------------------------
+08. Client  Section CSS
+---------------------------
+09. Video Blog Section CSS
+---------------------------
+10. Tweet  Section CSS
+---------------------------
+11. Skill  Section CSS
+---------------------------
+12. Gallery  Section CSS
+---------------------------
+----Gallery Section 2 CSS
+---------------------------
+13. Video Fluid  Section CSS
+---------------------------
+14. History Section CSS
+---------------------------
+15. Achivement Section CSS
+---------------------------
+16. About Section CSS
+---------------------------
+17. Information Section CSS
+---------------------------
+18. Record Section CSS
+---------------------------
+19. Skill Progress  Section CSS
+---------------------------
+20. Blog  Section CSS
+---------------------------
+21. inner ripple  Section CSS
+---------------------------
+*/
+@import '_abstracts/_mixins';
+@import '_abstracts/_variables';
+@import '_base/_reset';
+@import '_base/_global';
+@import '_base/_typography';
+@import '_base/_about';
+@import '_layout/_footer';
+@import '_layout/_forms';
+@import '_layout/_header';
+@import '_layout/_banner';
+@import '_layout/_sidebar';
+@import '_layout/_section';
+@import '_layout/_animation';
+@import '_layout/_blog';
+@import '_components/_buttons';
+@import '_components/_backcontrol';
+.preloader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    @extend %flex;
+    justify-content: center;
+    align-items: center;
+    background: $body-bg;
+    z-index: 999;
+}
+.loader  {
+    animation: rotate 1s infinite;  
+    height: 50px;
+    width: 50px;
+}
+
+.loader:before,
+.loader:after {   
+    border-radius: 50%;
+    content: '';
+    display: block;
+    height: 20px;  
+    width: 20px;
+}
+.loader:before {
+    animation: ball1 1s infinite;  
+    background-color: #cb2025;
+    box-shadow: 30px 0 0 #f8b334;
+    margin-bottom: 10px;
+}
+.loader:after {
+    animation: ball2 1s infinite; 
+    background-color: #00a096;
+    box-shadow: 30px 0 0 #97bf0d;
+}
+
+@keyframes rotate {
+    0% { 
+        -webkit-transform: rotate(0deg) scale(0.8); 
+        -moz-transform: rotate(0deg) scale(0.8);
+    }
+    50% { 
+        -webkit-transform: rotate(360deg) scale(1.2); 
+        -moz-transform: rotate(360deg) scale(1.2);
+    }
+    100% { 
+        -webkit-transform: rotate(720deg) scale(0.8); 
+        -moz-transform: rotate(720deg) scale(0.8);
+    }
+}
+
+@keyframes ball1 {
+    0% {
+        box-shadow: 30px 0 0 #f8b334;
+    }
+    50% {
+        box-shadow: 0 0 0 #f8b334;
+        margin-bottom: 0;
+        -webkit-transform: translate(15px,15px);
+        -moz-transform: translate(15px, 15px);
+    }
+    100% {
+        box-shadow: 30px 0 0 #f8b334;
+        margin-bottom: 10px;
+    }
+}
+
+@keyframes ball2 {
+    0% {
+        box-shadow: 30px 0 0 #97bf0d;
+    }
+    50% {
+        box-shadow: 0 0 0 #97bf0d;
+        margin-top: -20px;
+        -webkit-transform: translate(15px,15px);
+        -moz-transform: translate(15px, 15px);
+    }
+    100% {
+        box-shadow: 30px 0 0 #97bf0d;
+        margin-top: 0;
+    }
+}

@@ -17,6 +17,7 @@ import { Tournament } from "./Tournament";
 export const Home = () => {
 
     const params = useParams()
+    console.log(params);
     const it_number = params.id;
 
     const [player, setPlayer] = React.useState([]);
@@ -39,12 +40,25 @@ export const Home = () => {
     var star = [];
     var name_id;
 
-    player.map((e, i) => { if (e.id == it_number) { name_id = e.lastname + ' ' + e.firstname + ' ' + e.id + ' '; firstname = e.firstname; lastname = e.lastname; position = e.playerPosition; avatar = e.avatar?.url; star = e.Statistics; birthday = e.birthday; lead_leg = e.lead_leg; team = e.team; console.log(e) } })
+    player.map((e, i) => {
+        if (e.id == it_number) {
+            name_id = e.lastname + ' ' + e.firstname + ' ' + e.id + ' ';
+            firstname = e.firstname;
+            lastname = e.lastname;
+            position = e.playerPosition;
+            avatar = e.avatar?.url;
+            star = e.Statistics;
+            birthday = e.birthday;
+            lead_leg = e.lead_leg;
+            team = e.team;
+            console.log(e)
+        }
+    })
 
     if (avatar != null) {
         avatar = "https://cdn.lk-ft.ru" + avatar;
     } else {
-        avatar = "/images/banner/head.png";
+        avatar = "/images/banner/banner.png";
     }
 
 
@@ -53,9 +67,15 @@ export const Home = () => {
 
             <SiteHeader />
             <body>
-                <BannerPlayer firstname={firstname} lastname={lastname} position={position} avatar={avatar} birthday={birthday} lead_leg={lead_leg} team={team} />
-                {/*  <SectionAbout /> 
-            <SectionHistory />  */}
+                <BannerPlayer
+                    firstname={firstname}
+                    lastname={lastname}
+                    position={position}
+                    avatar={avatar}
+                    birthday={birthday}
+                    lead_leg={lead_leg}
+                    team={team}
+                />
                 <div className="long-green-line"></div>
                 <Tournament name_id={name_id} />
                 <div className="long-green-line"></div>

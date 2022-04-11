@@ -1,110 +1,108 @@
 import React, { useState } from "react";
-import list_awards from "./awards.json";
+import axios from "axios";
+import { Camp } from "./components/AchivmentsCpm/Camp";
+import { Events } from "./components/AchivmentsCpm/Events";
+import { FullGradde } from "./components/AchivmentsCpm/FullGrade";
+import { Training } from "./components/AchivmentsCpm/Training";
+import { SiteFooter } from "./components/footer";
+import { SiteHeader } from "./components/header";
+import { FullInformation } from "./components/AchivmentsCpm/FullInformation";
+import { useParams } from "react-router";
 
 
-export const award = () => {
-    return (
-        <>
-            <section class="hero-section">
-                <a href="#about" class="banner-icon">
-                    <i class="flaticon-down-arrow"></i>
-                </a>
-                <div class="container">
-                    <div class="hero-content">
-                        <h1 class="title" data-bg="Награды"><span>Награды</span></h1>
-                        <ul class="breadcrumb">
-                            <li>
-                                <a href="/home">Домашняя Страница</a>
-                            </li>
-                            <li>
-                                <span>Награды</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
+export const Award = () => {
 
-            <section class="record-section padding-top padding-bottom" id="about">
-                <div class="container">
-                    <div class="mb-30-none">
-                        <Pagination_Award />
-                    </div>
-                </div>
-            </section>
-        </>
-    )
-}
+    const params = useParams()
+    const it_number = params.id;
 
+    const [footballPlayer, setFootballPlayer] = React.useState([]);
+    const [loading, setLoading] = React.useState([])
+    const [player, setPlayer] = React.useState([]);
 
-const Awards_Component = ({ posts }) => {
-    return (
-        <>
-            {
-                posts.map((e, i) => <div key={i} class="award-item">
-                    <div class="award-thumb">
-                        <div class="thumb">
-                            <img src={e.img} alt="award" />
-                        </div>
-                        <div class="cont">
-                            <span>x</span>{e.count}
-                        </div>
-                    </div>
-                    <div class="award-content">
-                        <h4 class="title">{e.name}</h4>
-                        <p>{e.post}</p>
-                    </div>
-                </div>)
+    React.useEffect(() => {
+        const fetchStat = async () => {
+            setLoading(true)
+            const res = await axios.get('https://cdn.lk-ft.ru/footballers');
+            setFootballPlayer(res.data)
+            setLoading(false)
+        }
+
+        fetchStat();
+    }, []);
+
+    let name_id;
+
+    footballPlayer.map((e, i) => {
+        if (e.id == it_number) {
+            name_id = e.lastname + ' ' + e.firstname + ' ' + e.id + ' '
+        }
+    })
+
+    React.useEffect(() => {
+        const fetchStat = async () => {
+            const res = await axios.get('https://cdn.lk-ft.ru/players');
+            setPlayer(res.data)
+        }
+
+        fetchStat();
+    }, []);
+
+    console.log(player)
+
+    var twoVSTwo = [];
+    var two = 0, tre = 0, penal = 0;
+    var threeVsThree = [];
+    var penalty = [];
+
+    player.map((e, i) => {
+        if (e.fullname == name_id) {
+            if (e.last_statements == "2 VS 2") {
+                twoVSTwo.push({
+                    date: e.age,
+                    zabito: e.phone,
+                    propush: e.insta,
+                    mark: e.adresse
+                })
+                two += Number(e.adresse);
             }
-
-        </>
-    )
-}
-const Pagination = ({ awardPerPage, totalAwards, paginate }) => {
-
-    const pageNumbers = [];
-
-    for (let i = 1; i <= Math.ceil(totalAwards / awardPerPage); i++) {
-        pageNumbers.push(i);
-
-    }
-
-    return (
-        <nav>
-            <ul class="pagination">
-                {pageNumbers.map(number =>
-
-                    <li key={number}  >
-                        <a onClick={() => paginate(number)} href="#0" >{number}</a>
-                    </li>
-
-                )}
-            </ul>
-        </nav>
-    )
-}
-export default function Pagination_Award() {
-
-    const [currentPage, setCurrentPage] = useState(1);
-    const [awardPerPage] = useState(3);
-
-    //get current award
-    const indexOfLastAward = currentPage * awardPerPage;
-    const indexOfFirstAward = indexOfLastAward - awardPerPage;
-    const currentAward = list_awards.player_award.slice(indexOfFirstAward, indexOfLastAward);
-
-    // Change Page
-
-    const paginate = (pageNumber) => setCurrentPage(pageNumber);
+            if (e.last_statements == '3 VS 3') {
+                threeVsThree.push({
+                    date: e.age,
+                    zabito: e.phone,
+                    propush: e.insta,
+                    mark: e.adresse
+                })
+                tre += Number(e.adresse)
+            }
+            if (e.last_statements == "Пенальти") {
+                penalty.push({
+                    date: e.age,
+                    zabito: e.phone,
+                    propush: e.insta,
+                    mark: e.adresse
+                })
+                penal += Number(e.adresse)
+            }
+        }
+    })
     return (
         <>
-            <Pagination awardPerPage={awardPerPage} totalAwards={list_awards.player_award.length} paginate={paginate} />
-            <Awards_Component posts={currentAward} />
-            <Pagination awardPerPage={awardPerPage} totalAwards={list_awards.player_award.length} paginate={paginate} />
-
+            <SiteHeader />
+            <body>
+                <div class="container">
+                    <div class="single-tournament-content">
+                        <div class="achivements-header">
+                            <Training />
+                            <FullInformation />
+                        </div>
+                        <Camp />
+                        <Events dva={twoVSTwo} tre={threeVsThree} penal={penalty} />
+                        <FullGradde two={two} tre={tre} penal={penal} />
+                    </div>
+                </div>
+                <div class="before-footer"></div>
+            </body>
+            <SiteFooter />
         </>
     )
-
 }
-
-
-
