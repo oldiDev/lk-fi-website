@@ -129,6 +129,12 @@
     }
 }
 
+@media screen and (max-width: 321px) {
+    .event-item {
+        width: 250px;
+    }
+}
+
 .item-box{
     
     border: 1px solid;

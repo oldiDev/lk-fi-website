@@ -2908,6 +2908,7 @@ footer {
     }
 }
 
+
 .text-theme {
     left: 135px;
     font-family: "GothamPro";
@@ -2948,6 +2949,15 @@ footer {
         font-size: 22px;
     }
 
+}
+@media screen and (max-width: 321px) {
+    .text-theme {
+        font-size: 20px;
+    }
+    
+    .text-theme-show{
+        font-size: 20px;
+    }
 }
 
 @media (min-width: 992px) {
@@ -3008,7 +3018,7 @@ footer {
 @media (max-width: 575px) {
     .banner-content-2 {
         padding-left: 15px;
-        margin-bottom: 60px;
+        margin-bottom: 50px;
     }
 
     .banner-content-2 .title {
@@ -3019,6 +3029,17 @@ footer {
     .banner-content-2 .subtitle {
         font-size: 18px;
         margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 426px) {
+    .banner-content-2 .title {
+        font-size: 35px;
+        line-height: 45px;
+    }
+
+    .banner-content-2 .subtitle {
+        font-size: 16px;
     }
 }
 
@@ -3091,7 +3112,7 @@ g circle {
 
 @media (max-width: 767px) {
     .banner-section-2 {
-        padding: 100px 0 100px;
+        padding: 100px 0 70px;
         margin: 0px auto;
     }
 
@@ -3102,11 +3123,22 @@ g circle {
 
 @media (max-width: 575px) {
     .banner-section-2 {
-        padding: 180px 0 100px;
+        padding: 100px 0 50px;
     }
     .banner-section-2 .container-banner {
         display: block;
         padding-left: 30px
+    }
+}
+
+@media (max-width: 321px){
+
+    .banner-section-2{
+        padding: 100px 0  50px;
+    }
+
+    .banner-section-2 .container-banner{
+        margin: 0px 0px;
     }
 }
 
@@ -6431,5 +6463,12 @@ div[class*="col"]:nth-of-type(4n + 4) .info-inner {
         margin-left: -10%;
     }
     
+}
+
+@media screen and (max-width: 321px) {
+    .stats-chart{
+        transform: scale(0.7, 0.7);
+        margin-left: -15%;
+    }
 }
 
