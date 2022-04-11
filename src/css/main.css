@@ -1959,6 +1959,12 @@ footer {
     }
 }
 
+@media screen and (max-width: 430px) {
+    .social-text{
+        font-size: 16px;
+    }
+}
+
 .social-icons.choto {
     justify-content: flex-start;
 }
