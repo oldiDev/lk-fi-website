@@ -45,7 +45,7 @@ export const Auth = () => {
     return (
         <section class="auth-backround">
             <form class="auth-form" onSubmit={handleSubmit}>
-                <img id="auth-logo" src="/images/logo/logo_black.svg" alt="logo with black letters" />
+                <img id="auth-logo" src="/images/logo/logo-header.svg" alt="logo with black letters" />
                 <label className="auth-input-label">
                     <span>Почта</span>
                     <input

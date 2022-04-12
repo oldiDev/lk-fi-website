@@ -52,6 +52,9 @@ export const MiddleStats = ({ stats }) => {
                             <img src="/images/client/down-arrow.svg" alt="right-arrow" className="client-menu-arrow"></img>
                         </div>
                         <div class="middle_stats-container">
+                            <div>
+                                
+                            </div>
                             <ul>
                                 <li>
                                     <div>
@@ -79,7 +82,7 @@ export const MiddleStats = ({ stats }) => {
                                         <img src="/images/middle-stats/speed.svg"></img>
                                     </div>
                                     <div>Скорость:</div>
-                                    <div className="middle-stats-value">{middle_speed}</div>
+                                    <div className="middle-stats-value">{middle_speed} км/ч</div>
                                 </li>
                             </ul>
                         </div>

@@ -4,12 +4,9 @@ import { useParams } from "react-router";
 import { BannerPlayer } from "./components/bannerPlayer";
 import { SiteHeader } from "./components/header";
 import { SiteFooter } from "./components/footer";
-import { SectionBlog } from "./components/sectionBlog";
 import { Stats } from "./Stats";
 import axios from "axios";
-import { SelectionShedule } from "./components/schedule";
 import { MiddleStats } from "./MidleStats";
-import { Tournament } from "./Tournament";
 
 
 
@@ -17,7 +14,6 @@ import { Tournament } from "./Tournament";
 export const Home = () => {
 
     const params = useParams()
-    console.log(params);
     const it_number = params.id;
 
     const [player, setPlayer] = React.useState([]);
@@ -55,12 +51,7 @@ export const Home = () => {
         }
     })
 
-    if (avatar != null) {
-        avatar = "https://cdn.lk-ft.ru" + avatar;
-    } else {
-        avatar = "/images/banner/banner.png";
-    }
-
+    avatar = (avatar != null) ? "https://cdn.lk-ft.ru" + avatar : "/images/banner/banner.png";
 
     return (
         <>
@@ -68,18 +59,14 @@ export const Home = () => {
             <SiteHeader />
             <body>
                 <BannerPlayer
-                    firstname={firstname}
-                    lastname={lastname}
-                    position={position}
-                    avatar={avatar}
-                    birthday={birthday}
-                    lead_leg={lead_leg}
-                    team={team}
+                    firstname={ firstname }
+                    lastname={ lastname }
+                    position={ position }
+                    avatar={ avatar }
+                    birthday={ birthday }
+                    lead_leg={ lead_leg }
+                    team={ team }
                 />
-                <div className="container">
-                    <div className="long-green-line"></div>
-                </div>
-                <Tournament name_id={name_id} />
                 <div className="container">
                     <div className="long-green-line"></div>
                 </div>
@@ -88,14 +75,6 @@ export const Home = () => {
                     <div className="long-green-line"></div>
                 </div>
                 <MiddleStats stats={star} />
-                <div className="container">
-                    <div className="long-green-line"></div>
-                </div>
-                <SelectionShedule />
-                <div className="container">
-                    <div className="long-green-line"></div>
-                </div>
-                <SectionBlog />
                 <div className="container">
                     <div className="long-green-line"></div>
                 </div>

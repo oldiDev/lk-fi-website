@@ -11,7 +11,7 @@ export const SiteFooter = () => {
     return (
         <footer>
             <div class="footer-container">
-                <img src="/images/logo/logo_footer.svg" alt="footer-logo" class="footer-logo"></img>
+                <img src="/images/logo/logo-footer.svg" alt="footer-logo" class="footer-logo"></img>
                 <div class="footer-content">
                     Dempor pede libero dapi useu class venenatis ut bibendum quam ut nibh necm. NonhonPede mollis vel vitae dorpis Sed odio ultrices id, est eu mauris.
                 </div>

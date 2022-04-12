@@ -1889,6 +1889,8 @@ footer {
 }
 
 .footer-logo{
+    width: 79px;
+    height: 55px;
     grid-area: footer-logo;
     align-self: center;
     justify-self: flex-end;
@@ -3152,7 +3154,8 @@ g circle {
     height: 300px;
     width: 300px;
     border-radius: 50%;
-    object-fit: contain;
+    object-fit: cover;
+    object-position: 50% 20%;
     border: 20px solid #25BA00;
 }
 
@@ -6069,6 +6072,11 @@ div[class*="col"]:nth-of-type(4n + 4) .info-inner {
     background-color: #25BA00;
 }
 
+@media screen and (max-width: 576px) {
+    .long-green-line{
+        width: 90%;
+    }
+}
 
 .my-stats-chart{
     display: flex;
