@@ -16,86 +16,6 @@
     border-left: 1px solid black;
     position: static;
     flex: none;
-    order: 0;
-    flex-grow: 0;
-    margin: 0px 15px
-}
-
-#last-pay-header{
-    font-size: 14px;
-    color: black;
-    position: static;
-    width: 125px;
-    height: 14px;
-    left: 15px;
-    top: 0px; 
-    letter-spacing: 0.03em;
-    flex: none;
-    order: 0;
-    flex-grow: 0;
-    margin: 0px 5px;
-}
-
-#last-pay-value{
-    font-size: 14px;
-    color: black;
-    font-weight: bold;
-    position: static;
-    width: 84px;
-    height: 4px;
-    left: 5px;
-    top: 0px;
-    letter-spacing: 0.03em;
-    flex: none;
-    order: 1;
-    flex-grow: 0;
-    margin: 0px 5px;
-}
-
-#count-lessons-header{
-    font-size: 14px;
-    color: black;
-    position: static;
-    width: 101px;
-    height: 14px;
-    left: 0px;
-    top: 0px;
-    letter-spacing: 0.03em;
-    flex: none;
-    order: 0;
-    flex-grow: 0;
-    margin: 0px 5px;
-}
-#count-lessons-value{
-    font-size: 14px;
-    color: black;
-    position: static;
-    width: 46px;
-    height: 14px;
-    left: 106px;
-    top: 0px;
-    font-weight: bold;
-    flex: none;
-    order: 1;
-    flex-grow: 0;
-    margin: 0px 5px;
-}
-
-#variant-comment-header{
-    font-size: 14px;
-    color: black;
-    position: static;
-    width: 88px;
-    height: 14px;
-    left: 0px;
-    top: 0px;
-
-    letter-spacing: 0.03em;
-
-    flex: none;
-    order: 0;
-    flex-grow: 0;
-    margin: 0px 5px;
 }
 
 .header-menu{
@@ -171,4 +91,54 @@
 .enter-header-button a{
     color: white;
     font-weight: bold;
+}
+
+.header-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 5px;
+}
+
+.header-socials{
+    margin: 0px .3em;
+    width: 24px;
+    height: 24px;
+}
+
+.header-content ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-content ul li span{
+    margin: 0px .3em;
+}
+
+.header-content-label {
+    font-size: 14px;
+    line-height: 14px;
+    letter-spacing: 0.03em
+}
+
+.header-content-value {
+    font-size: 14px;
+    line-height: 14px;
+    letter-spacing: 0.03em;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 1200px) {
+    .follow-area, .header-content {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .header-container{
+        height: 45px;
+    }
 }

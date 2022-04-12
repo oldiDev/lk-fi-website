@@ -12,7 +12,7 @@ export const SiteFooter = () => {
     return (
         <footer>
             <div class="footer-container">
-                <img src="/images/logo/logo-footer.svg" alt="footer-logo" class="footer-logo"></img>
+                <img src="/images/logo/logo-footer1.svg" alt="footer-logo" class="footer-logo"></img>
                 <div class="footer-content">
                     <ul>
                         <li>

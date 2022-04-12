@@ -103,6 +103,9 @@
         justify-content: space-between;
         align-items: center;
     }
+    .inside-container .events-repeateable ul{
+        margin: .5em 0px
+    }
 }
 
 @media screen  and (max-width: 576px){
