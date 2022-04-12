@@ -178,12 +178,6 @@ export const SiteHeader = () => {
                                         Достижения
                                     </a>
                                 </li>
-                                {/* <li class="enter-header-button">
-                                    <a href={AUTH_ROUTE}>Выход</a>
-                                </li> */}
-                                {/*                                             <li>
-                                                    <a href="#0" >Регистрация</a>
-                                                </li> */}
                             </ul>
                             <div class="enter-header-button">
                                 <a href={AUTH_ROUTE}>Выход</a>

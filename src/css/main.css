@@ -1917,6 +1917,28 @@ footer {
     letter-spacing: 0.05em;
     line-height: 25px;
     max-width: 50%;
+    align-self: center;
+}
+
+.footer-content ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-content ul li {
+    margin: 1.5em;
+}
+
+
+.footer-content ul li a{
+    color: white;
+}
+
+.footer-content ul li a:hover{
+    color: #25BA00;
+    text-decoration: none;
 }
 
 
