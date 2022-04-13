@@ -204,6 +204,12 @@ html {
     border-color: #25BA00;
 }
 
+@media screen and (max-width: 430px){
+    .date-select {
+        font-size: 16px;
+    }
+}
+
 .middle_stats-container ul {
     display: flex;
     flex-direction: row;

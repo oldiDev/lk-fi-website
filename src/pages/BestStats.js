@@ -49,6 +49,7 @@ export const BestStats = ({ stats, show, year, playerArray }) => {
         middleSharpshooting = middleSharpshooting / result.length;
     }
 
+
     var hit = 0;
     var jump = 0;
     var reaction = 0;
