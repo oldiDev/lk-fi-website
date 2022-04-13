@@ -193,6 +193,8 @@ html {
 
 .date-select label {
     align-self: center;
+    font-family: 'GothamPro';
+    letter-spacing: 0.03em;
 }
 
 .date-select select{
