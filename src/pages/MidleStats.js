@@ -22,7 +22,6 @@ export const MiddleStats = ({ stats, playerArray }) => {
         fetchStat();
     }, []);
 
-    // console.log(player);
     const options = [];
     player.forEach(e => {
         if (!options.includes(e.birthday.split('-')[0])) {
