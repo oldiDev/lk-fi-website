@@ -45,7 +45,7 @@ export const SelectionShedule = () => {
                                         <span>Понедельник</span>
                                         <span class="shedule-value">
                                             <span class="point"></span>
-                                            {e.MondayStart}
+                                            {e.MondayStart} {e.TrainerLocation[0].end}
                                         </span>
                                     </li>
                                     <li>

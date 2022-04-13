@@ -167,6 +167,24 @@ html {
     border: 1px solid #25BA00;
 }
 
+.date-select{
+    display: flex;
+    flex-direction: column;
+    margin: 1.5em 0px;
+    align-items: center;
+}
+
+.date-select label {
+    align-self: center;
+}
+
+.date-select select{
+    align-self: center;
+    color: black;
+    width: 50%;
+    background-color: white;
+    border-color: #25BA00;
+}
 
 .middle_stats-container ul {
     display: flex;
