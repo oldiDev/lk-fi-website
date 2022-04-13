@@ -184,6 +184,7 @@ html {
 }
 
 .date-select{
+    font-family: 'GothamPro';
     display: flex;
     flex-direction: column;
     margin: 1.5em 0px;
