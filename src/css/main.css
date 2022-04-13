@@ -193,6 +193,8 @@ html {
 
 .date-select label {
     align-self: center;
+    font-family: 'GothamPro';
+    letter-spacing: 0.03em;
 }
 
 .date-select select{
@@ -3073,7 +3075,7 @@ g circle {
     .banner-section-2 .container-banner {
         /* display: block; */
         flex-direction:  column-reverse;
-        padding-left: 30px
+        padding-left: unset
     }
 }
 
