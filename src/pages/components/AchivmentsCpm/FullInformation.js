@@ -81,7 +81,6 @@ export const FullInformation = () => {
                         <span>О всех подробностях уточнайте у Вашего тренера</span>
                     </div>
                 </div>
-                <div style={{ backgroundColor: "#2D2D2D" }}></div>
             </>
         )
     }

@@ -1,5 +1,6 @@
 import React, { Fragment } from "react";
 import { useHistory, useParams } from "react-router";
+import { AWARD_ROUTE, BLOG_ROUTE, CONTACT_ROUTE, HOMEPAGE_ROUTE } from "./utils/consts";
 
 
 
@@ -11,10 +12,32 @@ export const SiteFooter = () => {
     return (
         <footer>
             <div class="footer-container">
-                <img src="/images/logo/logo_footer.svg" alt="footer-logo" class="footer-logo"></img>
+                <img src="/images/logo/logo-footer1.svg" alt="footer-logo" class="footer-logo"></img>
                 <div class="footer-content">
-                    Dempor pede libero dapi useu class venenatis ut bibendum quam ut nibh necm. NonhonPede mollis vel vitae dorpis Sed odio ultrices id, est eu mauris.
+                    <ul>
+                        <li>
+                            <a href={HOMEPAGE_ROUTE + "/" + it_number}>
+                                Главная
+                            </a>
+                        </li>
+                        <li>
+                            <a href={BLOG_ROUTE + "/" + it_number}>
+                                Информация
+                            </a>
+                        </li>
+                        <li>
+                            <a href={CONTACT_ROUTE + "/" + it_number}>
+                                Расписание
+                            </a>
+                        </li>
+                        <li>
+                            <a href={AWARD_ROUTE + '/' + it_number}>
+                                Достижения
+                            </a>
+                        </li>
+                    </ul>
                 </div>
+
                 <div class="footer-social">
                     <div class="social-text">Подписывайтесь на нас</div>
                     <div class="footer-social-icons">
