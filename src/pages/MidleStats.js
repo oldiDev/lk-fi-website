@@ -58,6 +58,7 @@ export const MiddleStats = ({ stats, playerArray }) => {
                             <div class="date-select">
                                 <label>Выберите год рождения спортсмена</label>
                                 <select value={selectedOption} name="Выберите год рождения" onChange={handleChange}>
+                                    <option selected disabled>Выберите год</option>
                                     {
                                         options.sort((a, b) => a - b).map((e) =>
                                             <option>{e}</option>

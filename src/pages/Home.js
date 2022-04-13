@@ -44,7 +44,7 @@ export const Home = () => {
             position = e.playerPosition;
             avatar = e.avatar?.url;
             star = e.Statistics;
-            birthday = e.birthday;
+            birthday = e.birthday.split('-').reverse().join('.');
             lead_leg = e.lead_leg;
             team = e.team;
         }

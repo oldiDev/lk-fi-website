@@ -27,7 +27,7 @@ export const Stats = ({ stats }) => {
                                 className="stats-chart"
                                 width={"470px"}
                                 height={"357px"}
-                                chartType="LineChart"
+                                chartType="AreaChart"
                                 data={[
                                     [
                                         { type: "date", label: "Дата", id: "Date" },
@@ -39,6 +39,7 @@ export const Stats = ({ stats }) => {
                                     series: [{ color: "#25BA00" }],
                                     curveType: "function",
                                     intervals: { color: "#ffffff" },
+                                    pointSize: 7,
                                 }}
                                 rootProps={{ "data-testid": "2" }}
                             />
@@ -49,7 +50,7 @@ export const Stats = ({ stats }) => {
                                 className="stats-chart"
                                 width={"470px"}
                                 height={"357px"}
-                                chartType="LineChart"
+                                chartType="AreaChart"
                                 data={[
                                     [
                                         { type: "date", label: "Дата", id: "Date" },
@@ -59,6 +60,7 @@ export const Stats = ({ stats }) => {
                                 options={{
                                     series: [{ color: "#25BA00" }],
                                     curveType: "function",
+                                    pointSize: 7,
                                 }}
                                 rootProps={{ "data-testid": "2" }}
                             />
@@ -69,7 +71,7 @@ export const Stats = ({ stats }) => {
                                 className="stats-chart"
                                 width={"470px"}
                                 height={"357px"}
-                                chartType="LineChart"
+                                chartType="AreaChart"
                                 data={[
                                     [
                                         { type: "date", label: "Дата", id: "Date" },
@@ -79,6 +81,7 @@ export const Stats = ({ stats }) => {
                                 options={{
                                     series: [{ color: "#25BA00" }],
                                     curveType: "function",
+                                    pointSize: 7,
                                 }}
                                 rootProps={{ "data-testid": "2" }}
                             />
@@ -89,7 +92,7 @@ export const Stats = ({ stats }) => {
                                 className="stats-chart"
                                 width={"470px"}
                                 height={"357px"}
-                                chartType="LineChart"
+                                chartType="AreaChart"
                                 data={[
                                     [
                                         { type: "date", label: "Дата", id: "Date" },
@@ -99,6 +102,7 @@ export const Stats = ({ stats }) => {
                                 options={{
                                     series: [{ color: "#25BA00" }],
                                     curveType: "function",
+                                    pointSize: 7,
                                 }}
                                 rootProps={{ "data-testid": "2" }}
                             />
@@ -109,7 +113,7 @@ export const Stats = ({ stats }) => {
                                 className="stats-chart"
                                 width={"470px"}
                                 height={"357px"}
-                                chartType="LineChart"
+                                chartType="AreaChart"
                                 data={[
                                     [
                                         { type: "date", label: "Дата", id: "Date" },
@@ -119,6 +123,7 @@ export const Stats = ({ stats }) => {
                                 options={{
                                     series: [{ color: "#25BA00" }],
                                     curveType: "function",
+                                    pointSize: 7,
                                 }}
                                 rootProps={{ "data-testid": "2" }}
                             />
