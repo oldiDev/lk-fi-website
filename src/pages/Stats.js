@@ -103,6 +103,26 @@ export const Stats = ({ stats }) => {
                                 rootProps={{ "data-testid": "2" }}
                             />
                         </div>
+                        <div>
+                            <span class="my-stats-label">Точность удара</span>
+                            <Chart
+                                className="stats-chart"
+                                width={"470px"}
+                                height={"357px"}
+                                chartType="LineChart"
+                                data={[
+                                    [
+                                        { type: "date", label: "Дата", id: "Date" },
+                                        { type: "number", label: "", id: "Won/Loss" },
+                                    ],
+                                ].concat(get()?.SharpshootingList || [])}
+                                options={{
+                                    series: [{ color: "#25BA00" }],
+                                    curveType: "function",
+                                }}
+                                rootProps={{ "data-testid": "2" }}
+                            />
+                        </div>
                     </div>
                 </section>
             </div>

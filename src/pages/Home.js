@@ -47,7 +47,6 @@ export const Home = () => {
             birthday = e.birthday;
             lead_leg = e.lead_leg;
             team = e.team;
-            console.log(e)
         }
     })
 
@@ -74,7 +73,7 @@ export const Home = () => {
                 <div className="container">
                     <div className="long-green-line"></div>
                 </div>
-                <MiddleStats stats={star} />
+                <MiddleStats stats={star} playerArray={ player } />
                 <div className="container">
                     <div className="long-green-line"></div>
                 </div>

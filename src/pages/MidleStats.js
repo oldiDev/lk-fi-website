@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { BestStats } from "./BestStats";
 
-export const MiddleStats = ({ stats }) => {
-    /* console.log("stats",stats); */
+export const MiddleStats = ({ stats, playerArray }) => {
     const [show, setShow] = useState(false);
     const [player, setPlayer] = React.useState([]);
     const [loading, setLoading] = React.useState([])
     const [selectedOption, setSelectedOption] = React.useState()
+    const [showBest, setShowBest] = useState(false)
 
     React.useEffect(() => {
         // fetchDataPlayer();
@@ -21,43 +22,17 @@ export const MiddleStats = ({ stats }) => {
         fetchStat();
     }, []);
 
-    const options = [
-        1991,
-        1992,
-        1993
-    ]
+    // console.log(player);
+    const options = [];
+    player.forEach(e => {
+        if (!options.includes(e.birthday.split('-')[0])) {
+            options.push(e.birthday.split('-')[0])
+        }
+    });
 
     const handleChange = (e) => {
         setSelectedOption(e.target.value);
-        console.log(selectedOption)
-    }
-
-
-    var middle_number = stats.length;
-
-    var middle_hit = 0;
-    var middle_jump = 0;
-    var middle_reaction = 0;
-    var middle_speed = 0;
-    let sharpshooting = 0;
-
-    stats.map((e, i) => {
-        middle_hit = Number(middle_hit) + Number(e.Hit);
-        middle_jump = Number(middle_jump) + Number(e.Jump);
-        middle_reaction = Number(middle_reaction) + Number(e.Reaction);
-        middle_speed = Number(middle_speed) + Number(e.Speed);
-        sharpshooting = (sharpshooting > e.sharpshooting) ? sharpshooting : e.sharpshooting;
-    });
-    if (middle_hit != 0)
-        middle_hit = Math.round(Number(middle_hit) / Number(middle_number));
-    if (middle_jump != 0)
-        middle_jump = Math.round(Number(middle_jump) / Number(middle_number));
-    if (middle_reaction != 0)
-        middle_reaction = Math.round(Number(middle_reaction) / Number(middle_number));
-    if (middle_speed != 0)
-        middle_speed = Math.round(Number(middle_speed) / Number(middle_number));
-    if (sharpshooting != 0) {
-        sharpshooting = (sharpshooting > 100) ? Math.round(sharpshooting - 100) : Math.round(sharpshooting);
+        setShowBest(true)
     }
 
     if (!show) {
@@ -83,51 +58,15 @@ export const MiddleStats = ({ stats }) => {
                         <div class="middle_stats-container">
                             <div class="date-select">
                                 <label>Выберите год рождения спортсмена</label>
-                                <select value={selectedOption} name="Выберите год рождения" onChange={ handleChange }>
+                                <select value={selectedOption} name="Выберите год рождения" onChange={handleChange}>
                                     {
-                                        options.map((e) =>
+                                        options.sort((a, b) => a - b).map((e) =>
                                             <option>{e}</option>
                                         )
                                     }
                                 </select>
                             </div>
-                            <ul>
-                                <li>
-                                    <div>
-                                        <img src="/images/middle-stats/barbell.svg" alt='barbel' style={{ color: "#008CDB" }}></img>
-                                    </div>
-                                    <div>Удар:</div>
-                                    <div className="middle-stats-value">{middle_hit}</div>
-                                </li>
-                                <li>
-                                    <div>
-                                        <img src="/images/middle-stats/jumps.svg" alt="jumps" style={{ color: "#25BA00" }}></img>
-                                    </div>
-                                    <div>Прыжок:</div>
-                                    <div className="middle-stats-value">{middle_jump}</div>
-                                </li>
-                                <li>
-                                    <div>
-                                        <img src="/images/middle-stats/watch.svg" alt="time"></img>
-                                    </div>
-                                    <div>Реакция:</div>
-                                    <div className="middle-stats-value">{middle_reaction}</div>
-                                </li>
-                                <li>
-                                    <div>
-                                        <img src="/images/middle-stats/speed.svg"></img>
-                                    </div>
-                                    <div>Скорость:</div>
-                                    <div className="middle-stats-value">{middle_speed} км/ч</div>
-                                </li>
-                                <li>
-                                    <div>
-                                        <img src="/images/middle-stats/sharpshooting.svg"></img>
-                                    </div>
-                                    <div>Точность удара:</div>
-                                    <div className="middle-stats-value">{sharpshooting} %</div>
-                                </li>
-                            </ul>
+                            <BestStats stats={stats} show={showBest} year={selectedOption} playerArray={playerArray} />
                         </div>
                     </div>
                 </section>

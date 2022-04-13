@@ -160,11 +160,27 @@ html {
 }
 
 .middle_stats-container {
+    font-size: 20px;
     justify-content: space-between;
     align-items: center;
     width: 100%;
     top: 90px;
     border: 1px solid #25BA00;
+}
+
+.middle-stats-label{
+    font-family: 'GothamPro';
+    width: fit-content;
+    margin: .5em auto;
+    font-weight: bold;
+    letter-spacing: 0.03em;
+    text-align: center;
+    text-align: center;
+}
+
+#middle-stats-green-line{
+    margin: .5em auto;
+    width: 80%;
 }
 
 .date-select{
@@ -179,6 +195,7 @@ html {
 }
 
 .date-select select{
+    font-family: 'GothamPro';
     align-self: center;
     color: black;
     width: 50%;
@@ -4687,6 +4704,7 @@ div[class*="col"]:nth-of-type(4n + 4) .info-inner {
     border: 1px solid #25BA00;
     box-sizing: border-box;
     padding: 0px 1.5em; 
+    margin-top: 1.5em;
 }
 
 .history-wrapper div > span{

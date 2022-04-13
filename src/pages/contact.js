@@ -22,7 +22,6 @@ export const Contact = () => {
         fetchStat();
     }, []);
 
-    console.log(shedule)
     return (
 
         <html>

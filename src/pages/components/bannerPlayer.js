@@ -22,8 +22,6 @@ export const BannerPlayer = ({ firstname, lastname, position, avatar, birthday, 
         ages--;
     }
 
-    console.log(ages)
-
     return (
         <Fragment>
             <section class="banner-section-2">
