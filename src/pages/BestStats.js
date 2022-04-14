@@ -1,28 +1,18 @@
 import React from "react";
-import axios from "axios";
 
-export const BestStats = ({ stats, show, year, playerArray }) => {
-    const [player, setPlayer] = React.useState([]);
-    const [loading, setLoading] = React.useState([])
-
-    React.useEffect(() => {
-        // fetchDataPlayer();
-
-        const fetchStat = async () => {
-            setLoading(true);
-            const res = await axios.get('https://cdn.lk-ft.ru/footballers');
-            setPlayer(res.data)
-            setLoading(false);
-        }
-
-        fetchStat();
-    }, []);
+export const BestStats = ({ show, year, playerArray }) => {
 
     let middleHit = 0;
     let middleJump = 0;
     let middleReaction = 0;
     let middleSpeed = 0;
     let middleSharpshooting = 0;
+
+    var hit = 0;
+    var jump = 0;
+    var reaction = 0;
+    var speed = 0;
+    let sharpshooting = 0;
 
     const result = playerArray.filter(e => e.birthday.split('-')[0] == year)
     result.map(e => {
@@ -32,6 +22,11 @@ export const BestStats = ({ stats, show, year, playerArray }) => {
             middleReaction += Number(f.Reaction);
             middleSpeed += Number(f.Speed);
             middleSharpshooting += Number(f.sharpshooting);
+            hit = (Number(hit) > Number(f.Hit)) ? Number(hit) : Number(f.Hit);
+            jump = (Number(jump) > Number(f.Jump)) ? Number(jump) : Number(f.Jump);
+            reaction = (Number(reaction) > Number(f.Reaction)) ? Number(reaction) : Number(f.Reaction);
+            speed = (Number(speed) > Number(f.Speed)) ? Number(speed) : Number(f.Speed);
+            sharpshooting = (Number(sharpshooting) > Number(f.sharpshooting)) ? Number(sharpshooting) : Number(f.sharpshooting);
         })
         if (e.Statistics.length != 0) {
             middleHit = middleHit / e.Statistics.length;
@@ -49,20 +44,6 @@ export const BestStats = ({ stats, show, year, playerArray }) => {
         middleSharpshooting = middleSharpshooting / result.length;
     }
 
-
-    var hit = 0;
-    var jump = 0;
-    var reaction = 0;
-    var speed = 0;
-    let sharpshooting = 0;
-
-    stats.map((e, i) => {
-        hit = (Number(hit) > Number(e.Hit)) ? Number(hit) : Number(e.Hit);
-        jump = (Number(jump) > Number(e.Jump)) ? Number(jump) : Number(e.Jump);
-        reaction = (Number(reaction) > Number(e.Reaction)) ? Number(reaction) : Number(e.Reaction);
-        speed = (Number(speed) > Number(e.Speed)) ? Number(speed) : Number(e.Speed);
-        sharpshooting = (Number(sharpshooting) > Number(e.sharpshooting)) ? Number(sharpshooting) : Number(e.sharpshooting);
-    });
 
     if (sharpshooting != 0) {
         sharpshooting = (sharpshooting > 100) ? Math.round(sharpshooting - 100) : Math.round(sharpshooting);

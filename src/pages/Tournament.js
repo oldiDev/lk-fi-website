@@ -30,7 +30,7 @@ export const Tournament = ({ name_id }) => {
         if (e.fullname == name_id) {
             if (e.last_statements == "2 VS 2") {
                 twoVSTwo.push({
-                    date: e.age,
+                    date: e.age.split('-').reverse().join('.'),
                     zabito: e.phone,
                     propush: e.insta,
                     mark: e.adresse
@@ -39,7 +39,7 @@ export const Tournament = ({ name_id }) => {
             }
             if (e.last_statements == '3 VS 3') {
                 threeVsThree.push({
-                    date: e.age,
+                    date: e.age.split('-').reverse().join('.'),
                     zabito: e.phone,
                     propush: e.insta,
                     mark: e.adresse
@@ -48,7 +48,7 @@ export const Tournament = ({ name_id }) => {
             }
             if (e.last_statements == "Пенальти") {
                 penalty.push({
-                    date: e.age,
+                    date: e.age.split('-').reverse().join('.'),
                     zabito: e.phone,
                     propush: e.insta,
                     mark: e.adresse

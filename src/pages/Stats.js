@@ -40,6 +40,9 @@ export const Stats = ({ stats }) => {
                                     curveType: "function",
                                     intervals: { color: "#ffffff" },
                                     pointSize: 7,
+                                    hAxis: {
+                                        format: "dd.MM.yy"
+                                    }
                                 }}
                                 rootProps={{ "data-testid": "2" }}
                             />
@@ -61,6 +64,9 @@ export const Stats = ({ stats }) => {
                                     series: [{ color: "#25BA00" }],
                                     curveType: "function",
                                     pointSize: 7,
+                                    hAxis: {
+                                        format: "dd.MM.yy"
+                                    }
                                 }}
                                 rootProps={{ "data-testid": "2" }}
                             />
@@ -82,6 +88,9 @@ export const Stats = ({ stats }) => {
                                     series: [{ color: "#25BA00" }],
                                     curveType: "function",
                                     pointSize: 7,
+                                    hAxis: {
+                                        format: "dd.MM.yy"
+                                    }
                                 }}
                                 rootProps={{ "data-testid": "2" }}
                             />
@@ -103,6 +112,9 @@ export const Stats = ({ stats }) => {
                                     series: [{ color: "#25BA00" }],
                                     curveType: "function",
                                     pointSize: 7,
+                                    hAxis: {
+                                        format: "dd.MM.yy"
+                                    }
                                 }}
                                 rootProps={{ "data-testid": "2" }}
                             />
@@ -124,6 +136,9 @@ export const Stats = ({ stats }) => {
                                     series: [{ color: "#25BA00" }],
                                     curveType: "function",
                                     pointSize: 7,
+                                    hAxis: {
+                                        format: "dd.MM.yy"
+                                    }
                                 }}
                                 rootProps={{ "data-testid": "2" }}
                             />
