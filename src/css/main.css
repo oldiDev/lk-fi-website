@@ -4775,6 +4775,7 @@ div[class*="col"]:nth-of-type(4n + 4) .info-inner {
 }
 
 .shedule-value{
+    text-align: center;
     font-size: 17px;
 }
 
@@ -6325,14 +6326,11 @@ div[class*="col"]:nth-of-type(4n + 4) .info-inner {
 
 .single-blog-img-container{
     position: relative;
-    max-width: 100%;
-    transform: scale(0.5, 0.5);
+    width: 70%;
+    margin: .5em auto;
 }
 
 .single-blog-img{
-    position: relative;
-    margin: 0px auto .5em auto;
-    justify-self: center;
     width: 100%;
 }
 

@@ -22,6 +22,7 @@ export const Contact = () => {
         fetchStat();
     }, []);
 
+    console.log(shedule)
     return (
 
         <html>
@@ -36,13 +37,16 @@ export const Contact = () => {
                                 </div>
                                 <div class="schedule">
                                     <ul>
-                                        <li>
-                                            <span>Понедельник</span>
-                                            <span class="shedule-value">
-                                                <span class="point"></span>
-                                                {e.MondayStart} {e.TrainerLocation.end}
-                                            </span>
-                                        </li>
+                                        {(e.MondayStart != null) ?
+                                            <li>
+                                                <span>Понедельник</span>
+                                                <span class="shedule-value">
+                                                    <span class="point"></span>
+                                                    {e.MondayStart} {e.TrainerLocation.end}
+                                                </span>
+                                            </li> : <></>
+                                    }
+
                                         <li>
                                             <span>Вторник</span>
                                             <span class="shedule-value">
