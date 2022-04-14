@@ -2,7 +2,6 @@ import React from 'react'
 import { useHistory, useParams } from 'react-router'
 import { SiteFooter } from './components/footer'
 import { SiteHeader } from './components/header'
-import { HOMEPAGE_ROUTE } from './components/utils/consts'
 
 export const Blog_Single = () => {
     //  const [posts, setPosts] = useState({info: []})

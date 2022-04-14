@@ -58,13 +58,13 @@ export const Home = () => {
             <SiteHeader />
             <body>
                 <BannerPlayer
-                    firstname={ firstname }
-                    lastname={ lastname }
-                    position={ position }
-                    avatar={ avatar }
-                    birthday={ birthday }
-                    lead_leg={ lead_leg }
-                    team={ team }
+                    firstname={firstname}
+                    lastname={lastname}
+                    position={position}
+                    avatar={avatar}
+                    birthday={birthday}
+                    lead_leg={lead_leg}
+                    team={team}
                 />
                 <div className="container">
                     <div className="long-green-line"></div>
@@ -73,7 +73,7 @@ export const Home = () => {
                 <div className="container">
                     <div className="long-green-line"></div>
                 </div>
-                <MiddleStats stats={star} playerArray={ player } />
+                <MiddleStats playerArray={player} />
                 <div className="container">
                     <div className="long-green-line"></div>
                 </div>

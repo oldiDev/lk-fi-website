@@ -25,7 +25,6 @@ export const SelectionShedule = () => {
     }, []);
 
 
-
     if (show) {
         return (
             <div class="container">

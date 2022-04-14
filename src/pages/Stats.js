@@ -32,6 +32,7 @@ export const Stats = ({ stats }) => {
                                     [
                                         { type: "date", label: "Дата", id: "Date" },
                                         { type: "number", label: "", id: "Won/Loss" },
+                                        { role: "tooltip", type: "string", p: { html: true } },
                                     ],
                                     //   ...get()?.HitList
                                 ].concat(get()?.HitList || [])}
@@ -40,6 +41,9 @@ export const Stats = ({ stats }) => {
                                     curveType: "function",
                                     intervals: { color: "#ffffff" },
                                     pointSize: 7,
+                                    hAxis: {
+                                        format: "dd.MM.yy"
+                                    }
                                 }}
                                 rootProps={{ "data-testid": "2" }}
                             />
@@ -55,12 +59,16 @@ export const Stats = ({ stats }) => {
                                     [
                                         { type: "date", label: "Дата", id: "Date" },
                                         { type: "number", label: "", id: "Won/Loss" },
+                                        { role: "tooltip", type: "string", p: { html: true } },
                                     ],
                                 ].concat(get()?.SpeedList || [])}
                                 options={{
                                     series: [{ color: "#25BA00" }],
                                     curveType: "function",
                                     pointSize: 7,
+                                    hAxis: {
+                                        format: "dd.MM.yy"
+                                    }
                                 }}
                                 rootProps={{ "data-testid": "2" }}
                             />
@@ -76,12 +84,16 @@ export const Stats = ({ stats }) => {
                                     [
                                         { type: "date", label: "Дата", id: "Date" },
                                         { type: "number", label: "", id: "Won/Loss" },
+                                        { role: "tooltip", type: "string", p: { html: true } },
                                     ],
                                 ].concat(get()?.JumpList || [])}
                                 options={{
                                     series: [{ color: "#25BA00" }],
                                     curveType: "function",
                                     pointSize: 7,
+                                    hAxis: {
+                                        format: "dd.MM.yy"
+                                    }
                                 }}
                                 rootProps={{ "data-testid": "2" }}
                             />
@@ -97,12 +109,16 @@ export const Stats = ({ stats }) => {
                                     [
                                         { type: "date", label: "Дата", id: "Date" },
                                         { type: "number", label: "", id: "Won/Loss" },
+                                        { role: "tooltip", type: "string", p: { html: true } },
                                     ],
                                 ].concat(get()?.ReactionList || [])}
                                 options={{
                                     series: [{ color: "#25BA00" }],
                                     curveType: "function",
                                     pointSize: 7,
+                                    hAxis: {
+                                        format: "dd.MM.yy"
+                                    }
                                 }}
                                 rootProps={{ "data-testid": "2" }}
                             />
@@ -118,12 +134,16 @@ export const Stats = ({ stats }) => {
                                     [
                                         { type: "date", label: "Дата", id: "Date" },
                                         { type: "number", label: "", id: "Won/Loss" },
+                                        { role: "tooltip", type: "string", p: { html: true } },
                                     ],
                                 ].concat(get()?.SharpshootingList || [])}
                                 options={{
                                     series: [{ color: "#25BA00" }],
                                     curveType: "function",
                                     pointSize: 7,
+                                    hAxis: {
+                                        format: "dd.MM.yy"
+                                    }
                                 }}
                                 rootProps={{ "data-testid": "2" }}
                             />
