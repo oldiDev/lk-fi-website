@@ -32,6 +32,7 @@ export const Stats = ({ stats }) => {
                                     [
                                         { type: "date", label: "Дата", id: "Date" },
                                         { type: "number", label: "", id: "Won/Loss" },
+                                        { role: "tooltip", type: "string", p: { html: true } },
                                     ],
                                     //   ...get()?.HitList
                                 ].concat(get()?.HitList || [])}
@@ -58,6 +59,7 @@ export const Stats = ({ stats }) => {
                                     [
                                         { type: "date", label: "Дата", id: "Date" },
                                         { type: "number", label: "", id: "Won/Loss" },
+                                        { role: "tooltip", type: "string", p: { html: true } },
                                     ],
                                 ].concat(get()?.SpeedList || [])}
                                 options={{
@@ -82,6 +84,7 @@ export const Stats = ({ stats }) => {
                                     [
                                         { type: "date", label: "Дата", id: "Date" },
                                         { type: "number", label: "", id: "Won/Loss" },
+                                        { role: "tooltip", type: "string", p: { html: true } },
                                     ],
                                 ].concat(get()?.JumpList || [])}
                                 options={{
@@ -106,6 +109,7 @@ export const Stats = ({ stats }) => {
                                     [
                                         { type: "date", label: "Дата", id: "Date" },
                                         { type: "number", label: "", id: "Won/Loss" },
+                                        { role: "tooltip", type: "string", p: { html: true } },
                                     ],
                                 ].concat(get()?.ReactionList || [])}
                                 options={{
@@ -130,6 +134,7 @@ export const Stats = ({ stats }) => {
                                     [
                                         { type: "date", label: "Дата", id: "Date" },
                                         { type: "number", label: "", id: "Won/Loss" },
+                                        { role: "tooltip", type: "string", p: { html: true } },
                                     ],
                                 ].concat(get()?.SharpshootingList || [])}
                                 options={{
