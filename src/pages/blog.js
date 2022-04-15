@@ -20,6 +20,7 @@ const PostList = () => {
                     <div class="blog-array">
                         <Pagination_Post it_number={it_number} />
                     </div>
+                    <div className="before-footer"></div>
                 </div>
 
             </body>

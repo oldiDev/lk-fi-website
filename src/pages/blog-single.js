@@ -58,7 +58,8 @@ export const Blog_Single = () => {
     var post_author_lastname;
     var post_teaser;
     var post_date;
-    var post_author_lastname
+    var post_author_lastname;
+    let post_video_url;
 
     var author_icon;
 
@@ -68,7 +69,8 @@ export const Blog_Single = () => {
     posts.map((e, i) => { if (e.id == it_number) { post_author = e.Post_author } })
     posts.map((e, i) => { if (e.id == it_number) { post_author_lastname = e.Post_author_lastname } })
     posts.map((e, i) => { if (e.id == it_number) { post_teaser = e.Post_teaser } })
-    posts.map((e, i) => { if (e.id == it_number) { post_date = e.Post_Date.split('-').reverse().join('.') } })
+    posts.map((e, i) => { if (e.id == it_number) { post_date = e.Post_Date.split('-').reverse().join('.') } });
+    posts.map((e, i) => { if (e.id == it_number) { post_video_url = e.Post_video } })
     //author pic
     player.map((e, i) => { if (e.lastname == post_author_lastname && e.firstname == post_author) author_icon = e.avatar })
 
@@ -85,7 +87,24 @@ export const Blog_Single = () => {
                         <span>{post_author} {post_author_lastname}</span>
                     </div>
                     <div class="single-blog-img-container">
-                        <img class="single-blog-img" src={"https://cdn.lk-ft.ru" + post_img?.url} alt="blog-img"></img>
+                        {
+                            (post_img != null) ?
+                                <img class="single-blog-img" src={"https://cdn.lk-ft.ru" + post_img?.url} alt="blog-img"></img> : <></>
+
+                        }
+                        {
+                            (post_video_url != 0) ?
+                                <iframe className='single-blog-video'
+                                    src={post_video_url + '?autoplay=1&mute=1'}
+                                    title="YouTube video player"
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen="allowfullscreen"
+                                    mozallowfullscreen="mozallowfullscreen"
+                                    msallowfullscreen="msallowfullscreen"
+                                    oallowfullscreen="oallowfullscreen"
+                                    webkitallowfullscreen="webkitallowfullscreen"></iframe> : <></>
+                        }
                     </div>
                     <div class="single-blog-content">
                         <span>

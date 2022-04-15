@@ -87,8 +87,7 @@ html {
 
 .container {
     width: 100%;
-    margin-right: 8%;
-    margin-left: 8%;
+    margin: 0px auto;
     align-self: center;
     align-items: center;
 }
@@ -4709,7 +4708,9 @@ div[class*="col"]:nth-of-type(4n + 4) .info-inner {
     font-size: 20px;
     position: relative;
     width: 100%;
-    height: fit-content;
+    /* height: fit-content; */
+    max-height: 700px;
+    overflow: scroll;
     border: 1px solid #25BA00;
     box-sizing: border-box;
     padding: 0px 1.5em; 
@@ -4721,10 +4722,14 @@ div[class*="col"]:nth-of-type(4n + 4) .info-inner {
     font-weight: bold;
 }
 
+
 @media screen and (max-width: 576px) {
     .history-wrapper {
-        width: 85%;
-        border: none
+        width: 90%;
+        border: none;
+        height: fit-content;
+        overflow: unset;
+        max-height: none;
     }
 }
 
@@ -4744,9 +4749,16 @@ div[class*="col"]:nth-of-type(4n + 4) .info-inner {
 .schedule ul {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
+    flex-wrap: wrap;
+    margin: 1.5em 0px;
 }
+
+.shedule ul li {
+    margin: .5em 0px;
+}
+
 
 @media screen and (max-width: 576px) {
     .schedule ul {
@@ -4774,9 +4786,10 @@ div[class*="col"]:nth-of-type(4n + 4) .info-inner {
     padding: 1.5em 0px;
 }
 
-.shedule-value{
+.schedule-value{
     text-align: center;
     font-size: 17px;
+    max-width: 240px;
 }
 
 
@@ -6019,6 +6032,10 @@ div[class*="col"]:nth-of-type(4n + 4) .info-inner {
     .long-green-line{
         width: 90%;
     }
+
+    #schedule-green-line{
+        width: 100%;
+    }
 }
 
 .my-stats-chart{
@@ -6328,11 +6345,48 @@ div[class*="col"]:nth-of-type(4n + 4) .info-inner {
     position: relative;
     width: 70%;
     margin: .5em auto;
+    align-items: center;
 }
 
 .single-blog-img{
     width: 100%;
 }
+
+.single-blog-video{
+    display: flex;
+    margin: 2em auto;
+    width: 760px; 
+    height: 430px;
+}
+
+@media screen and (max-width: 1200px) {
+    .single-blog-video{
+        width: 670px;
+        height: 380px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .single-blog-video{
+        width: 480px;
+        height: 320px;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .single-blog-video{
+        width: 380px;
+        height: 285px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .single-blog-video {
+        width: 100%;
+        height: 250px;
+    }
+}
+
 
 .single-blog-content{
     max-width: 70%;
@@ -6360,6 +6414,12 @@ div[class*="col"]:nth-of-type(4n + 4) .info-inner {
         font-size: 15px;
         line-height: 22px;
     }
+
+    .single-blog-video{
+        width: 100%;
+        height: 100%;
+    }
+
 }
 
 .information-page-item{

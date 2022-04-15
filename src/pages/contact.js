@@ -32,68 +32,88 @@ export const Contact = () => {
                     <div class="history-wrapper">
                         {shedule.reverse().map((e, i) =>
                             <>
-                                <div className='schedule-day-title'>
-                                    <span>{e.name}</span>
-                                </div>
+                                {
+                                    (e.name != null) ?
+                                        <div className='schedule-day-title'>
+                                            <span>{e.name}</span>
+                                        </div> : <></>
+                                }
+
                                 <div class="schedule">
                                     <ul>
                                         {(e.MondayStart != null) ?
                                             <li>
                                                 <span>Понедельник</span>
-                                                <span class="shedule-value">
+                                                <span class="schedule-value">
                                                     <span class="point"></span>
                                                     {e.MondayStart} {e.TrainerLocation.end}
                                                 </span>
                                             </li> : <></>
-                                    }
+                                        }
+                                        {
+                                            (e.SaturdayStart != null) ?
+                                                <li>
+                                                    <span>Вторник</span>
+                                                    <span class="schedule-value">
+                                                        <span class="point"></span>
+                                                        {e.TuesdayStart} {e.TrainerLocation.end}
+                                                    </span>
+                                                </li> : <></>
+                                        }
+                                        {
+                                            (e.WednesdayStart != null) ?
+                                                <li>
+                                                    <span>Среда</span>
+                                                    <span class="schedule-value">
+                                                        <span class="point"></span>
+                                                        {e.WednesdayStart} {e.TrainerLocation.end}
+                                                    </span>
+                                                </li> : <></>
+                                        }
+                                        {
+                                            (e.ThursdayStart != null) ?
+                                                <li>
+                                                    <span>Четверг</span>
+                                                    <span class="schedule-value">
+                                                        <span class="point"></span>
+                                                        {e.ThursdayStart} {e.TrainerLocation.end}
+                                                    </span>
+                                                </li> : <></>
+                                        }
+                                        {
+                                            (e.FridayStart != null) ?
+                                                <li>
+                                                    <span>Пятница</span>
+                                                    <span class="schedule-value">
+                                                        <span class="point"></span>
+                                                        {e.FridayStart} {e.TrainerLocation.end}
+                                                    </span>
+                                                </li> : <></>
+                                        }
+                                        {
+                                            (e.SaturdayStart != null) ?
+                                                <li>
+                                                    <span>Суббота</span>
+                                                    <span class="schedule-value">
+                                                        <span class="point"></span>
+                                                        {e.SaturdayStart} {e.TrainerLocation.end}
+                                                    </span>
+                                                </li> : <></>
+                                        }
+                                        {
+                                            (e.SundayStart != null) ?
+                                                <li>
+                                                    <span>Воскресенье</span>
+                                                    <span class="schedule-value">
+                                                        <span class="point"></span>
+                                                        {e.SundayStart} {e.TrainerLocation.end}
+                                                    </span>
+                                                </li> : <></>
+                                        }
 
-                                        <li>
-                                            <span>Вторник</span>
-                                            <span class="shedule-value">
-                                                <span class="point"></span>
-                                                {e.TuesdayStart} {e.TrainerLocation.end}
-                                            </span>
-                                        </li>
-                                        <li>
-                                            <span>Среда</span>
-                                            <span class="shedule-value">
-                                                <span class="point"></span>
-                                                {e.WednesdayStart} {e.TrainerLocation.end}
-                                            </span>
-                                        </li>
-                                        <li>
-                                            <span>Четверг</span>
-                                            <span class="shedule-value">
-                                                <span class="point"></span>
-                                                {e.ThursdayStart} {e.TrainerLocation.end}
-                                            </span>
-                                        </li>
-                                    </ul>
-                                    <ul id="schedule-second">
-                                        <li>
-                                            <span>Пятница</span>
-                                            <span class="shedule-value">
-                                                <span class="point"></span>
-                                                {e.FridayStart} {e.TrainerLocation.end}
-                                            </span>
-                                        </li>
-                                        <li>
-                                            <span>Суббота</span>
-                                            <span class="shedule-value">
-                                                <span class="point"></span>
-                                                {e.SaturdayStart} {e.TrainerLocation.end}
-                                            </span>
-                                        </li>
-                                        <li>
-                                            <span>Воскресенье</span>
-                                            <span class="shedule-value">
-                                                <span class="point"></span>
-                                                {e.SundayStart} {e.TrainerLocation.end}
-                                            </span>
-                                        </li>
                                     </ul>
                                 </div>
-                                <div className="long-green-line"></div>
+                                <div className="long-green-line" id="schedule-green-line"></div>
                             </>
                         )}
                     </div>
