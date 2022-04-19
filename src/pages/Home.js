@@ -48,7 +48,18 @@ export const Home = () => {
             lead_leg = e.lead_leg;
             team = e.team;
         }
-    })
+    })  
+   
+
+    star.sort(function(a, b) {
+        if (a.date > b.date) {
+          return 1; }
+        if (a.date < b.date) {
+          return -1; }
+        return 0;
+      });
+     
+      
 
     avatar = (avatar != null) ? "https://cdn.lk-ft.ru" + avatar : "/images/banner/banner.png";
 
