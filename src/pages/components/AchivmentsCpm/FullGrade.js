@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import ProgressBar from "../ProgressBar/progressBar";
+import '../ProgressBar/progressBar.css'
 
-export const FullGradde = ({ two, tre, penal, camp, training, minusPoints }) => {
+export const FullGradde = ({ two, tre, camp, training, minusPoints }) => {
     const [show, setShow] = useState(false);
 
-    var grade = two + tre + penal + camp + training;
+    var grade = two + tre + camp + training;
 
     if (!show) {
         return (
@@ -52,37 +53,16 @@ export const FullGradde = ({ two, tre, penal, camp, training, minusPoints }) => 
                             <span id="fullGrade">Доступно баллов</span>
                             <ProgressBar bgcolor={'#25BA00'} completed={grade - minusPoints} />
                         </div>
+                        {/* <div className="event-progress">
+                            <span></span>
+                            <div className="containerStyles" id="line-progress">
+                                <span id="a25">25</span>
+                                <span id="a50">50</span>
+                                <span id="a75">75</span>
+                                <span id='a100'>100</span>
+                            </div>
 
-                        {/* <ul class='event-item'>
-                            <li>
-                                <span>
-                                    <img src="/images/achivements-full-grade/allPoints.svg" alt="all-points" className="achivements-icons"></img>
-                                </span>
-                                <span>Всего заработано баллов:</span>
-                                <span class="event-item-value">{grade}</span>
-                            </li>
-                            <li>
-                                <span>
-                                    <img src="/images/achivements-full-grade/camp.svg" alt="camp" className="achivements-icons"></img>
-                                </span>
-                                <span>Лагерь:</span>
-                                <span class="event-item-value">{camp}</span>
-                            </li>
-                            <li>
-                                <span>
-                                    <img src="/images/achivements-full-grade/2vs2.svg" alt="2vs2-points" className="achivements-icons"></img>
-                                </span>
-                                <span>2 против 2:</span>
-                                <span class="event-item-value">{two}</span>
-                            </li>
-                            <li>
-                                <span>
-                                    <img src="/images/achivements-full-grade/3vs3.svg" alt="3vs3-points" className="achivements-icons"></img>
-                                </span>
-                                <span>3 против 3:</span>
-                                <span class="event-item-value">{tre}</span>
-                            </li>
-                        </ul> */}
+                        </div> */}
                     </div>
 
                 </div>

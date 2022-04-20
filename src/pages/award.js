@@ -101,7 +101,7 @@ export const Award = () => {
                         </div>
                         <Camp countCamps={countCamps} />
                         <Events dva={twoVSTwo} tre={threeVsThree} penal={penalty} />
-                        <FullGradde two={two} tre={tre} penal={penal} camp={countCamps} training={countTraining} minusPoints={minusPoints}/>
+                        <FullGradde two={two} tre={tre} camp={countCamps} training={countTraining} minusPoints={minusPoints}/>
                     </div>
                 </div>
                 <div class="before-footer"></div>

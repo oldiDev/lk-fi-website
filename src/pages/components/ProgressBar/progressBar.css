@@ -15,6 +15,19 @@
     font-weight: bold;
 }
 
+#line-progress{
+    background-color: white;
+}
+
+#line-progress span {
+    font-size: 10px;
+}
+
+#a25{
+    position: inherit;
+    left: 20px
+}
+
 @media screen and (max-width: 577px) {
     .containerStyles{
         width: 90%;
