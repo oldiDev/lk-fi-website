@@ -1,9 +1,10 @@
 import React, { useState } from "react";
+import ProgressBar from "../ProgressBar/progressBar";
 
-export const FullGradde = ({ two, tre, penal }) => {
+export const FullGradde = ({ two, tre, penal, camp, training, minusPoints }) => {
     const [show, setShow] = useState(false);
 
-    var grade = two + tre + penal;
+    var grade = two + tre + penal + camp + training;
 
     if (!show) {
         return (
@@ -27,7 +28,32 @@ export const FullGradde = ({ two, tre, penal }) => {
                         </div>
                     </div>
                     <div class='inside-container'>
-                        <ul class='event-item'>
+                        <div className="event-progress">
+                            <span>Тренировки</span>
+                            <ProgressBar bgcolor={'#25BA00'} completed={training} />
+                        </div>
+                        <div className="event-progress">
+                            <span>Турнир 2 на 2</span>
+                            <ProgressBar bgcolor={'#25BA00'} completed={two} />
+                        </div>
+                        <div className="event-progress">
+                            <span>Турнир 3 на 3</span>
+                            <ProgressBar bgcolor={'#25BA00'} completed={tre} />
+                        </div>
+                        <div className="event-progress">
+                            <span>Лагерь</span>
+                            <ProgressBar bgcolor={'#25BA00'} completed={camp} />
+                        </div>
+                        <div className="event-progress">
+                            <span id="fullGrade">Всего заработанно баллов</span>
+                            <ProgressBar bgcolor={'#25BA00'} completed={grade} />
+                        </div>
+                        <div className="event-progress">
+                            <span id="fullGrade">Доступно баллов</span>
+                            <ProgressBar bgcolor={'#25BA00'} completed={grade - minusPoints} />
+                        </div>
+
+                        {/* <ul class='event-item'>
                             <li>
                                 <span>
                                     <img src="/images/achivements-full-grade/allPoints.svg" alt="all-points" className="achivements-icons"></img>
@@ -40,7 +66,7 @@ export const FullGradde = ({ two, tre, penal }) => {
                                     <img src="/images/achivements-full-grade/camp.svg" alt="camp" className="achivements-icons"></img>
                                 </span>
                                 <span>Лагерь:</span>
-                                <span class="event-item-value">?</span>
+                                <span class="event-item-value">{camp}</span>
                             </li>
                             <li>
                                 <span>
@@ -56,7 +82,7 @@ export const FullGradde = ({ two, tre, penal }) => {
                                 <span>3 против 3:</span>
                                 <span class="event-item-value">{tre}</span>
                             </li>
-                        </ul>
+                        </ul> */}
                     </div>
 
                 </div>
