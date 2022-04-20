@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { BestStats } from "./BestStats";
 
-export const MiddleStats = ({ playerArray }) => {
+export const MiddleStats = ({ selfBest, playerArray }) => {
     const [show, setShow] = useState(false);
     const [selectedOption, setSelectedOption] = React.useState()
     const [showBest, setShowBest] = useState(false)
@@ -23,7 +23,7 @@ export const MiddleStats = ({ playerArray }) => {
             <div className="container">
                 <section className="section-header-2">
                     <div class="text-theme" onClick={() => setShow(true)}>
-                        <span>Средний результат</span>
+                        <span>Лучшие результаты</span>
                         <img src="/images/client/right-arrow.svg" alt="right-arrow" className="client-menu-arrow"></img>
                     </div>
                 </section>
@@ -38,7 +38,7 @@ export const MiddleStats = ({ playerArray }) => {
                             setShow(false);
                             setShowBest(false);
                         }} >
-                            <span class="text-theme-show">Средний результат</span>
+                            <span class="text-theme-show">Лучшие результаты</span>
                             <img src="/images/client/down-arrow.svg" alt="right-arrow" className="client-menu-arrow"></img>
                         </div>
                         <div class="middle_stats-container">
@@ -53,7 +53,7 @@ export const MiddleStats = ({ playerArray }) => {
                                     }
                                 </select>
                             </div>
-                            <BestStats show={showBest} year={selectedOption} playerArray={playerArray} />
+                            <BestStats show={showBest} year={selectedOption} playerArray={playerArray} selfBest={selfBest} />
                         </div>
                     </div>
                 </section>

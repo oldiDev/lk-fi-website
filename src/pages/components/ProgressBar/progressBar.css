@@ -1,0 +1,35 @@
+.containerStyles {
+    height: 30px;
+    width: 60%;
+    background-color: #e0e0de;
+    border-radius: 5px;
+    margin-right: .5em;
+}
+
+
+.labelStyles {
+    font-family: 'GothamPro';
+    font-size: 15px;
+    padding: 5px;
+    color: white;
+    font-weight: bold;
+}
+
+#line-progress{
+    background-color: white;
+}
+
+#line-progress span {
+    font-size: 10px;
+}
+
+#a25{
+    position: inherit;
+    left: 20px
+}
+
+@media screen and (max-width: 577px) {
+    .containerStyles{
+        width: 90%;
+    }
+}

@@ -31,10 +31,16 @@ export const Award = () => {
     }, []);
 
     let name_id;
-
+    let countTraining;
+    let countCamps;
+    let minusPoints;
+    console.log(footballPlayer)
     footballPlayer.map((e, i) => {
         if (e.id == it_number) {
-            name_id = e.lastname + ' ' + e.firstname + ' ' + e.id + ' '
+            name_id = e.lastname + ' ' + e.firstname + ' ' + e.id + ' ';
+            countCamps = Number(e.count_of_camps);
+            countTraining = Number(e.count_of_training);
+            minusPoints = Number(e.count_of_minus_points)
         }
     })
 
@@ -47,8 +53,6 @@ export const Award = () => {
         fetchStat();
     }, []);
 
-    console.log(player)
-
     var twoVSTwo = [];
     var two = 0, tre = 0, penal = 0;
     var threeVsThree = [];
@@ -58,7 +62,7 @@ export const Award = () => {
         if (e.fullname == name_id) {
             if (e.last_statements == "2 VS 2") {
                 twoVSTwo.push({
-                    date: e.age,
+                    date: e.age.split('-').reverse().join('.'),
                     zabito: e.phone,
                     propush: e.insta,
                     mark: e.adresse
@@ -67,7 +71,7 @@ export const Award = () => {
             }
             if (e.last_statements == '3 VS 3') {
                 threeVsThree.push({
-                    date: e.age,
+                    date: e.age.split('-').reverse().join('.'),
                     zabito: e.phone,
                     propush: e.insta,
                     mark: e.adresse
@@ -76,7 +80,7 @@ export const Award = () => {
             }
             if (e.last_statements == "Пенальти") {
                 penalty.push({
-                    date: e.age,
+                    date: e.age.split('-').reverse().join('.'),
                     zabito: e.phone,
                     propush: e.insta,
                     mark: e.adresse
@@ -92,12 +96,12 @@ export const Award = () => {
                 <div class="container">
                     <div class="single-tournament-content">
                         <div class="achivements-header">
-                            <Training />
+                            <Training countTraining={countTraining} />
                             <FullInformation />
                         </div>
-                        <Camp />
+                        <Camp countCamps={countCamps} />
                         <Events dva={twoVSTwo} tre={threeVsThree} penal={penalty} />
-                        <FullGradde two={two} tre={tre} penal={penal} />
+                        <FullGradde two={two} tre={tre} camp={countCamps} training={countTraining} minusPoints={minusPoints}/>
                     </div>
                 </div>
                 <div class="before-footer"></div>

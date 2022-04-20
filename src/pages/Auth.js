@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Card, Container, Form, Row } from "react-bootstrap";
 import { useLocation } from "react-router-dom";
 import { AUTH_ROUTE, HOMEPAGE_ROUTE } from "./components/utils/consts";
@@ -7,6 +7,7 @@ import "./Auth.css";
 export const Auth = () => {
     const location = useLocation();
     const isLogin = location.pathname === AUTH_ROUTE;
+    const [showFalse, setShowFalse] = useState(false)
 
     const [player, setPlayer] = React.useState([]);
     const fetchDataPlayer = () => {
@@ -39,6 +40,9 @@ export const Auth = () => {
                 //console.log(HOMEPAGE_ROUTE)
                 window.open(HOMEPAGE_ROUTE + "/" + e.id, "_self");
             }
+            else {
+                setShowFalse(true);
+            }
         });
     };
 
@@ -67,6 +71,9 @@ export const Auth = () => {
                 <button className="auth-button" type="submit">
                     <span>Войти</span>
                 </button>
+                {
+                    (showFalse) ? <span class="show-false">Неправильный логин или пароль</span> : <></>
+                }
             </form>
         </section>
     );

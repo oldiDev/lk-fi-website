@@ -69,9 +69,9 @@ export const FullInformation = () => {
                                 <span>100</span>
                                 <div>-</div>
                                 <div class="information-bonuses-text">
-                                    <div>Скидка на абонемент в 75%.</div>
-                                    <div>3 Персональные тренировки.</div>
-                                    <div>15% скидка в лагерь</div>
+                                    <div>Месячный абонемент.</div>
+                                    <div>5 Персональных тренировок.</div>
+                                    <div>25% скидка в лагерь</div>
                                 </div>
 
                             </li>

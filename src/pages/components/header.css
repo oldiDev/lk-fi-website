@@ -86,11 +86,14 @@
     top: 36px;
     padding: 10px;
     background-color: #25BA00;
+    margin-top: 3px;
 }
 
 .enter-header-button a{
     color: white;
     font-weight: bold;
+    letter-spacing: 0.03em;
+    line-height: 13px;
 }
 
 .header-container{
@@ -148,3 +151,4 @@
         margin: unset;
     }
 }
+

@@ -9,10 +9,10 @@ export const Events = ({ dva, tre, penal }) => {
         return (
             <section>
                 <div class="achivements-container" onClick={() => setShow(true)}>
-                    <siv class="achivements-title" style={{ cursor: 'pointer' }}>
+                    <div class="achivements-title" style={{ cursor: 'pointer' }}>
                         <span>Мероприятия</span>
                         <img src="/images/client/right-arrow.svg" alt="right-arrow" className="client-menu-arrow"></img>
-                    </siv>
+                    </div>
                 </div>
             </section>
         )

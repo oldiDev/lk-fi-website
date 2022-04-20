@@ -25,6 +25,7 @@ export const Tournament = ({ name_id }) => {
     var threeVsThree = [];
     var penalty = [];
 
+    console.log(player)
 
     player.map((e, i) => {
         if (e.fullname == name_id) {
@@ -89,7 +90,7 @@ export const Tournament = ({ name_id }) => {
                             <Training />
                             <Camp />
                             <Events dva={twoVSTwo} tre={threeVsThree} penal={penalty} />
-                            <FullGradde two={two} tre={tre} penal={penal} />
+                            <FullGradde two={two} tre={tre} penal={penal} training={training} />
                         </div>
                     </section>
                 </div>
