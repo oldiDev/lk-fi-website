@@ -167,6 +167,16 @@ html {
     border: 1px solid #25BA00;
 }
 
+.best-stats-container{
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .best-stats-container{
+        display: contents;
+    }
+}
+
 .middle-stats-label{
     font-family: 'GothamPro';
     width: fit-content;
@@ -200,9 +210,10 @@ html {
     font-family: 'GothamPro';
     align-self: center;
     color: black;
-    width: 50%;
+    width: 40%;
     background-color: white;
     border-color: #25BA00;
+    padding-left: 10px;
 }
 
 @media screen and (max-width: 430px){
@@ -234,14 +245,60 @@ html {
 @media screen and (max-width: 576px) {
     .middle_stats-container{
         width: 90%;
+        font-size: 17px;
     }
     .middle_stats-container ul{
         flex-direction: column;
+        
+    }
+
+    .middle_stats-container ul li div{
+        font-size: 17px;
+        margin: 5px 0px;
     }
 }
 
 .middle-stats-value {
     font-weight: bold;
+}
+
+.best-stat-table {
+    font-family: "GothamPro";
+    margin: 1em auto
+}
+
+
+.best-stat-table th ,td {
+    padding: 1em;
+    align-items: center;
+    text-align: center;
+    border-right: 1px solid #25BA00;
+    border-bottom: 1px solid #25BA00;
+    letter-spacing: 0.03em;
+}
+
+
+.last-row{
+    border-bottom: none;
+}
+.last-cell{
+    border-right: none;
+}
+
+#last-th{
+    border-right: none;
+}
+
+@media screen and (max-width: 996px) {
+    .best-stat-table{
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .best-stat-table{
+        display: none;
+    }
 }
 
 .enter-header-buttom :hover {
@@ -2961,6 +3018,16 @@ footer {
     padding-right: 10px;
 }
 
+@media screen  and (max-width: 768px) {
+    .banner-content-2 .title{
+        font-size: 25px
+    }
+
+    .banner-content-2 .subtitle {
+        font-size: 18px;
+    }
+}
+
 @media (max-width: 575px) {
     .banner-content-2 {
         padding-left: 15px;
@@ -3091,12 +3158,19 @@ g circle {
 
 
 .avatar {
-    height: 300px;
-    width: 300px;
+    height: 350px;
+    width: 350px;
     border-radius: 50%;
     object-fit: cover;
     object-position: 50% 20%;
     border: 20px solid #25BA00;
+}
+
+@media screen and (max-width: 768px) {
+    .avatar{
+        height: 300px;
+        width: 300px;
+    }
 }
 
 @media screen and (max-width: 576px) {
@@ -6492,4 +6566,6 @@ div[class*="col"]:nth-of-type(4n + 4) .info-inner {
         margin-left: -15%;
     }
 }
+
+
 

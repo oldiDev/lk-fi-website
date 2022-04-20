@@ -50,6 +50,16 @@ export const Home = () => {
         }
     })
 
+    star.sort(function (a, b) {
+        if (a.date > b.date) {
+            return 1;
+        }
+        if (a.date < b.date) {
+            return -1;
+        }
+        return 0;
+    });
+
     avatar = (avatar != null) ? "https://cdn.lk-ft.ru" + avatar : "/images/banner/banner.png";
 
     return (
@@ -73,7 +83,7 @@ export const Home = () => {
                 <div className="container">
                     <div className="long-green-line"></div>
                 </div>
-                <MiddleStats playerArray={player} />
+                <MiddleStats selfBest={star} playerArray={player} />
                 <div className="container">
                     <div className="long-green-line"></div>
                 </div>
