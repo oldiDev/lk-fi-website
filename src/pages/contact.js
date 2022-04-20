@@ -22,7 +22,6 @@ export const Contact = () => {
         fetchStat();
     }, []);
 
-    console.log(shedule)
     return (
 
         <html>
@@ -30,14 +29,11 @@ export const Contact = () => {
             <body>
                 <div class="container" id="container-shedule">
                     <div class="history-wrapper">
-                        {shedule.reverse().map((e, i) =>
+                        {shedule.map((e, i) =>
                             <>
-                                {
-                                    (e.name != null) ?
-                                        <div className='schedule-day-title'>
-                                            <span>{e.name}</span>
-                                        </div> : <></>
-                                }
+                                <div className='schedule-day-title'>
+                                    <span>{e.TrainerLocation.end}</span>
+                                </div>
 
                                 <div class="schedule">
                                     <ul>
@@ -46,17 +42,17 @@ export const Contact = () => {
                                                 <span>Понедельник</span>
                                                 <span class="schedule-value">
                                                     <span class="point"></span>
-                                                    {e.MondayStart} {e.TrainerLocation.end}
+                                                    {e.MondayStart}
                                                 </span>
                                             </li> : <></>
                                         }
                                         {
-                                            (e.SaturdayStart != null) ?
+                                            (e.TusdayStart != null) ?
                                                 <li>
                                                     <span>Вторник</span>
                                                     <span class="schedule-value">
                                                         <span class="point"></span>
-                                                        {e.TuesdayStart} {e.TrainerLocation.end}
+                                                        {e.TuesdayStart}
                                                     </span>
                                                 </li> : <></>
                                         }
@@ -66,7 +62,7 @@ export const Contact = () => {
                                                     <span>Среда</span>
                                                     <span class="schedule-value">
                                                         <span class="point"></span>
-                                                        {e.WednesdayStart} {e.TrainerLocation.end}
+                                                        {e.WednesdayStart}
                                                     </span>
                                                 </li> : <></>
                                         }
@@ -76,7 +72,7 @@ export const Contact = () => {
                                                     <span>Четверг</span>
                                                     <span class="schedule-value">
                                                         <span class="point"></span>
-                                                        {e.ThursdayStart} {e.TrainerLocation.end}
+                                                        {e.ThursdayStart}
                                                     </span>
                                                 </li> : <></>
                                         }
@@ -86,7 +82,7 @@ export const Contact = () => {
                                                     <span>Пятница</span>
                                                     <span class="schedule-value">
                                                         <span class="point"></span>
-                                                        {e.FridayStart} {e.TrainerLocation.end}
+                                                        {e.FridayStart}
                                                     </span>
                                                 </li> : <></>
                                         }
@@ -96,7 +92,7 @@ export const Contact = () => {
                                                     <span>Суббота</span>
                                                     <span class="schedule-value">
                                                         <span class="point"></span>
-                                                        {e.SaturdayStart} {e.TrainerLocation.end}
+                                                        {e.SaturdayStart}
                                                     </span>
                                                 </li> : <></>
                                         }
@@ -106,7 +102,7 @@ export const Contact = () => {
                                                     <span>Воскресенье</span>
                                                     <span class="schedule-value">
                                                         <span class="point"></span>
-                                                        {e.SundayStart} {e.TrainerLocation.end}
+                                                        {e.SundayStart}
                                                     </span>
                                                 </li> : <></>
                                         }

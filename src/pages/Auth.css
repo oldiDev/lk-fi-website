@@ -60,6 +60,14 @@
 
 }
 
+.show-false{
+    font-family: 'GothamPro';
+    font-size: 12px;
+    line-height: 15px;
+    color: red;
+    text-align: center;
+}
+
 @media screen and (max-width: 786px) {
     .auth-form{
         width: 60%;
