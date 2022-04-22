@@ -2,7 +2,7 @@ import React from 'react'
 import { useHistory, useParams } from 'react-router'
 import { SiteFooter } from './components/footer'
 import { SiteHeader } from './components/header'
-import { Slide, Fade } from 'react-slideshow-image';
+import { Fade } from 'react-slideshow-image';
 import 'react-slideshow-image/dist/styles.css'
 
 export const Blog_Single = () => {

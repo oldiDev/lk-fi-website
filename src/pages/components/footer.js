@@ -1,12 +1,11 @@
-import React, { Fragment } from "react";
-import { useHistory, useParams } from "react-router";
+import React from "react";
+import { useParams } from "react-router";
 import { AWARD_ROUTE, BLOG_ROUTE, CONTACT_ROUTE, HOMEPAGE_ROUTE } from "./utils/consts";
 
 
 
 export const SiteFooter = () => {
     const params = useParams()
-    const history = useHistory()
     const it_number = params.id;
 
     return (

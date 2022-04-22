@@ -34,7 +34,6 @@ export const Award = () => {
     let countTraining;
     let countCamps;
     let minusPoints;
-    console.log(footballPlayer)
     footballPlayer.map((e, i) => {
         if (e.id == it_number) {
             name_id = e.lastname + ' ' + e.firstname + ' ' + e.id + ' ';

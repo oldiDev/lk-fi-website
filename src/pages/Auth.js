@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Card, Container, Form, Row } from "react-bootstrap";
 import { useLocation } from "react-router-dom";
 import { AUTH_ROUTE, HOMEPAGE_ROUTE } from "./components/utils/consts";
 import "./Auth.css";

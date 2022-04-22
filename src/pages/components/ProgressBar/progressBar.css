@@ -9,23 +9,29 @@
 
 .labelStyles {
     font-family: 'GothamPro';
-    font-size: 15px;
+    font-size: 20px;
     padding: 5px;
     color: white;
     font-weight: bold;
+    text-align: center;
+}
+
+.label-line{
+    width: 61%;
+    /* display: flex; */
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 #line-progress{
-    background-color: white;
+    position: relative;
+    padding: 5px;
+    color: black;
+    width: fit-content;
 }
 
-#line-progress span {
-    font-size: 10px;
-}
-
-#a25{
-    position: inherit;
-    left: 20px
+#last-line{
+    margin-top: unset;
 }
 
 @media screen and (max-width: 577px) {
