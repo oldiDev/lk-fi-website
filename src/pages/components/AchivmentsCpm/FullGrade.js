@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import ProgressBar from "../ProgressBar/progressBar";
 import '../ProgressBar/progressBar.css'
+import { FullInformation } from "./FullInformation";
 
 export const FullGradde = ({ two, tre, camp, training, minusPoints }) => {
     const [show, setShow] = useState(false);
@@ -10,10 +11,13 @@ export const FullGradde = ({ two, tre, camp, training, minusPoints }) => {
     if (!show) {
         return (
             <section>
-                <div class="achivements-container" onClick={() => setShow(true)}>
-                    <div class="achivements-title" style={{ cursor: 'pointer' }}>
-                        <span>Заработано баллов</span>
-                        <img src="/images/client/right-arrow.svg" alt="right-arrow" className="client-menu-arrow"></img>
+                <div class="achivements-container">
+                    <div className="achivements-header">
+                        <div class="achivements-title" style={{ cursor: 'pointer' }} onClick={() => setShow(true)}>
+                            <span>Заработано баллов</span>
+                            <img src="/images/client/right-arrow.svg" alt="right-arrow" className="client-menu-arrow"></img>
+                        </div>
+                        <FullInformation />
                     </div>
                 </div>
             </section>
@@ -22,11 +26,18 @@ export const FullGradde = ({ two, tre, camp, training, minusPoints }) => {
         return (
             <section>
                 <div>
-                    <div class="achivements-container" onClick={() => setShow(false)}>
-                        <div class="achivements-title-show" style={{ cursor: 'pointer' }} >
+                    <div class="achivements-container">
+                        <div className="achivements-header">
+                            <div class="achivements-title-show" style={{ cursor: 'pointer' }} onClick={() => setShow(false)}>
+                                <span>Заработано баллов</span>
+                                <img src="/images/client/down-arrow.svg" alt="right-arrow" className="client-menu-arrow"></img>
+                            </div>
+                            <FullInformation />
+                        </div>
+                        {/* <div class="achivements-title-show" style={{ cursor: 'pointer' }} >
                             <span>Заработано баллов</span>
                             <img src="/images/client/down-arrow.svg" alt="right-arrow" className="client-menu-arrow"></img>
-                        </div>
+                        </div> */}
                     </div>
                     <div class='inside-container'>
                         <div className="event-progress">

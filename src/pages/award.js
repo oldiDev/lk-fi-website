@@ -95,13 +95,14 @@ export const Award = () => {
             <body>
                 <div class="container">
                     <div class="single-tournament-content">
-                        <div class="achivements-header">
+                        {/* <div class="achivements-header">
                             <Training countTraining={countTraining} />
                             <FullInformation />
                         </div>
                         <Camp countCamps={countCamps} />
-                        <Events dva={twoVSTwo} tre={threeVsThree} penal={penalty} />
-                        <FullGradde two={two} tre={tre} camp={countCamps} training={countTraining} minusPoints={minusPoints}/>
+                        <Events dva={twoVSTwo} tre={threeVsThree} penal={penalty} /> */}
+                        <FullGradde two={two} tre={tre} camp={countCamps} training={countTraining} minusPoints={minusPoints} />
+                        <div className="before-footer"></div>
                     </div>
                 </div>
                 <div class="before-footer"></div>
