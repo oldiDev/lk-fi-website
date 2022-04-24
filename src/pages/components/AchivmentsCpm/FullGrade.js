@@ -8,9 +8,6 @@ export const FullGradde = ({ two, tre, camp, training, minusPoints }) => {
 
     var grade = two + tre + camp + training;
 
-    let price = [25, 50, 75, 100];
-
-    console.log(typeof (price))
     if (!show) {
         return (
             <section>
@@ -71,27 +68,26 @@ export const FullGradde = ({ two, tre, camp, training, minusPoints }) => {
                             <span></span>
                             <div className="label-line">
                                 {
-                                    (Number(grade - minusPoints) < 25) ?
+                                    (Number(grade - minusPoints) <= 25) ?
                                         <span className="labelStyles line-progress green" id="line-progress25">25</span>
                                         : <span className="labelStyles line-progress" id="line-progress25">25</span>
                                 }
                                 {
-                                    (Number(grade - minusPoints) > 25 && Number(grade - minusPoints) < 50) ?
+                                    (Number(grade - minusPoints) > 25 && Number(grade - minusPoints) <= 50) ?
                                         <span className="labelStyles line-progress green" id="line-progress50">50</span>
                                         : <span className="labelStyles line-progress" id="line-progress50">50</span>
                                 }
                                 {
-                                    (Number(grade - minusPoints) > 50 && Number(grade - minusPoints) < 75) ?
+                                    (Number(grade - minusPoints) > 50 && Number(grade - minusPoints) <= 75) ?
                                         <span className="labelStyles line-progress green" id="line-progress75">75</span>
                                         : <span className="labelStyles line-progress" id="line-progress75">75</span>
                                 }
                                 {
-                                    (Number(grade - minusPoints) > 75 && Number(grade - minusPoints) < 100) ?
+                                    (Number(grade - minusPoints) > 75 && Number(grade - minusPoints) <= 100) ?
                                         <span className="labelStyles line-progress green" id="line-progress100">100</span>
                                         :
                                         <span className="labelStyles line-progress" id="line-progress100">100</span>
                                 }
-                                {/* <span className="labelStyles line-progress" id="line-progress100">100</span> */}
                             </div>
                         </div>
 
