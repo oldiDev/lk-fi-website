@@ -6544,3 +6544,11 @@ div[class*="col"]:nth-of-type(4n + 4) .info-inner {
 .schedule-box > span {
     margin: 0px .5em;
 }
+
+@media screen and (max-width: 576px) {
+    .schedule{
+        display: flex;
+        flex-direction: column;
+
+    }
+}

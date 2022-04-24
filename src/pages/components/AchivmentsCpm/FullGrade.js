@@ -70,10 +70,10 @@ export const FullGradde = ({ two, tre, camp, training, minusPoints }) => {
                         <div className="event-progress" id="last-line">
                             <span></span>
                             <div className="label-line">
-                                <span style={{left:"22%"}} className="labelStyles" id="line-progress">25</span>
-                                <span style={{left:"42%"}} className="labelStyles" id="line-progress">50</span>
-                                <span style={{left:"61%"}} className="labelStyles" id="line-progress">75</span>
-                                <span style={{left:"77%"}} className="labelStyles" id="line-progress">100</span>
+                                <span  className="labelStyles line-progress" id="line-progress25">25</span>
+                                <span  className="labelStyles line-progress" id="line-progress50">50</span>
+                                <span  className="labelStyles line-progress" id="line-progress75">75</span>
+                                <span className="labelStyles line-progress" id="line-progress100">100</span>
                             </div>
                         </div>
 
