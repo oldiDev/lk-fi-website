@@ -56,7 +56,7 @@ const Post_Component = ({ posts, it_number }) => {
                                     <div>{e.Post_Date.split('-').reverse().join('.')}</div>
                                 </div>
                             </div>
-                            <img class="blog-img" src={"https://cdn.lk-ft.ru" + e.Post_image?.url} />
+                            <img class="blog-img" src={"https://cdn.lk-ft.ru" + e.Post_image[0]?.url} alt="blog-img"/>
                         </div>
                     </div>
                 )
@@ -99,10 +99,6 @@ function Pagination_Post({ it_number }) {
         return <div>Загрузка...</div>;
     }
 
-
-
-
-    const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
     return (
         <>

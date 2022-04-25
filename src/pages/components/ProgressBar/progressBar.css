@@ -9,24 +9,268 @@
 
 .labelStyles {
     font-family: 'GothamPro';
-    font-size: 15px;
+    font-size: 20px;
     padding: 5px;
     color: white;
     font-weight: bold;
+    text-align: center;
 }
 
-#line-progress{
-    background-color: white;
+.label-line{
+    width: 61%;
+    /* display: flex; */
+    flex-direction: row;
+    justify-content: space-between;
 }
 
-#line-progress span {
-    font-size: 10px;
+.line-progress{
+    position: relative;
+    padding: 5px;
+    color: black;
+    width: fit-content;
 }
 
-#a25{
-    position: inherit;
-    left: 20px
+#last-line{
+    margin-top: unset;
 }
+.green{
+    color: #25BA00;
+}
+
+@media screen and (max-width: 2560px) {
+    #line-progress25 {
+        left: 24%;
+    }
+
+    #line-progress50 {
+        left: 46%
+    }
+
+    #line-progress75 {
+        left: 68%
+    }
+
+    #line-progress100 {
+        left: 89%
+    }
+}
+
+@media screen and (max-width: 2548px) {
+    #line-progress25 {
+        left: 24%;
+    }
+
+    #line-progress50 {
+        left: 46%
+    }
+
+    #line-progress75 {
+        left: 67%
+    }
+
+    #line-progress100 {
+        left: 87%
+    }
+}
+
+@media screen and (max-width: 2139px) {
+    #line-progress25 {
+        left: 23%;
+    }
+
+    #line-progress50 {
+        left: 45%
+    }
+
+    #line-progress75 {
+        left: 66%
+    }
+
+    #line-progress100 {
+        left: 86%
+    }
+}
+
+@media screen and (max-width: 1958px) {
+    #line-progress25 {
+        left: 23%;
+    }
+
+    #line-progress50 {
+        left: 44%
+    }
+
+    #line-progress75 {
+        left: 65%
+    }
+
+    #line-progress100 {
+        left: 84%
+    }
+}
+
+@media screen and (max-width: 1629px) {
+    #line-progress25 {
+        left: 23%;
+    }
+
+    #line-progress50 {
+        left: 43%
+    }
+
+    #line-progress75 {
+        left: 64%
+    }
+
+    #line-progress100 {
+        left: 82%
+    }
+}
+
+@media screen and (max-width: 1450px) {
+    #line-progress25 {
+        left: 22%;
+    }
+
+    #line-progress50 {
+        left: 42%
+    }
+
+    #line-progress75 {
+        left: 61%
+    }
+
+    #line-progress100 {
+        left: 77%
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    #line-progress25 {
+        left: 22%;
+    }
+
+    #line-progress50 {
+        left: 40%
+    }
+
+    #line-progress75 {
+        left: 58%
+    }
+
+    #line-progress100 {
+        left: 73%
+    }
+}
+
+@media screen and (max-width: 992px) {
+    #line-progress25 {
+        left: 19%;
+    }
+
+    #line-progress50 {
+        left: 35%
+    }
+
+    #line-progress75 {
+        left: 51%
+    }
+
+    #line-progress100 {
+        left: 62%
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #line-progress25 {
+        left: 19%;
+    }
+
+    #line-progress50 {
+        left: 36%
+    }
+
+    #line-progress75 {
+        left: 52%
+    }
+
+    #line-progress100 {
+        left: 63%
+    }
+}
+
+@media screen and (max-width: 767px) {
+    #line-progress25 {
+        left: 19%;
+    }
+
+    #line-progress50 {
+        left: 31%
+    }
+
+    #line-progress75 {
+        left: 44%
+    }
+
+    #line-progress100 {
+        left: 52%
+    }
+}
+
+@media screen and (max-width: 430px) {
+    #line-progress25 {
+        left: 3%;
+    }
+
+    #line-progress50 {
+        left: 24%
+    }
+
+    #line-progress75 {
+        left: 44%
+    }
+
+    #line-progress100 {
+        left: 55%
+    }
+}
+
+@media screen and (max-width: 375px) {
+    #line-progress25 {
+        left: 3%;
+    }
+
+    #line-progress50 {
+        left: 22%
+    }
+
+    #line-progress75 {
+        left: 40%
+    }
+
+    #line-progress100 {
+        left: 55%
+    }
+}
+
+@media screen and (max-width: 320px) {
+    #line-progress25 {
+        left: 0%;
+    }
+
+    #line-progress50 {
+        left: 15%
+    }
+
+    #line-progress75 {
+        left: 30%
+    }
+
+    #line-progress100 {
+        left: 45%
+    }
+}
+
 
 @media screen and (max-width: 577px) {
     .containerStyles{

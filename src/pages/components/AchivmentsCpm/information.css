@@ -148,7 +148,7 @@
     align-items: center;
     margin: .7em 0px;
 }
-.event-progress span{
+.event-progress .event-progress-label{
     font-family: 'GothamPro';
     font-size: 20px;
     letter-spacing: 0.03em;
@@ -166,7 +166,7 @@
         flex-direction: column;
     }
 
-    .event-progress span {
+    .event-progress .event-progress-label {
         font-size: 18px;
         margin: .5em 0px;
     }

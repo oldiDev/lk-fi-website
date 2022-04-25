@@ -4,16 +4,13 @@ import {
     CONTACT_ROUTE,
     HOMEPAGE_ROUTE,
 } from "./utils/consts";
-import React, { useContext } from "react";
-import { Context } from "../..";
-import { useHistory, useParams } from "react-router-dom";
+import React from "react";
+import { useParams } from "react-router-dom";
 import { Icon } from "@iconify/react";
 import axios from "axios";
 import "./header.css";
 
 export const SiteHeader = () => {
-    const { user } = useContext(Context);
-    const history = useHistory();
     const params = useParams();
     var it_number = params.id;
     const that_number = params.test;

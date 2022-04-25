@@ -2,6 +2,8 @@ import React from 'react'
 import { useHistory, useParams } from 'react-router'
 import { SiteFooter } from './components/footer'
 import { SiteHeader } from './components/header'
+import { Fade } from 'react-slideshow-image';
+import 'react-slideshow-image/dist/styles.css'
 
 export const Blog_Single = () => {
     //  const [posts, setPosts] = useState({info: []})
@@ -51,7 +53,7 @@ export const Blog_Single = () => {
         return <div>Загрузка...</div>;
     }
 
-    var post_img;
+    var post_img = [];
     var post_rich_text;
     var post_title_text;
     var post_author;
@@ -61,7 +63,6 @@ export const Blog_Single = () => {
     var post_author_lastname;
     let post_video_url;
 
-    var author_icon;
 
     posts.map((e, i) => { if (e.id == it_number) { post_img = e.Post_image } })
     posts.map((e, i) => { if (e.id == it_number) { post_rich_text = e.Post_text } })
@@ -71,9 +72,8 @@ export const Blog_Single = () => {
     posts.map((e, i) => { if (e.id == it_number) { post_teaser = e.Post_teaser } })
     posts.map((e, i) => { if (e.id == it_number) { post_date = e.Post_Date.split('-').reverse().join('.') } });
     posts.map((e, i) => { if (e.id == it_number) { post_video_url = e.Post_video } })
-    //author pic
-    player.map((e, i) => { if (e.lastname == post_author_lastname && e.firstname == post_author) author_icon = e.avatar })
 
+    console.log(post_img)
     return (
         <>
             <SiteHeader />
@@ -88,9 +88,24 @@ export const Blog_Single = () => {
                     </div>
                     <div class="single-blog-img-container">
                         {
-                            (post_img != null) ?
-                                <img class="single-blog-img" src={"https://cdn.lk-ft.ru" + post_img?.url} alt="blog-img"></img> : <></>
+                            (post_img.length == 1) ?
+                                <img class="single-blog-img" src={"https://cdn.lk-ft.ru" + post_img[0]?.url} alt="blog-img"></img>
+                                :
+                                <div className="slide-container">
+                                    <Fade>
+                                        {post_img.map((slideImage, index) => (
+                                            <div className="each-fade" key={index}>
+                                                {/* <div style={{ 'backgroundImage': `url(${"https://cdn.lk-ft.ru" + slideImage?.url})` }}>
+                                            <span>{slideImage.caption}</span>
+                                        </div> */}
+                                                <div className='image-container'>
+                                                    <img class="single-blog-img" src={"https://cdn.lk-ft.ru" + slideImage?.url} alt="blog-img"></img>
+                                                </div>
 
+                                            </div>
+                                        ))}
+                                    </Fade>
+                                </div>
                         }
                         {
                             (post_video_url != 0) ?
@@ -99,11 +114,11 @@ export const Blog_Single = () => {
                                     title="YouTube video player"
                                     frameborder="0"
                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                    allowfullscreen="allowFullscreen"
-                                    mozallowfullscreen="mozallowFullscreen"
-                                    msallowfullscreen="msallowFullscreen"
-                                    oallowfullscreen="oallowFullscreen"
-                                    webkitallowfullscreen="webkitallowfullscreen"></iframe> : <></>
+                                    allowfullscreen="allowFullScreen"
+                                    mozallowfullscreen="mozallowFullScreen"
+                                    msallowfullscreen="msallowFullScreen"
+                                    oallowfullscreen="oallowFullScreen"
+                                    webkitallowfullscreen="webkitallowFullScreen"></iframe> : <></>
                         }
                     </div>
                     <div class="single-blog-content">

@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 
 export const Camp = ({countCamps}) => {
-    // const [show, setShow] = useState(false);
+
     return (
         <section>
             <div class="achivements-container">
