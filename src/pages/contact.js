@@ -125,6 +125,95 @@ export const Contact = () => {
                                 </tr>
                             </tbody>
                         </table>
+                        <table className="schedule-mobile">
+                            {
+                                shedule.map((e) =>
+                                    <>
+                                        <thead>
+                                            <th className="schedule-adress">{e.TrainerLocation.end}</th>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    {
+                                                        (e.MondayStart != null) ?
+                                                            <div className="schedule-box">
+                                                                <span>Понедельник</span>
+                                                                <span className="schedule-value">
+                                                                    <span className="point"></span>
+                                                                    {e.MondayStart}
+                                                                </span>
+                                                            </div>
+                                                            : <></>
+                                                    }
+                                                    {
+                                                        (e.TuesdayStart != null) ?
+                                                            <div className="schedule-box">
+                                                                <span>Вторник</span>
+                                                                <span className="schedule-value">
+                                                                    <span className="point"></span>
+                                                                    {e.TuesdayStart}
+                                                                </span>
+                                                            </div> : <></>
+                                                    }
+                                                    {
+                                                        (e.WednesdayStart != null) ?
+                                                            <div className="schedule-box">
+                                                                <span>Среда</span>
+                                                                <span className="schedule-value">
+                                                                    <span className="point"></span>
+                                                                    {e.WednesdayStart}
+                                                                </span>
+                                                            </div> : <></>
+                                                    }
+                                                    {
+                                                        (e.ThursdayStart != null) ?
+                                                            <div className="schedule-box">
+                                                                <span>Четверг</span>
+                                                                <span className="schedule-value">
+                                                                    <span className="point"></span>
+                                                                    {e.ThursdayStart}
+                                                                </span>
+                                                            </div> : <></>
+                                                    }
+                                                    {
+                                                        (e.FridayStart != null) ?
+                                                            <div className="schedule-box">
+                                                                <span>Пятница</span>
+                                                                <span className="schedule-value">
+                                                                    <span className="point"></span>
+                                                                    {e.FridayStart}
+                                                                </span>
+                                                            </div> : <></>
+                                                    }
+                                                    {
+                                                        (e.SaturdayStart != null) ?
+                                                            <div className="schedule-box">
+                                                                <span>Суббота</span>
+                                                                <span className="schedule-value">
+                                                                    <span className="point"></span>
+                                                                    {e.SaturdayStart}
+                                                                </span>
+                                                            </div> : <></>
+                                                    }
+                                                    {
+                                                        (e.SundayStart != null) ?
+                                                            <div className="schedule-box">
+                                                                <span>Воскресенье</span>
+                                                                <span className="schedule-value">
+                                                                    <span className="point"></span>
+                                                                    {e.SundayStart}
+                                                                </span>
+                                                            </div> : <></>
+                                                    }
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </>
+
+                                )
+                            }
+                        </table>
                     </div>
                 </div>
                 <div className="before-footer"></div>

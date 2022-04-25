@@ -6551,4 +6551,27 @@ div[class*="col"]:nth-of-type(4n + 4) .info-inner {
         flex-direction: column;
 
     }
+
+    #container-shedule{
+        margin-left: 5%;
+    }
+
+}
+
+.schedule-mobile{
+    display: none;
+}
+
+.schedule-mobile td{
+    border-right: unset;
+}
+
+@media screen and (max-width: 992px) {
+    .schedule{
+        display: none;
+    }
+
+    .schedule-mobile{
+        display: contents;
+    }
 }

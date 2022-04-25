@@ -180,7 +180,26 @@
         left: 62%
     }
 }
+
 @media screen and (max-width: 768px) {
+    #line-progress25 {
+        left: 19%;
+    }
+
+    #line-progress50 {
+        left: 36%
+    }
+
+    #line-progress75 {
+        left: 52%
+    }
+
+    #line-progress100 {
+        left: 63%
+    }
+}
+
+@media screen and (max-width: 767px) {
     #line-progress25 {
         left: 19%;
     }
