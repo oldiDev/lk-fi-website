@@ -4,7 +4,7 @@ import '../ProgressBar/progressBar.css'
 import { FullInformation } from "./FullInformation";
 
 export const FullGradde = ({ two, tre, camp, training, minusPoints }) => {
-    const [show, setShow] = useState(false);
+    const [show, setShow] = useState(true);
 
     var grade = two + tre + camp + training;
 
@@ -45,7 +45,7 @@ export const FullGradde = ({ two, tre, camp, training, minusPoints }) => {
                             <ProgressBar bgcolor={'#25BA00'} completed={training} />
                         </div>
                         <div className="event-progress">
-                            <span className="event-progress-label">Турнир 2 на 2</span>
+                            <span className="event-progress-label">Панна 1 на 1</span>
                             <ProgressBar bgcolor={'#25BA00'} completed={two} />
                         </div>
                         <div className="event-progress">

@@ -50,12 +50,12 @@ export const Auth = () => {
             <form class="auth-form" onSubmit={handleSubmit}>
                 <img id="auth-logo" src="/images/logo/logo-header.svg" alt="logo with black letters" />
                 <label className="auth-input-label">
-                    <span>Почта</span>
+                    <span>Номер телефона</span>
                     <input
                         className="auth-input"
                         type="text"
                         name="username"
-                        placeholder="Введите почту"
+                        placeholder="Введите номер телефона"
                     />
                 </label>
                 <label className="auth-input-label">

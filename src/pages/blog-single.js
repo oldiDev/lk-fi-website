@@ -61,19 +61,22 @@ export const Blog_Single = () => {
     var post_teaser;
     var post_date;
     var post_author_lastname;
-    let post_video_url;
+    let post_video_url = '';
 
 
-    posts.map((e, i) => { if (e.id == it_number) { post_img = e.Post_image } })
-    posts.map((e, i) => { if (e.id == it_number) { post_rich_text = e.Post_text } })
-    posts.map((e, i) => { if (e.id == it_number) { post_title_text = e.Post_Title } })
-    posts.map((e, i) => { if (e.id == it_number) { post_author = e.Post_author } })
-    posts.map((e, i) => { if (e.id == it_number) { post_author_lastname = e.Post_author_lastname } })
-    posts.map((e, i) => { if (e.id == it_number) { post_teaser = e.Post_teaser } })
-    posts.map((e, i) => { if (e.id == it_number) { post_date = e.Post_Date.split('-').reverse().join('.') } });
-    posts.map((e, i) => { if (e.id == it_number) { post_video_url = e.Post_video } })
+    posts.map((e, i) => {
+        if (e.id == it_number) {
+            post_img = e.Post_image;
+            post_rich_text = e.Post_text;
+            post_title_text = e.Post_Title;
+            post_author = e.Post_author;
+            post_author_lastname = e.Post_author_lastname;
+            post_teaser = e.Post_teaser;
+            post_date = e.Post_Date.split('-').reverse().join('.');
+            post_video_url = e.Post_video;
+        }
+    })
 
-    console.log(post_img)
     return (
         <>
             <SiteHeader />
@@ -108,7 +111,7 @@ export const Blog_Single = () => {
                                 </div>
                         }
                         {
-                            (post_video_url != 0) ?
+                            (post_video_url != '' && post_video_url != null && post_video_url != 0) ?
                                 <iframe className='single-blog-video'
                                     src={post_video_url + '?autoplay=1&mute=1'}
                                     title="YouTube video player"
