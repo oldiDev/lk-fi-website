@@ -6549,6 +6549,12 @@ div[class*="col"]:nth-of-type(4n + 4) .info-inner {
     width: 25%;
 }
 
+@media screen and (max-width: 992px) {
+    .schedule-adress{
+        padding-top: 1.7em;
+    }
+}
+
 .schedule-box{
     display: flex;
     flex-direction: row;
