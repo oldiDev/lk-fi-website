@@ -4790,6 +4790,11 @@ div[class*="col"]:nth-of-type(4n + 4) .info-inner {
     margin-top: 1.5em;
 }
 
+@media screen and (min-width: 1200px) {
+    .history-wrapper{
+        border-right: unset;
+    }
+}
 
 
 @media screen and (max-width: 576px) {
@@ -6519,6 +6524,14 @@ div[class*="col"]:nth-of-type(4n + 4) .info-inner {
     text-transform: uppercase;
 }
 
+@media screen and (min-width: 1200px) {
+    #schedule-label{
+        width: unset;
+        border-right: 1px solid #25BA00;
+        text-align: center;
+    }
+}
+
 .schedule th {
     border-right: 1px solid #25BA00;
     border-bottom: 1px solid #25BA00;
@@ -6534,6 +6547,12 @@ div[class*="col"]:nth-of-type(4n + 4) .info-inner {
     font-family: 'GothamPro';
     text-align: center;
     width: 25%;
+}
+
+@media screen and (max-width: 992px) {
+    .schedule-adress{
+        padding-top: 1.7em;
+    }
 }
 
 .schedule-box{
