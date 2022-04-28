@@ -6505,6 +6505,10 @@ div[class*="col"]:nth-of-type(4n + 4) .info-inner {
     }
 }
 
+.schedule tbody {
+    vertical-align: initial;
+}
+
 #schedule-label{
     font-family: 'GothamPro';
     font-size: 25px;
@@ -6536,7 +6540,7 @@ div[class*="col"]:nth-of-type(4n + 4) .info-inner {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    align-items: baseline;
     margin: .5em 0px;
     text-align: center;
 }
@@ -6574,4 +6578,38 @@ div[class*="col"]:nth-of-type(4n + 4) .info-inner {
     .schedule-mobile{
         display: contents;
     }
+}
+
+.schedule-value {
+    width: fit-content;
+    display: inline;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.schedule-time{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: right;
+}
+
+.schedule-themes{
+    font-size: 10px;
+    text-align: right;
+}
+
+.schedule-time-array{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: right;
+}
+
+.green-line{
+    width: 95%;
+    height: 1px;
+    margin: 1.5em auto;
+    background-color: #25BA00;
 }

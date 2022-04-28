@@ -53,13 +53,14 @@ export const Award = () => {
     }, []);
 
     var twoVSTwo = [];
-    var two = 0, tre = 0, penal = 0;
+    var two = 0, tre = 0, penal = 0, test = 0;
     var threeVsThree = [];
     var penalty = [];
+    let testing = [];
 
     player.map((e, i) => {
         if (e.fullname == name_id) {
-            if (e.last_statements == "2 VS 2") {
+            if (e.last_statements == "Панна") {
                 twoVSTwo.push({
                     date: e.age.split('-').reverse().join('.'),
                     zabito: e.phone,
@@ -86,6 +87,14 @@ export const Award = () => {
                 })
                 penal += Number(e.adresse)
             }
+            if (e.last_statements == 'Тестирование')
+                testing.push({
+                    date: e.age.split('-').reverse().join('.'),
+                    zabito: e.phone,
+                    propush: e.insta,
+                    mark: e.adresse
+                })
+                test += Number(e.adresse)
         }
     })
     return (
@@ -100,7 +109,7 @@ export const Award = () => {
                         </div>
                         <Camp countCamps={countCamps} />
                         <Events dva={twoVSTwo} tre={threeVsThree} penal={penalty} /> */}
-                        <FullGradde two={two} tre={tre} camp={countCamps} training={countTraining} minusPoints={minusPoints} />
+                        <FullGradde two={two} tre={tre} camp={countCamps} test={test} training={countTraining} minusPoints={minusPoints} />
                         <div className="before-footer"></div>
                     </div>
                 </div>

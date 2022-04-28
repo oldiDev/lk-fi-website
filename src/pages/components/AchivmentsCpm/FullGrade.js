@@ -3,10 +3,17 @@ import ProgressBar from "../ProgressBar/progressBar";
 import '../ProgressBar/progressBar.css'
 import { FullInformation } from "./FullInformation";
 
-export const FullGradde = ({ two, tre, camp, training, minusPoints }) => {
-    const [show, setShow] = useState(false);
+export const FullGradde = ({ two, tre, camp, test, training, minusPoints }) => {
+    const [show, setShow] = useState(true);
 
-    var grade = two + tre + camp + training;
+    two = (two > 100) ? 100 : two;
+    tre = (tre > 100) ? 100 : tre;
+    camp = (camp > 100) ? 100 : camp;
+    training = (training > 100) ? 100 : training;
+    test = (test > 100) ? 100 : test;
+
+    var grade = two + tre + camp + training + test;
+    grade = (grade - minusPoints > 100) ? 100 : grade;
 
     if (!show) {
         return (
@@ -45,7 +52,7 @@ export const FullGradde = ({ two, tre, camp, training, minusPoints }) => {
                             <ProgressBar bgcolor={'#25BA00'} completed={training} />
                         </div>
                         <div className="event-progress">
-                            <span className="event-progress-label">Турнир 2 на 2</span>
+                            <span className="event-progress-label">Панна 1 на 1</span>
                             <ProgressBar bgcolor={'#25BA00'} completed={two} />
                         </div>
                         <div className="event-progress">
@@ -55,6 +62,10 @@ export const FullGradde = ({ two, tre, camp, training, minusPoints }) => {
                         <div className="event-progress">
                             <span className="event-progress-label">Лагерь</span>
                             <ProgressBar bgcolor={'#25BA00'} completed={camp} />
+                        </div>
+                        <div className="event-progress">
+                            <span className="event-progress-label">Тестирование</span>
+                            <ProgressBar bgcolor={'#25BA00'} completed={test} />
                         </div>
                         <div className="event-progress">
                             <span className="event-progress-label" id="fullGrade">Всего заработанно баллов</span>
