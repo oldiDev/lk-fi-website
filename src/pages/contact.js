@@ -21,7 +21,7 @@ export const Contact = () => {
 
         fetchStat();
     }, []);
-
+    // console.log(shedule[2]);
     return (
 
         <html>
@@ -38,7 +38,7 @@ export const Contact = () => {
                                 <tr>
                                     {
                                         shedule.map((e) =>
-                                            <th className="schedule-adress">{e.TrainerLocation.end}</th>
+                                            <th className="schedule-adress">{e.Loation}</th>
                                         )
                                     }
                                 </tr>
@@ -49,75 +49,175 @@ export const Contact = () => {
                                         shedule.map((e) =>
                                             <td>
                                                 {
-                                                    (e.MondayStart != null) ?
+                                                    (e.MondayStart != null && e.MondayStart != '') ?
                                                         <div className="schedule-box">
                                                             <span>Понедельник</span>
                                                             <span className="schedule-value">
-                                                                <span className="point"></span>
-                                                                {e.MondayStart}
+                                                                <div className="schedule-time">
+                                                                    {
+                                                                        (e.MondayStart.split(' и ')).map((f) =>
+                                                                            <div className="schedule-time-array">
+                                                                                <span className="point"></span>
+                                                                                <span>{f}</span>
+                                                                            </div>
+
+                                                                        )
+                                                                    }
+                                                                </div>
+                                                                <div className="schedule-themes">({e.MondayArtema})</div>
                                                             </span>
                                                         </div>
                                                         : <></>
                                                 }
                                                 {
-                                                    (e.TuesdayStart != null) ?
+                                                    (e.MondayStart != null && e.MondayStart != '') ?
+                                                        <div className="green-line"></div> : <></>
+                                                }
+                                                {
+                                                    (e.TuesdayStart != null && e.TuesdayStart != '') ?
                                                         <div className="schedule-box">
                                                             <span>Вторник</span>
                                                             <span className="schedule-value">
-                                                                <span className="point"></span>
-                                                                {e.TuesdayStart}
+                                                                <div className="schedule-time">
+                                                                    {
+                                                                        (e.TuesdayStart.split(' и ')).map((f) =>
+                                                                            <div className="schedule-time-array">
+                                                                                <span className="point"></span>
+                                                                                <span>{f}</span>
+                                                                            </div>
+
+                                                                        )
+                                                                    }
+                                                                </div>
+                                                                <div className="schedule-themes">({e.TuesdayArtema})</div>
                                                             </span>
                                                         </div> : <></>
                                                 }
                                                 {
-                                                    (e.WednesdayStart != null) ?
+                                                    (e.TuesdayStart != null && e.TuesdayStart != '') ?
+                                                        <div className="green-line"></div> : <></>
+                                                }
+                                                {
+                                                    (e.WednesdayStart != null && e.WednesdayStart != '') ?
+
                                                         <div className="schedule-box">
                                                             <span>Среда</span>
                                                             <span className="schedule-value">
-                                                                <span className="point"></span>
-                                                                {e.WednesdayStart}
+                                                                <div className="schedule-time">
+                                                                    {
+                                                                        (e.WednesdayStart.split(' и ')).map((f) =>
+                                                                            <div>
+                                                                                <span className="point"></span>
+                                                                                <span>{f}</span>
+                                                                            </div>
+
+                                                                        )
+                                                                    }
+
+                                                                </div>
+                                                                <div className="schedule-themes">({e.WednesdayArtema})</div>
                                                             </span>
                                                         </div> : <></>
                                                 }
                                                 {
-                                                    (e.ThursdayStart != null) ?
+                                                    (e.WednesdayStart != null && e.WednesdayStart != '') ?
+                                                        <div className="green-line"></div> : <></>
+                                                }
+                                                {
+                                                    (e.ThursdayStart != null && e.ThursdayStart != '') ?
                                                         <div className="schedule-box">
                                                             <span>Четверг</span>
                                                             <span className="schedule-value">
-                                                                <span className="point"></span>
-                                                                {e.ThursdayStart}
+                                                                <div className="schedule-time">
+                                                                    {
+                                                                        (e.ThursdayStart.split(' и ')).map((f) =>
+                                                                            <div className="schedule-time-array">
+                                                                                <span className="point"></span>
+                                                                                <span>{f}</span>
+                                                                            </div>
+
+                                                                        )
+                                                                    }
+                                                                </div>
+                                                                <div className="schedule-themes">({e.ThursdayArtema})</div>
                                                             </span>
                                                         </div> : <></>
                                                 }
                                                 {
-                                                    (e.FridayStart != null) ?
+                                                    (e.ThursdayStart != null && e.ThursdayStart != '') ?
+                                                        <div className="green-line"></div> : <></>
+                                                }
+                                                {
+                                                    (e.FridayStart != null && e.FridayStart != '') ?
                                                         <div className="schedule-box">
                                                             <span>Пятница</span>
                                                             <span className="schedule-value">
-                                                                <span className="point"></span>
-                                                                {e.FridayStart}
+                                                                <div className="schedule-time">
+                                                                    {
+                                                                        (e.FridayStart.split(' и ')).map((f) =>
+                                                                            <div className="schedule-time-array">
+                                                                                <span className="point"></span>
+                                                                                <span>{f}</span>
+                                                                            </div>
+
+                                                                        )
+                                                                    }
+                                                                </div>
+                                                                <div className="schedule-themes">({e.FridayArtema})</div>
                                                             </span>
                                                         </div> : <></>
                                                 }
                                                 {
-                                                    (e.SaturdayStart != null) ?
+                                                    (e.FridayStart != null && e.FridayStart != '') ?
+                                                        <div className="green-line"></div> : <></>
+                                                }
+                                                {
+                                                    (e.SaturdayStart != null && e.SaturdayStart != '') ?
                                                         <div className="schedule-box">
                                                             <span>Суббота</span>
                                                             <span className="schedule-value">
-                                                                <span className="point"></span>
-                                                                {e.SaturdayStart}
+                                                                <div className="schedule-time">
+                                                                    {
+                                                                        (e.SaturdayStart.split(' и ')).map((f) =>
+                                                                            <div className="schedule-time-array">
+                                                                                <span className="point"></span>
+                                                                                <span>{f}</span>
+                                                                            </div>
+
+                                                                        )
+                                                                    }
+                                                                </div>
+                                                                <div className="schedule-themes">({e.SaturdayArtema})</div>
                                                             </span>
                                                         </div> : <></>
                                                 }
                                                 {
-                                                    (e.SundayStart != null) ?
+                                                    (e.SaturdayStart != null && e.SaturdayStart != '') ?
+                                                        <div className="green-line"></div> : <></>
+                                                }
+                                                {
+                                                    (e.SundayStart != null && e.SundayStart != '') ?
                                                         <div className="schedule-box">
                                                             <span>Воскресенье</span>
                                                             <span className="schedule-value">
-                                                                <span className="point"></span>
-                                                                {e.SundayStart}
+                                                                <div className="schedule-time">
+                                                                    {
+                                                                        (e.SundayStart.split(' и ')).map((f) =>
+                                                                            <div className="schedule-time-array">
+                                                                                <span className="point"></span>
+                                                                                <span>{f}</span>
+                                                                            </div>
+
+                                                                        )
+                                                                    }
+                                                                </div>
+                                                                <div className="schedule-themes">({e.SundayArtema})</div>
                                                             </span>
                                                         </div> : <></>
+                                                }
+                                                {
+                                                    (e.SundayStart != null && e.SundayStart != '') ?
+                                                        <div className="green-line"></div> : <></>
                                                 }
                                             </td>
                                         )
@@ -130,79 +230,149 @@ export const Contact = () => {
                                 shedule.map((e) =>
                                     <>
                                         <thead>
-                                            <th className="schedule-adress">{e.TrainerLocation.end}</th>
+                                            <th className="schedule-adress">{e.Loation}</th>
                                         </thead>
                                         <tbody>
                                             <tr>
                                                 <td>
                                                     {
-                                                        (e.MondayStart != null) ?
+                                                        (e.MondayStart != null && e.MondayStart != '') ?
                                                             <div className="schedule-box">
                                                                 <span>Понедельник</span>
                                                                 <span className="schedule-value">
-                                                                    <span className="point"></span>
-                                                                    {e.MondayStart}
+                                                                    <div className="schedule-time">
+                                                                        {
+                                                                            (e.MondayStart.split(' и ')).map((f) =>
+                                                                                <div className="schedule-time-array">
+                                                                                    <span className="point"></span>
+                                                                                    <span>{f}</span>
+                                                                                </div>
+
+                                                                            )
+                                                                        }
+                                                                    </div>
+                                                                    <div className="schedule-themes">({e.MondayArtema})</div>
                                                                 </span>
                                                             </div>
                                                             : <></>
                                                     }
                                                     {
-                                                        (e.TuesdayStart != null) ?
+                                                        (e.TuesdayStart != null && e.TuesdayStart != '') ?
                                                             <div className="schedule-box">
                                                                 <span>Вторник</span>
                                                                 <span className="schedule-value">
-                                                                    <span className="point"></span>
-                                                                    {e.TuesdayStart}
+                                                                    <div className="schedule-time">
+                                                                        {
+                                                                            (e.TuesdayStart.split(' и ')).map((f) =>
+                                                                                <div className="schedule-time-array">
+                                                                                    <span className="point"></span>
+                                                                                    <span>{f}</span>
+                                                                                </div>
+
+                                                                            )
+                                                                        }
+                                                                    </div>
+                                                                    <div className="schedule-themes">({e.TuesdayArtema})</div>
                                                                 </span>
                                                             </div> : <></>
                                                     }
                                                     {
-                                                        (e.WednesdayStart != null) ?
+                                                        (e.WednesdayStart != null && e.WednesdayStart != '') ?
                                                             <div className="schedule-box">
                                                                 <span>Среда</span>
                                                                 <span className="schedule-value">
-                                                                    <span className="point"></span>
-                                                                    {e.WednesdayStart}
+                                                                    <div className="schedule-time">
+                                                                        {
+                                                                            (e.WednesdayStart.split(' и ')).map((f) =>
+                                                                                <div>
+                                                                                    <span className="point"></span>
+                                                                                    <span>{f}</span>
+                                                                                </div>
+
+                                                                            )
+                                                                        }
+                                                                    </div>
+                                                                    <div className="schedule-themes">({e.WednesdayArtema})</div>
                                                                 </span>
                                                             </div> : <></>
                                                     }
                                                     {
-                                                        (e.ThursdayStart != null) ?
+                                                        (e.ThursdayStart != null && e.ThursdayStart != '') ?
                                                             <div className="schedule-box">
                                                                 <span>Четверг</span>
                                                                 <span className="schedule-value">
-                                                                    <span className="point"></span>
-                                                                    {e.ThursdayStart}
+                                                                    <div className="schedule-time">
+                                                                        {
+                                                                            (e.ThursdayStart.split(' и ')).map((f) =>
+                                                                                <div className="schedule-time-array">
+                                                                                    <span className="point"></span>
+                                                                                    <span>{f}</span>
+                                                                                </div>
+
+                                                                            )
+                                                                        }
+                                                                    </div>
+                                                                    <div className="schedule-themes">({e.ThursdayArtema})</div>
                                                                 </span>
                                                             </div> : <></>
                                                     }
                                                     {
-                                                        (e.FridayStart != null) ?
+                                                        (e.FridayStart != null && e.FridayStart != '') ?
                                                             <div className="schedule-box">
                                                                 <span>Пятница</span>
                                                                 <span className="schedule-value">
-                                                                    <span className="point"></span>
-                                                                    {e.FridayStart}
+                                                                    <div className="schedule-time">
+                                                                        {
+                                                                            (e.FridayStart.split(' и ')).map((f) =>
+                                                                                <div className="schedule-time-array">
+                                                                                    <span className="point"></span>
+                                                                                    <span>{f}</span>
+                                                                                </div>
+
+                                                                            )
+                                                                        }
+                                                                    </div>
+                                                                    <div className="schedule-themes">({e.FridayArtema})</div>
                                                                 </span>
                                                             </div> : <></>
                                                     }
                                                     {
-                                                        (e.SaturdayStart != null) ?
+                                                        (e.SaturdayStart != null && e.SaturdayStart != '') ?
                                                             <div className="schedule-box">
                                                                 <span>Суббота</span>
                                                                 <span className="schedule-value">
-                                                                    <span className="point"></span>
-                                                                    {e.SaturdayStart}
+                                                                    <div className="schedule-time">
+                                                                        {
+                                                                            (e.SaturdayStart.split(' и ')).map((f) =>
+                                                                                <div className="schedule-time-array">
+                                                                                    <span className="point"></span>
+                                                                                    <span>{f}</span>
+                                                                                </div>
+
+                                                                            )
+                                                                        }
+                                                                    </div>
+                                                                    <div className="schedule-themes">({e.SaturdayArtema})</div>
                                                                 </span>
                                                             </div> : <></>
                                                     }
                                                     {
-                                                        (e.SundayStart != null) ?
+                                                        (e.SundayStart != null && e.SundayStart != '') ?
                                                             <div className="schedule-box">
                                                                 <span>Воскресенье</span>
                                                                 <span className="schedule-value">
-                                                                    <span className="point"></span>
-                                                                    {e.SundayStart}
+                                                                    <div className="schedule-time">
+                                                                        {
+                                                                            (e.SundayStart.split(' и ')).map((f) =>
+                                                                                <div className="schedule-time-array">
+                                                                                    <span className="point"></span>
+                                                                                    <span>{f}</span>
+                                                                                </div>
+
+                                                                            )
+                                                                        }
+                                                                    </div>
+                                                                    <div className="schedule-themes">({e.SundayArtema})</div>
                                                                 </span>
                                                             </div> : <></>
                                                     }

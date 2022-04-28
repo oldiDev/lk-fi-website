@@ -71,7 +71,7 @@ export const Auth = () => {
                     <span>Войти</span>
                 </button>
                 {
-                    (showFalse) ? <span class="show-false">Неправильный логин или пароль</span> : <></>
+                    (showFalse) ? <span class="show-false">Неправильный номер телефона или пароль</span> : <></>
                 }
             </form>
         </section>
