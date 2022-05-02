@@ -198,6 +198,7 @@ html {
     flex-direction: column;
     margin: 1.5em 0px;
     align-items: center;
+    text-align: center;
 }
 
 .date-select label {
@@ -227,6 +228,7 @@ html {
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .middle_stats-container ul li {
@@ -244,7 +246,7 @@ html {
 
 @media screen and (max-width: 576px) {
     .middle_stats-container{
-        width: 90%;
+        width: 94%;
         font-size: 17px;
     }
     .middle_stats-container ul{
@@ -3130,7 +3132,7 @@ g circle {
     }
 
     .banner-section-2 .container-banner {
-        padding-left: 30px
+        padding-left: 0px
     }
 }
 
@@ -6047,7 +6049,7 @@ div[class*="col"]:nth-of-type(4n + 4) .info-inner {
 
 @media screen and (max-width: 576px) {
     .long-green-line{
-        width: 90%;
+        width: 94%;
     }
 
     #schedule-green-line{

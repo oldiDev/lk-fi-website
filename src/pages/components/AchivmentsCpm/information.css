@@ -154,6 +154,7 @@
     letter-spacing: 0.03em;
     width: fit-content;
     margin: 0px .5em;
+    text-align: center;
 }
 
 #fullGrade{
