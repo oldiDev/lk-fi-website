@@ -198,6 +198,7 @@ html {
     flex-direction: column;
     margin: 1.5em 0px;
     align-items: center;
+    text-align: center;
 }
 
 .date-select label {
@@ -227,6 +228,7 @@ html {
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .middle_stats-container ul li {
@@ -244,7 +246,7 @@ html {
 
 @media screen and (max-width: 576px) {
     .middle_stats-container{
-        width: 90%;
+        width: 94%;
         font-size: 17px;
     }
     .middle_stats-container ul{
@@ -3130,7 +3132,7 @@ g circle {
     }
 
     .banner-section-2 .container-banner {
-        padding-left: 30px
+        padding-left: 0px
     }
 }
 
@@ -3398,7 +3400,6 @@ g circle {
     width: calc(100% - 315px);
     border-radius: 0 10px 10px 0;
     padding: 40px 50px;
-    background: url("./img/award-content.png") repeat-y left center;
 }
 
 .award-item .award-content .title {
@@ -3689,12 +3690,6 @@ g circle {
 }
 
 /*Tweet Section  Starts Here*/
-.tweet-item {
-    background: #fff;
-    border-radius: 5px;
-    background: url("./img/tweet-bg.png") #fff repeat-y top left;
-    color: rgba(255, 255, 255, 0.82);
-}
 
 .tweet-item .tweet-header {
     padding: 30px 30px 22px;
@@ -4533,15 +4528,6 @@ div[class*="col"]:nth-of-type(4n + 4) .info-inner {
     max-width: 50px;
 }
 
-.award-item-2 .award-inner .award-content {
-    width: calc(100% - 108px);
-    padding: 0 15px;
-    text-align: center;
-}
-
-.award-item-2 .award-inner .award-content .title {
-    color: #08d565;
-}
 
 .award-item-2 .award-inner:hover .award-thumb::before {
     -webkit-border-radius: 0 0 50px 0;
@@ -4556,14 +4542,6 @@ div[class*="col"]:nth-of-type(4n + 4) .info-inner {
 }
 
 /*Record Section Starts Here*/
-.record-item {
-    background: url("./img/award-content.png") #fff repeat-y left center;
-    padding: 40px;
-    border: 1px solid rgba(255, 255, 255, 0.18);
-    box-shadow: 0.314px 5.992px 4.2px 0.8px rgba(116, 35, 247, 0.04);
-    border-radius: 5px;
-    margin: 0 auto 30px;
-}
 
 .record-item .title {
     margin-bottom: 16px;
@@ -5455,17 +5433,6 @@ div[class*="col"]:nth-of-type(4n + 4) .info-inner {
     }
 }
 
-.post-item.post-details .post-content blockquote::before {
-    position: absolute;
-    left: 0;
-    top: 0;
-    content: "";
-    height: 100%;
-    width: 100%;
-    background: url(./img/quote.png) no-repeat center center;
-    background-size: contain;
-    z-index: -1;
-}
 
 .post-author {
     text-align: center;
@@ -6047,7 +6014,7 @@ div[class*="col"]:nth-of-type(4n + 4) .info-inner {
 
 @media screen and (max-width: 576px) {
     .long-green-line{
-        width: 90%;
+        width: 94%;
     }
 
     #schedule-green-line{
@@ -6148,9 +6115,9 @@ div[class*="col"]:nth-of-type(4n + 4) .info-inner {
         flex-direction: column;
     }
 
-    .achivements-information {
+    /* .achivements-information {
         display: none;
-    }
+    } */
 }
 
 .achivements-header {

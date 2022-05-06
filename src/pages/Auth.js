@@ -38,6 +38,7 @@ export const Auth = () => {
                 //console.log("Найдено совпадение ", e.id , " Пользователь :", e.lastname )
                 //console.log(HOMEPAGE_ROUTE)
                 window.open(HOMEPAGE_ROUTE + "/" + e.id, "_self");
+                setShowFalse(false);
             }
             else {
                 setShowFalse(true);

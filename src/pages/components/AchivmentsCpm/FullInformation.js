@@ -77,8 +77,8 @@ export const FullInformation = () => {
                             </li>
                         </ul>
                     </div>
-                    <div>
-                        <span>О всех подробностях уточнайте у Вашего тренера</span>
+                    <div className="more-info-container">
+                        <span className="more-info">О всех подробностях уточнайте у Вашего тренера</span>
                     </div>
                 </div>
             </>
