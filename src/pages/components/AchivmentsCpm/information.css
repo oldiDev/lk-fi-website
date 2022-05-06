@@ -20,12 +20,19 @@
     position: fixed;
     padding: 1.5em 1.5em;
     z-index: 99;
-    
 }
 
 .full-info-modal div > span{
     position: relative;
     font-weight: bold;
+}
+
+@media screen and (max-width: 576px) {
+    .full-info-modal {
+        width: 70%;
+        left: 15%;
+        padding: 1em 1em;
+    }
 }
 
 /*
@@ -188,6 +195,13 @@
     align-items: center;
 }
 
+@media screen and (max-width: 576px) {
+    .achivements-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
 .information-backround{
     position: fixed;
     width: 100%;
@@ -209,10 +223,16 @@
     border-bottom: 1px solid #25BA00;
 }
 
+@media screen and (max-width: 576px) {
+    .information-title span{
+        font-size: 25px;
+    }
+}
+
 .information-for-what > span {
     font-size: 20px;
-    
 }
+
 
 .information-for-what ul{
     font-size: 18px;
@@ -223,6 +243,22 @@
     align-items: center;
     padding: 0.5em 0px;
 }
+
+@media screen and (max-width: 576px) {
+    .information-for-what {
+        text-align: center;
+    }
+
+    .information-for-what > span {
+        font-size: 16px;
+    }
+
+    .information-for-what ul {
+        font-size: 14px;
+    }
+}
+
+
 .information-bonuses{
     padding-top: 1.5em;
 }
@@ -265,6 +301,40 @@
     flex-direction: column;
 }
 
+@media screen and (max-width: 576px) {
+    .information-bonuses {
+        text-align: center;
+    }
+
+    .information-bonuses > span {
+        font-size: 16px;
+    }
+
+    .information-bonuses ul {
+        font-size: 14px;
+    }
+
+    .information-bonuses ul li {
+        text-align: center;
+        align-items: center;
+    }
+
+    .information-bonuses-text {
+        align-items: center;
+        text-align: center;
+    }
+
+    .more-info-container {
+        text-align: center;
+    }
+
+    .more-info {
+        font-size: 17px;
+        text-align: center;
+        margin: 0px auto;
+    }
+}
+
 .point{
     display: inline-block;
     height: 8px;
@@ -299,4 +369,27 @@
   }
   .close-button:after {
     transform: rotate(-45deg);
+  }
+
+  @media screen and (max-width: 576px) {
+    .close-button {
+        right: 20px;
+        top: 15px;
+        width: 16px;
+        height: 16px;
+    }
+
+    .close-button:before, .close-button:after {
+        height: 20px;
+    }
+  }
+
+
+  @media screen and (max-width: 430px) {
+    .close-button {
+        right: 20px;
+        top: 10px;
+        width: 10px;
+        height: 10px;
+    }
   }
