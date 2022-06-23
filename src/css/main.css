@@ -171,7 +171,7 @@ html {
     display: none;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1200px) {
     .best-stats-container{
         display: contents;
     }
@@ -291,9 +291,10 @@ html {
     border-right: none;
 }
 
-@media screen and (max-width: 996px) {
+@media screen and (max-width: 1200px) {
     .best-stat-table{
-        font-size: 16px;
+        /* font-size: 16px; */
+        display: none;
     }
 }
 
@@ -6252,6 +6253,12 @@ div[class*="col"]:nth-of-type(4n + 4) .info-inner {
     font-size: 11px;
     color: white;
     margin-top: 120px;
+}
+
+@media screen and (max-width: 576px) {
+    .blog-body-footer{
+        margin-top: 903px;
+    }
 }
 
 @media screen and (max-width: 1200px) {
