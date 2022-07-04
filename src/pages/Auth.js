@@ -31,7 +31,7 @@ export const Auth = () => {
         player.map((e, i) => {
             //console.log(e);
             if (email_user[0] == "support" && email_user[1] == "Support1234") {
-                window.open("https://dev.lk-ft.ru/login", "_self");
+                window.open("https://admin.lk-ft.ru/login", "_self");
             }
 
             if (email_user[0] == e.f_email && email_user[1] == e.f_password) {
@@ -57,6 +57,7 @@ export const Auth = () => {
                         type="text"
                         name="username"
                         placeholder="Введите номер телефона"
+                        required
                     />
                 </label>
                 <label className="auth-input-label">
@@ -66,6 +67,7 @@ export const Auth = () => {
                         type="password"
                         name="password"
                         placeholder="Введите пароль"
+                        required
                     />
                 </label>
                 <button className="auth-button" type="submit">

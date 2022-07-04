@@ -20,7 +20,7 @@ export const BannerPlayer = ({ firstname, lastname, position, avatar, birthday, 
                     <div class="banner-content-2">
                         <span class="title">{firstname} {lastname}</span>
                         <h5 class="subtitle">Позиция: <span>{position}</span></h5>
-                        <h5 class="subtitle">Возраст: <span>{birthday}</span></h5>
+                        <h5 class="subtitle">Дата рождения: <span>{birthday}</span></h5>
                         <h5 class="subtitle">Нога: <span>{lead_leg}</span></h5>
                         <h5 class="subtitle">Команда: <span>{team}</span></h5>
                     </div>

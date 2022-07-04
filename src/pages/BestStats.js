@@ -11,21 +11,30 @@ export const BestStats = ({ show, year, playerArray, selfBest }) => {
     let middleSpeed_s_razbegu = 0;
     let middleSpeed_s_razbegu2 = 0;
     let middleSharpshooting = 0;
+    let middleAgility = 0;
+    let middleFootSkill = 0;
+    let middleFootSkill_hits = 0;
 
     var hit = 0;
     var jump = 0;
     var jump2 = 0;
     var reaction = 999999;
     var speed = 0;
-    var speed2 = 0;
+    var speed2 = 999999;
     var speed_s_razbegu = 0;
-    var speed_s_razbegu2 = 0;
+    var speed_s_razbegu2 = 9999;
     let sharpshooting = 0;
+    let agility = 99999;
+    let footSkill = 0;
+    let footSkill_hits = 0;
+
 
     const result = playerArray.filter(e => e.birthday.split('-')[0] == year)
     console.log(result);
     result.map(e => {
         e.Statistics.map(f => {
+
+
             middleHit += Number(f.Hit);
             middleJump += Number(f.Jump);
             middleJump2 += Number(f.Jump2);
@@ -35,15 +44,23 @@ export const BestStats = ({ show, year, playerArray, selfBest }) => {
             middleSpeed_s_razbegu += Number(f.Speed_s_razbega);
             middleSpeed_s_razbegu2 += Number(f.Speed_s_razbega2);
             middleSharpshooting += Number(f.sharpshooting);
+            middleAgility += Number(f.Agility);
+            middleFootSkill += Number(f.FootSkill);
+            middleFootSkill_hits += Number(f.FootSkill2);
+
+
             hit = (Number(hit) > Number(f.Hit)) ? Number(hit) : Number(f.Hit);
             jump = (Number(jump) > Number(f.Jump)) ? Number(jump) : Number(f.Jump);
             jump2 = (Number(jump2) > Number(f.Jump2)) ? Number(jump2) : Number(f.Jump2);
             reaction = (Number(reaction) < Number(f.Reaction)) ? Number(reaction) : Number(f.Reaction);
             speed = (Number(speed) > Number(f.Speed)) ? Number(speed) : Number(f.Speed);
-            speed2 = (Number(speed2) > Number(f.Speed2)) ? Number(speed2) : Number(f.Speed2);
+            speed2 = (Number(speed2) < Number(f.Speed2)) ? Number(speed2) : Number(f.Speed2);
             speed_s_razbegu = (Number(speed_s_razbegu) > Number(f.Speed_s_razbega)) ? Number(speed_s_razbegu) : Number(f.Speed_s_razbega);
-            speed_s_razbegu2 = (Number(speed_s_razbegu2) > Number(f.Speed_s_razbega2)) ? Number(speed_s_razbegu2) : Number(f.Speed_s_razbega2);
+            speed_s_razbegu2 = (Number(speed_s_razbegu2) < Number(f.Speed_s_razbega2)) ? Number(speed_s_razbegu2) : Number(f.Speed_s_razbega2);
             sharpshooting = (Number(sharpshooting) > Number(f.sharpshooting)) ? Number(sharpshooting) : Number(f.sharpshooting);
+            agility = (Number(agility) < Number(f.Agility)) ? Number(agility) : Number(f.Agility);
+            footSkill = (Number(footSkill) > Number(f.FootSkill)) ? Number(footSkill) : Number(f.FootSkill);
+            footSkill_hits = (Number(footSkill_hits) > Number(f.FootSkill2)) ? Number(footSkill_hits) : Number(f.FootSkill2);
         })
         if (e.Statistics.length != 0) {
             middleHit = middleHit / e.Statistics.length;
@@ -55,6 +72,9 @@ export const BestStats = ({ show, year, playerArray, selfBest }) => {
             middleSpeed_s_razbegu = middleSpeed_s_razbegu / e.Statistics.length;
             middleSpeed_s_razbegu2 = middleSpeed_s_razbegu2 / e.Statistics.length;
             middleSharpshooting = middleSharpshooting / e.Statistics.length;
+            middleAgility = middleAgility / e.Statistics.length;
+            middleFootSkill = middleFootSkill / e.Statistics.length;
+            middleFootSkill_hits = middleFootSkill_hits / e.Statistics.length;
         }
     })
     if (result.length != 0) {
@@ -67,6 +87,9 @@ export const BestStats = ({ show, year, playerArray, selfBest }) => {
         middleSpeed_s_razbegu = middleSpeed_s_razbegu / result.length;
         middleSpeed_s_razbegu2 = middleSpeed_s_razbegu2 / result.length;
         middleSharpshooting = middleSharpshooting / result.length;
+        middleAgility = middleAgility / result.length;
+        middleFootSkill = middleFootSkill / result.length;
+        middleFootSkill_hits = middleFootSkill_hits / result.length;
     }
 
     let bestHit = 0;
@@ -74,10 +97,13 @@ export const BestStats = ({ show, year, playerArray, selfBest }) => {
     let bestJump2 = 0;
     let bestReaction = 999999;
     let bestSpeed = 0;
-    let bestSpeed2 = 0;
+    let bestSpeed2 = 99999;
     let bestSpeed_s_razbegu = 0;
-    let bestSpeed_s_razbegu2 = 0;
+    let bestSpeed_s_razbegu2 = 99999;
     let bestSharpshooting = 0;
+    let bestAgility = 999999;
+    let bestFootSkill = 0;
+    let bestFootSkill_hits = 0;
 
     selfBest.map(e => {
         bestHit = (bestHit > Number(e.Hit)) ? bestHit : Number(e.Hit);
@@ -85,11 +111,24 @@ export const BestStats = ({ show, year, playerArray, selfBest }) => {
         bestJump2 = (bestJump2 > Number(e.Jump2)) ? bestJump2 : Number(e.Jump2);
         bestReaction = (bestReaction < Number(e.Reaction)) ? bestReaction : Number(e.Reaction);
         bestSpeed = (bestSpeed > Number(e.Speed)) ? bestSpeed : Number(e.Speed);
-        bestSpeed2 = (bestSpeed2 > Number(e.Speed2)) ? bestSpeed2 : Number(e.Speed2);
+        bestSpeed2 = (bestSpeed2 < Number(e.Speed2)) ? bestSpeed2 : Number(e.Speed2);
         bestSpeed_s_razbegu = (bestSpeed_s_razbegu > Number(e.Speed_s_razbega)) ? bestSpeed2 : Number(e.Speed_s_razbega);
-        bestSpeed_s_razbegu2 = (bestSpeed_s_razbegu2 > Number(e.Speed_s_razbega2)) ? bestSpeed_s_razbegu2 : Number(e.Speed_s_razbega2);
+        bestSpeed_s_razbegu2 = (bestSpeed_s_razbegu2 < Number(e.Speed_s_razbega2)) ? bestSpeed_s_razbegu2 : Number(e.Speed_s_razbega2);
         bestSharpshooting = (bestSharpshooting > Number(e.sharpshooting)) ? bestSharpshooting : Number(e.sharpshooting);
+        bestAgility = (bestAgility < Number(e.Agility)) ? bestAgility : Number(e.Agility);
+        bestFootSkill = (bestFootSkill > Number(e.FootSkill)) ? bestFootSkill : Number(e.FootSkill);
+        bestFootSkill_hits = (bestFootSkill_hits > Number(e.FootSkill2)) ? bestFootSkill_hits : Number(e.FootSkill2);
     })
+
+    function declOfNum(n) {
+        const text_forms = ["удар", "удара", "ударов"]
+        n = Math.abs(n) % 100;
+        var n1 = n % 10;
+        if (n > 10 && n < 20) { return text_forms[2]; }
+        if (n1 > 1 && n1 < 5) { return text_forms[1]; }
+        if (n1 == 1) { return text_forms[0]; }
+        return text_forms[2];
+    }
 
 
     if (sharpshooting != 0) {
@@ -102,43 +141,55 @@ export const BestStats = ({ show, year, playerArray, selfBest }) => {
                 <table class="best-stat-table">
                     <thead>
                         <th></th>
-                        <th scope="col">
+                        <th className="table-header" scope="col">
                             <div>
                                 <img src="/images/middle-stats/barbell.svg" alt='barbel' style={{ color: "#008CDB" }}></img>
                             </div>
                             <div>Сила удара</div>
                         </th>
-                        <th scope="col">
+                        <th className="table-header" scope="col">
                             <div>
                                 <img src="/images/middle-stats/jumps.svg" alt="jumps"></img>
                             </div>
                             <div>Прыжок в высоту</div>
                         </th>
-                        <th scope="col">
+                        <th className="table-header" scope="col">
                             <div>
                                 <img src="/images/middle-stats/jumps-length.svg" alt="jumps"></img>
                             </div>
                             <div>Прыжок в длинну</div>
                         </th>
-                        <th scope="col">
+                        <th className="table-header" scope="col">
                             <div>
                                 <img src="/images/middle-stats/watch.svg" alt="time"></img>
                             </div>
                             <div>Реакция</div>
                         </th>
-                        <th scope="col">
+                        <th className="table-header" scope="col">
                             <div>
                                 <img src="/images/middle-stats/speed.svg" alt="speed"></img>
                             </div>
                             <div>10 метров с места</div>
                         </th>
-                        <th scope="col">
+                        <th className="table-header" scope="col">
                             <div>
                                 <img src="/images/middle-stats/speed.svg" alt="speed"></img>
                             </div>
                             <div>10 метров с разбега</div>
                         </th>
-                        <th scope="col" id="last-th">
+                        <th className="table-header" scope="col">
+                            <div>
+                                <img src="/images/middle-stats/watch.svg" alt="speed"></img>
+                            </div>
+                            <div>Agility test</div>
+                        </th>
+                        <th className="table-header" scope="col">
+                            <div>
+                                <img src="/images/middle-stats/speed.svg" alt="speed"></img>
+                            </div>
+                            <div>FootSkill test</div>
+                        </th>
+                        <th className="table-header" scope="col" id="last-th">
                             <div>
                                 <img src="/images/middle-stats/sharpshooting.svg" alt="sharpshooting"></img>
                             </div>
@@ -147,52 +198,67 @@ export const BestStats = ({ show, year, playerArray, selfBest }) => {
                     </thead>
                     <tbody>
                         <tr>
-                            <td scope="row">Мой лучший рез-т</td>
-                            <td>{Math.round(bestHit)} км/ч</td>
-                            <td>{Math.round(bestJump)} см</td>
-                            <td>{Math.round(bestJump2)} см</td>
-                            <td>{Math.round(bestReaction)} мс</td>
-                            <td>
+                            <td className="table-cell" scope="row">Мой лучший результат</td>
+                            <td className="table-cell">{Math.round(bestHit)} км/ч</td>
+                            <td className="table-cell">{Math.round(bestJump)} см</td>
+                            <td className="table-cell">{Math.round(bestJump2)} см</td>
+                            <td className="table-cell">{Math.round(bestReaction)} мс</td>
+                            <td className="table-cell">
                                 <div>{Math.round(bestSpeed)} км/ч</div>
                                 <div>{Math.round(bestSpeed2)} c</div>
                             </td>
-                            <td>
+                            <td className="table-cell">
                                 <div>{Math.round(bestSpeed_s_razbegu)} км/ч</div>
                                 <div>{Math.round(bestSpeed_s_razbegu2)} c</div>
                             </td>
-                            <td className="last-cell">{Math.round(bestSharpshooting)} %</td>
+                            <td className="table-cell">{bestAgility.toFixed(3)} с</td>
+                            <td className="table-cell">
+                                <div>{bestFootSkill.toFixed(2)} c</div>
+                                <div>({Math.round(bestFootSkill_hits)} {declOfNum(bestFootSkill_hits)})</div>
+                            </td>
+                            <td className="last-cell table-cell">{Math.round(bestSharpshooting)} %</td>
                         </tr>
                         <tr>
-                            <td scope="row">Средний по возрасту</td>
-                            <td>{Math.round(middleHit)} км/ч</td>
-                            <td>{Math.round(middleJump)} см</td>
-                            <td>{Math.round(middleJump2)} см</td>
-                            <td>{Math.round(middleReaction)} мс</td>
-                            <td>
+                            <td className="table-cell" scope="row">Средний по возрасту</td>
+                            <td className="table-cell">{Math.round(middleHit)} км/ч</td>
+                            <td className="table-cell">{Math.round(middleJump)} см</td>
+                            <td className="table-cell">{Math.round(middleJump2)} см</td>
+                            <td className="table-cell">{Math.round(middleReaction)} мс</td>
+                            <td className="table-cell">
                                 <div>{Math.round(middleSpeed)} км/ч</div>
                                 <div>{Math.round(middleSpeed2)} c</div>
                             </td>
-                            <td>
+                            <td className="table-cell">
                                 <div>{Math.round(middleSpeed_s_razbegu)} км/ч</div>
                                 <div>{Math.round(middleSpeed_s_razbegu2)} c</div>
                             </td>
-                            <td className="last-cell">{Math.round(middleSharpshooting)} %</td>
+                            <td className="table-cell">{middleAgility.toFixed(3)} с</td>
+                            <td className="table-cell">
+                                <div>{middleFootSkill.toFixed(2)} c</div>
+                                <div>({Math.round(middleFootSkill_hits)} {declOfNum(middleFootSkill_hits)})</div>
+                            </td>
+                            <td className="last-cell table-cell">{Math.round(middleSharpshooting)} %</td>
                         </tr>
                         <tr>
-                            <td scope="row" className="last-row">Лучший рез-т</td>
-                            <td className="last-row">{Math.round(hit)} км/ч</td>
-                            <td className="last-row">{Math.round(jump)} см</td>
-                            <td className="last-row">{Math.round(jump2)} см</td>
-                            <td className="last-row">{Math.round(reaction)} мс</td>
-                            <td className="last-row">
+                            <td scope="row" className="last-row table-cell">Лучший результат</td>
+                            <td className="last-row table-cell">{Math.round(hit)} км/ч</td>
+                            <td className="last-row table-cell">{Math.round(jump)} см</td>
+                            <td className="last-row table-cell">{Math.round(jump2)} см</td>
+                            <td className="last-row table-cell">{Math.round(reaction)} мс</td>
+                            <td className="last-row table-cell">
                                 <div>{Math.round(speed)} км/ч</div>
                                 <div>{Math.round(speed2)} c</div>
                             </td>
-                            <td className="last-row">
+                            <td className="last-row table-cell">
                                 <div>{Math.round(speed_s_razbegu)} км/ч</div>
                                 <div>{Math.round(speed_s_razbegu2)} c</div>
                             </td>
-                            <td className="last-row last-cell">{Math.round(sharpshooting)} %</td>
+                            <td className="last-row table-cell">{agility.toFixed(3)} с</td>
+                            <td className="last-row table-cell">
+                                <div>{footSkill.toFixed(2)} c</div>
+                                <div>({Math.round(footSkill_hits)} {declOfNum(footSkill_hits)})</div>
+                            </td>
+                            <td className="last-row last-cell table-cell">{Math.round(sharpshooting)} %</td>
                         </tr>
                     </tbody>
                 </table>
@@ -244,6 +310,21 @@ export const BestStats = ({ show, year, playerArray, selfBest }) => {
                             <div>10 метров с разбега:</div>
                             <div className="middle-stats-value">{Math.round(bestSpeed_s_razbegu)} км/ч</div>
                             <div className="middle-stats-value">{Math.round(bestSpeed_s_razbegu2)} с</div>
+                        </li>
+                        <li>
+                            <div>
+                                <img src="/images/middle-stats/watch.svg" alt="time"></img>
+                            </div>
+                            <div>Agility test:</div>
+                            <div className="middle-stats-value">{bestAgility.toFixed(3)} с</div>
+                        </li>
+                        <li>
+                            <div>
+                                <img src="/images/middle-stats/speed.svg"></img>
+                            </div>
+                            <div>FootSkill test:</div>
+                            <div className="middle-stats-value">{bestFootSkill.toFixed(2)} c</div>
+                            <div className="middle-stats-value">({Math.round(bestFootSkill_hits)} {declOfNum(bestFootSkill_hits)})</div>
                         </li>
                         <li>
                             <div>
@@ -304,6 +385,21 @@ export const BestStats = ({ show, year, playerArray, selfBest }) => {
                         </li>
                         <li>
                             <div>
+                                <img src="/images/middle-stats/watch.svg" alt="time"></img>
+                            </div>
+                            <div>Agility test:</div>
+                            <div className="middle-stats-value">{middleAgility.toFixed(3)} с</div>
+                        </li>
+                        <li>
+                            <div>
+                                <img src="/images/middle-stats/speed.svg"></img>
+                            </div>
+                            <div>FootSkill test:</div>
+                            <div className="middle-stats-value">{middleFootSkill.toFixed(2)} c</div>
+                            <div className="middle-stats-value">({Math.round(middleFootSkill_hits)} {declOfNum(middleFootSkill_hits)})</div>
+                        </li>
+                        <li>
+                            <div>
                                 <img src="/images/middle-stats/sharpshooting.svg"></img>
                             </div>
                             <div>Точность удара:</div>
@@ -356,6 +452,21 @@ export const BestStats = ({ show, year, playerArray, selfBest }) => {
                             <div>10 метров с разбега:</div>
                             <div className="middle-stats-value">{Math.round(speed_s_razbegu)} км/ч</div>
                             <div className="middle-stats-value">{Math.round(speed_s_razbegu2)} с</div>
+                        </li>
+                        <li>
+                            <div>
+                                <img src="/images/middle-stats/watch.svg" alt="time"></img>
+                            </div>
+                            <div>Agility test:</div>
+                            <div className="middle-stats-value">{agility.toFixed(3)} с</div>
+                        </li>
+                        <li>
+                            <div>
+                                <img src="/images/middle-stats/speed.svg"></img>
+                            </div>
+                            <div>FootSkill test:</div>
+                            <div className="middle-stats-value">{footSkill.toFixed(2)} c</div>
+                            <div className="middle-stats-value">({Math.round(footSkill_hits)} {declOfNum(footSkill_hits)})</div>
                         </li>
                         <li>
                             <div>

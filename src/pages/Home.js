@@ -72,6 +72,7 @@ export const Home = () => {
     });
 
     avatar = (avatar != null) ? "https://cdn.lk-ft.ru" + avatar : "/images/banner/banner.png";
+    // console.log(star);
 
     return (
         <>
