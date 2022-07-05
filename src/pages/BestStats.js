@@ -185,7 +185,7 @@ export const BestStats = ({ show, year, playerArray, selfBest }) => {
                         </th>
                         <th className="table-header" scope="col">
                             <div>
-                                <img src="/images/middle-stats/speed.svg" alt="speed"></img>
+                                <img src="/images/middle-stats/footSkill2.svg" alt="speed"></img>
                             </div>
                             <div>FootSkill test</div>
                         </th>
@@ -320,7 +320,7 @@ export const BestStats = ({ show, year, playerArray, selfBest }) => {
                         </li>
                         <li>
                             <div>
-                                <img src="/images/middle-stats/speed.svg"></img>
+                                <img src="/images/middle-stats/footSkill2.svg"></img>
                             </div>
                             <div>FootSkill test:</div>
                             <div className="middle-stats-value">{bestFootSkill.toFixed(2)} c</div>
@@ -392,7 +392,7 @@ export const BestStats = ({ show, year, playerArray, selfBest }) => {
                         </li>
                         <li>
                             <div>
-                                <img src="/images/middle-stats/speed.svg"></img>
+                                <img src="/images/middle-stats/footSkill2.svg"></img>
                             </div>
                             <div>FootSkill test:</div>
                             <div className="middle-stats-value">{middleFootSkill.toFixed(2)} c</div>
@@ -462,7 +462,7 @@ export const BestStats = ({ show, year, playerArray, selfBest }) => {
                         </li>
                         <li>
                             <div>
-                                <img src="/images/middle-stats/speed.svg"></img>
+                                <img src="/images/middle-stats/footSkill2.svg"></img>
                             </div>
                             <div>FootSkill test:</div>
                             <div className="middle-stats-value">{footSkill.toFixed(2)} c</div>
