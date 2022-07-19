@@ -30,7 +30,7 @@ export const BestStats = ({ show, year, playerArray, selfBest }) => {
 
 
     const result = playerArray.filter(e => e.birthday.split('-')[0] == year)
-    console.log(result);
+    // console.log(result);
     result.map(e => {
         e.Statistics.map(f => {
 

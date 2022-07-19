@@ -148,7 +148,7 @@ export const SiteHeader = () => {
                             <div class="logo">
                                 <a href={HOMEPAGE_ROUTE + "/" + it_number}>
                                     <img
-                                        src="/images/logo/logo-header.svg"
+                                        src="/images/logo/logo_red_black.svg"
                                         alt="logo"
                                         style={{ width: "78px", height: "55px" }}
                                     />
