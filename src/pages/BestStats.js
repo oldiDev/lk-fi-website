@@ -237,18 +237,30 @@ export const BestStats = ({ show, year, playerArray, selfBest }) => {
     let bestFootSkill_hits = 0;
 
     selfBest.map(e => {
-        bestHit = (bestHit > Number(e.Hit)) ? bestHit : Number(e.Hit);
-        bestJump = (bestJump > Number(e.Jump)) ? bestJump : Number(e.Jump);
-        bestJump2 = (bestJump2 > Number(e.Jump2)) ? bestJump2 : Number(e.Jump2);
-        bestReaction = (bestReaction < Number(e.Reaction)) ? bestReaction : Number(e.Reaction);
-        bestSpeed = (bestSpeed > Number(e.Speed)) ? bestSpeed : Number(e.Speed);
-        bestSpeed2 = (bestSpeed2 < Number(e.Speed2)) ? bestSpeed2 : Number(e.Speed2);
-        bestSpeed_s_razbegu = (bestSpeed_s_razbegu > Number(e.Speed_s_razbega)) ? bestSpeed_s_razbegu : Number(e.Speed_s_razbega);
-        bestSpeed_s_razbegu2 = (bestSpeed_s_razbegu2 < Number(e.Speed_s_razbega2)) ? bestSpeed_s_razbegu2 : Number(e.Speed_s_razbega2);
-        bestSharpshooting = (bestSharpshooting > Number(e.sharpshooting)) ? bestSharpshooting : Number(e.sharpshooting);
-        bestAgility = (bestAgility < Number(e.Agility)) ? bestAgility : Number(e.Agility);
-        bestFootSkill = (bestFootSkill < Number(e.FootSkill)) ? bestFootSkill : Number(e.FootSkill);
-        bestFootSkill_hits = (bestFootSkill_hits > Number(e.FootSkill2)) ? bestFootSkill_hits : Number(e.FootSkill2);
+        if (e.Hit != 0)
+            bestHit = (bestHit > Number(e.Hit)) ? bestHit : Number(e.Hit);
+        if (e.Jump != 0)
+            bestJump = (bestJump > Number(e.Jump)) ? bestJump : Number(e.Jump);
+        if (e.Jump2 != 0)
+            bestJump2 = (bestJump2 > Number(e.Jump2)) ? bestJump2 : Number(e.Jump2);
+        if (e.Reaction != 0)
+            bestReaction = (bestReaction < Number(e.Reaction)) ? bestReaction : Number(e.Reaction);
+        if (e.Speed != 0)
+            bestSpeed = (bestSpeed > Number(e.Speed)) ? bestSpeed : Number(e.Speed);
+        if (e.Speed2 != 0)
+            bestSpeed2 = (bestSpeed2 < Number(e.Speed2)) ? bestSpeed2 : Number(e.Speed2);
+        if (e.Speed_s_razbega != 0)
+            bestSpeed_s_razbegu = (bestSpeed_s_razbegu > Number(e.Speed_s_razbega)) ? bestSpeed_s_razbegu : Number(e.Speed_s_razbega);
+        if (e.Speed_s_razbega2 != 0)
+            bestSpeed_s_razbegu2 = (bestSpeed_s_razbegu2 < Number(e.Speed_s_razbega2)) ? bestSpeed_s_razbegu2 : Number(e.Speed_s_razbega2);
+        if (e.sharpshooting != 0)
+            bestSharpshooting = (bestSharpshooting > Number(e.sharpshooting)) ? bestSharpshooting : Number(e.sharpshooting);
+        if (e.Agility !=0 )
+            bestAgility = (bestAgility < Number(e.Agility)) ? bestAgility : Number(e.Agility);
+        if (e.FootSkill != 0)
+            bestFootSkill = (bestFootSkill < Number(e.FootSkill)) ? bestFootSkill : Number(e.FootSkill);
+        if (e.FootSkill2 != 0)
+            bestFootSkill_hits = (bestFootSkill_hits > Number(e.FootSkill2)) ? bestFootSkill_hits : Number(e.FootSkill2);
     })
 
     function declOfNum(n) {

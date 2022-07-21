@@ -45,6 +45,7 @@ export const Auth = () => {
             }
         });
     };
+    // console.log(player)
 
     return (
         <section class="auth-backround">
