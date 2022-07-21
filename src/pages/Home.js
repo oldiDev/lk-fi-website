@@ -96,9 +96,9 @@ export const Home = () => {
                     <div className="long-green-line"></div>
                 </div>
                 <MiddleStats selfBest={star} playerArray={player} />
-                <div className="container">
+                {/* <div className="container">
                     <div className="long-green-line"></div>
-                </div>
+                </div> */}
             </body>
             <SiteFooter />
         </>
