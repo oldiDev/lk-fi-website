@@ -347,12 +347,12 @@ export const BestStats = ({ show, year, playerArray, selfBest }) => {
                             <td className="table-cell">{bestJump2 == 0 ? '-' : Math.round(bestJump2)} см</td>
                             <td className="table-cell">{bestReaction == 999999 ? '-' : Math.round(bestReaction)} мс</td>
                             <td className="table-cell">
-                                <div>{bestSpeed == 0 ? '-' : Math.round(bestSpeed)} км/ч</div>
-                                <div>{bestSpeed2 == 99999 ? '-' : Math.round(bestSpeed2)} c</div>
+                                <div>{bestSpeed == 0 ? '-' : bestSpeed.toFixed(2)} км/ч</div>
+                                <div>{bestSpeed2 == 99999 ? '-' : bestSpeed2.toFixed(3)} c</div>
                             </td>
                             <td className="table-cell">
-                                <div>{bestSpeed_s_razbegu == 0 ? '-' : Math.round(bestSpeed_s_razbegu)} км/ч</div>
-                                <div>{bestSpeed_s_razbegu2 == 99999 ? '-' : Math.round(bestSpeed_s_razbegu2)} c</div>
+                                <div>{bestSpeed_s_razbegu == 0 ? '-' : bestSpeed_s_razbegu.toFixed(2)} км/ч</div>
+                                <div>{bestSpeed_s_razbegu2 == 99999 ? '-' : bestSpeed_s_razbegu2.toFixed(3)} c</div>
                             </td>
                             <td className="table-cell">{bestAgility == 999999 ? '-' : bestAgility.toFixed(3)} с</td>
                             <td className="table-cell">
@@ -368,12 +368,12 @@ export const BestStats = ({ show, year, playerArray, selfBest }) => {
                             <td className="table-cell">{middleJump2 == 0 ? '-' : Math.round(middleJump2)} см</td>
                             <td className="table-cell">{middleReaction == 0 ? '-' : Math.round(middleReaction)} мс</td>
                             <td className="table-cell">
-                                <div>{middleSpeed == 0 ? '-' : Math.round(middleSpeed)} км/ч</div>
-                                <div>{middleSpeed2 == 0 ? '-' : Math.round(middleSpeed2)} c</div>
+                                <div>{middleSpeed == 0 ? '-' : middleSpeed.toFixed(2)} км/ч</div>
+                                <div>{middleSpeed2 == 0 ? '-' : middleSpeed2.toFixed(3)} c</div>
                             </td>
                             <td className="table-cell">
-                                <div>{middleSpeed_s_razbegu == 0 ? '-' : Math.round(middleSpeed_s_razbegu)} км/ч</div>
-                                <div>{middleSpeed_s_razbegu2 == 0 ? '-' : Math.round(middleSpeed_s_razbegu2)} c</div>
+                                <div>{middleSpeed_s_razbegu == 0 ? '-' : middleSpeed_s_razbegu.toFixed(2)} км/ч</div>
+                                <div>{middleSpeed_s_razbegu2 == 0 ? '-' : middleSpeed_s_razbegu2.toFixed(3)} c</div>
                             </td>
                             <td className="table-cell">{middleAgility == 0 ? '-' : middleAgility.toFixed(3)} с</td>
                             <td className="table-cell">
@@ -389,12 +389,12 @@ export const BestStats = ({ show, year, playerArray, selfBest }) => {
                             <td className="last-row table-cell">{jump2 == 0 ? '-' : Math.round(jump2)} см</td>
                             <td className="last-row table-cell">{reaction == 999999 ? '-' : Math.round(reaction)} мс</td>
                             <td className="last-row table-cell">
-                                <div>{speed == 0 ? '-' : Math.round(speed)} км/ч</div>
-                                <div>{speed2 == 999999 ? '-' : Math.round(speed2)} c</div>
+                                <div>{speed == 0 ? '-' : speed.toFixed(2)} км/ч</div>
+                                <div>{speed2 == 999999 ? '-' : speed2.toFixed(3)} c</div>
                             </td>
                             <td className="last-row table-cell">
-                                <div>{speed_s_razbegu == 0 ? '-' : Math.round(speed_s_razbegu)} км/ч</div>
-                                <div>{speed_s_razbegu2 == 9999 ? '-' : Math.round(speed_s_razbegu2)} c</div>
+                                <div>{speed_s_razbegu == 0 ? '-' : speed_s_razbegu.toFixed(2)} км/ч</div>
+                                <div>{speed_s_razbegu2 == 9999 ? '-' : speed_s_razbegu2.toFixed(3)} c</div>
                             </td>
                             <td className="last-row table-cell">{agility == 99999 ? '-' : agility.toFixed(3)} с</td>
                             <td className="last-row table-cell">
@@ -443,16 +443,16 @@ export const BestStats = ({ show, year, playerArray, selfBest }) => {
                                 <img src="/images/middle-stats/speed.svg"></img>
                             </div>
                             <div>10 метров с места:</div>
-                            <div className="middle-stats-value">{bestSpeed == 0 ? '-' : Math.round(bestSpeed)} км/ч</div>
-                            <div className="middle-stats-value">{bestSpeed2 == 99999 ? '-' : Math.round(bestSpeed2)} с</div>
+                            <div className="middle-stats-value">{bestSpeed == 0 ? '-' : bestSpeed.toFixed(3)} км/ч</div>
+                            <div className="middle-stats-value">{bestSpeed2 == 99999 ? '-' : bestSpeed2.toFixed(3)} с</div>
                         </li>
                         <li>
                             <div>
                                 <img src="/images/middle-stats/speed.svg"></img>
                             </div>
                             <div>10 метров с разбега:</div>
-                            <div className="middle-stats-value">{bestSpeed_s_razbegu == 0 ? '-' : Math.round(bestSpeed_s_razbegu)} км/ч</div>
-                            <div className="middle-stats-value">{bestSpeed_s_razbegu2 == 99999 ? '-' : Math.round(bestSpeed_s_razbegu2)} с</div>
+                            <div className="middle-stats-value">{bestSpeed_s_razbegu == 0 ? '-' : bestSpeed_s_razbegu.toFixed(3)} км/ч</div>
+                            <div className="middle-stats-value">{bestSpeed_s_razbegu2 == 99999 ? '-' : bestSpeed_s_razbegu2.toFixed(3)} с</div>
                         </li>
                         <li>
                             <div>
@@ -515,16 +515,16 @@ export const BestStats = ({ show, year, playerArray, selfBest }) => {
                                 <img src="/images/middle-stats/speed.svg"></img>
                             </div>
                             <div>10 метров с места:</div>
-                            <div className="middle-stats-value">{middleSpeed == 0 ? '-' : Math.round(middleSpeed)} км/ч</div>
-                            <div className="middle-stats-value">{middleSpeed2 == 0 ? '-' : Math.round(middleSpeed2)} с</div>
+                            <div className="middle-stats-value">{middleSpeed == 0 ? '-' : middleSpeed.toFixed(3)} км/ч</div>
+                            <div className="middle-stats-value">{middleSpeed2 == 0 ? '-' : middleSpeed2.toFixed(3)} с</div>
                         </li>
                         <li>
                             <div>
                                 <img src="/images/middle-stats/speed.svg"></img>
                             </div>
                             <div>10 метров с разбега:</div>
-                            <div className="middle-stats-value">{middleSpeed_s_razbegu == 0 ? '-' : Math.round(middleSpeed_s_razbegu)} км/ч</div>
-                            <div className="middle-stats-value">{middleSpeed_s_razbegu2 == 0 ? '-' : Math.round(middleSpeed_s_razbegu2)} с</div>
+                            <div className="middle-stats-value">{middleSpeed_s_razbegu == 0 ? '-' : middleSpeed_s_razbegu.toFixed(3)} км/ч</div>
+                            <div className="middle-stats-value">{middleSpeed_s_razbegu2 == 0 ? '-' : middleSpeed_s_razbegu2.toFixed(3)} с</div>
                         </li>
                         <li>
                             <div>
@@ -585,16 +585,16 @@ export const BestStats = ({ show, year, playerArray, selfBest }) => {
                                 <img src="/images/middle-stats/speed.svg"></img>
                             </div>
                             <div>10 метров с места:</div>
-                            <div className="middle-stats-value">{speed == 0 ? '-' : Math.round(speed)} км/ч</div>
-                            <div className="middle-stats-value">{speed2 == 999999 ? '-' : Math.round(speed2)} с</div>
+                            <div className="middle-stats-value">{speed == 0 ? '-' : speed.toFixed(3)} км/ч</div>
+                            <div className="middle-stats-value">{speed2 == 999999 ? '-' : speed2.toFixed(3)} с</div>
                         </li>
                         <li>
                             <div>
                                 <img src="/images/middle-stats/speed.svg"></img>
                             </div>
                             <div>10 метров с разбега:</div>
-                            <div className="middle-stats-value">{speed_s_razbegu == 0 ? '-' : Math.round(speed_s_razbegu)}  км/ч</div>
-                            <div className="middle-stats-value">{speed_s_razbegu2 == 9999 ? '-' : Math.round(speed_s_razbegu2)} с</div>
+                            <div className="middle-stats-value">{speed_s_razbegu == 0 ? '-' : speed_s_razbegu.toFixed(3)}  км/ч</div>
+                            <div className="middle-stats-value">{speed_s_razbegu2 == 9999 ? '-' : speed_s_razbegu2.toFixed(3)} с</div>
                         </li>
                         <li>
                             <div>

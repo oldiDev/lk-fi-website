@@ -7,7 +7,7 @@ export const MiddleStats = ({ selfBest, playerArray }) => {
     const [show, setShow] = useState(false);
     const [selectedOption, setSelectedOption] = React.useState()
     const [showBest, setShowBest] = useState(false);
-    const [showInfo, setShowInfo] = useState(true);
+    const [showInfo, setShowInfo] = useState(false);
 
     const options = [];
     playerArray.forEach(e => {
@@ -20,10 +20,10 @@ export const MiddleStats = ({ selfBest, playerArray }) => {
         setSelectedOption(e.target.value);
         setShowBest(true)
     }
+    // console.log(showInfo)
 
     let showInfoFunction = () => {
         setShowInfo(!showInfo)
-        console.log(showInfo)
     }
 
     if (!show) {
@@ -36,6 +36,9 @@ export const MiddleStats = ({ selfBest, playerArray }) => {
                     </div>
                     <div className="test-info" onClick={showInfoFunction}>Подробнее о тестировании</div>
                 </section>
+                {
+                    showInfo ? <TestInfo togglePopUp={showInfoFunction}/> : null
+                }
             </div>
         );
     } else {
@@ -53,7 +56,7 @@ export const MiddleStats = ({ selfBest, playerArray }) => {
                                     <img src="/images/client/down-arrow.svg" alt="right-arrow" className="client-menu-arrow"></img>
                                 </div>
                             </div>
-                        <button className="test-info" onClick={showInfoFunction}>Подробнее о тестировании</button>
+                        <div className="test-info" onClick={showInfoFunction}>Подробнее о тестировании</div>
                         </div>
                         <div class="middle_stats-container">
                             <div class="date-select">
@@ -72,7 +75,7 @@ export const MiddleStats = ({ selfBest, playerArray }) => {
                     </div>
                 </section>
                 {
-                    showInfo ? <TestInfo /> : null
+                    showInfo ? <TestInfo togglePopUp={showInfoFunction}/> : null
                 }
             </div>
         );
