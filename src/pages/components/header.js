@@ -102,7 +102,7 @@ export const SiteHeader = () => {
                         </li>
                         <li>
                             <a href={BLOG_ROUTE + "/" + it_number} >
-                                Информация
+                                Новости
                             </a>
                         </li>
                         <li>
@@ -162,7 +162,7 @@ export const SiteHeader = () => {
                                 </li>
                                 <li>
                                     <a href={BLOG_ROUTE + "/" + it_number} id="information-button">
-                                        Информация
+                                        Новости
                                     </a>
                                 </li>
                                 <li>
