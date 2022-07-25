@@ -15,7 +15,7 @@ const PostList = () => {
             <body>
                 <div class="blog-body-container">
                     <div class="blog-title">
-                        <span>Вся информация</span>
+                        <span>Все новости</span>
                     </div>
                     <div class="blog-array">
                         <Pagination_Post it_number={it_number} />

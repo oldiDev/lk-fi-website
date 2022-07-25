@@ -48,7 +48,18 @@ export const Home = () => {
             lead_leg = e.lead_leg;
             team = e.team;
         }
-    })
+    })  
+   
+
+    star.sort(function(a, b) {
+        if (a.date > b.date) {
+          return 1; }
+        if (a.date < b.date) {
+          return -1; }
+        return 0;
+      });
+     
+      
 
     star.sort(function (a, b) {
         if (a.date > b.date) {
@@ -61,6 +72,7 @@ export const Home = () => {
     });
 
     avatar = (avatar != null) ? "https://cdn.lk-ft.ru" + avatar : "/images/banner/banner.png";
+    // console.log(star);
 
     return (
         <>
@@ -84,9 +96,9 @@ export const Home = () => {
                     <div className="long-green-line"></div>
                 </div>
                 <MiddleStats selfBest={star} playerArray={player} />
-                <div className="container">
+                {/* <div className="container">
                     <div className="long-green-line"></div>
-                </div>
+                </div> */}
             </body>
             <SiteFooter />
         </>

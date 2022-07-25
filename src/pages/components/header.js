@@ -102,7 +102,7 @@ export const SiteHeader = () => {
                         </li>
                         <li>
                             <a href={BLOG_ROUTE + "/" + it_number} >
-                                Информация
+                                Новости
                             </a>
                         </li>
                         <li>
@@ -148,7 +148,7 @@ export const SiteHeader = () => {
                             <div class="logo">
                                 <a href={HOMEPAGE_ROUTE + "/" + it_number}>
                                     <img
-                                        src="/images/logo/logo-header.svg"
+                                        src="/images/logo/logo_red_black.svg"
                                         alt="logo"
                                         style={{ width: "78px", height: "55px" }}
                                     />
@@ -162,7 +162,7 @@ export const SiteHeader = () => {
                                 </li>
                                 <li>
                                     <a href={BLOG_ROUTE + "/" + it_number} id="information-button">
-                                        Информация
+                                        Новости
                                     </a>
                                 </li>
                                 <li>

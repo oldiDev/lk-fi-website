@@ -1,10 +1,13 @@
 import React, { useState } from "react";
 import { BestStats } from "./BestStats";
+import TestInfo from "./TestInfo";
+import './testInfo.css'
 
 export const MiddleStats = ({ selfBest, playerArray }) => {
     const [show, setShow] = useState(false);
     const [selectedOption, setSelectedOption] = React.useState()
-    const [showBest, setShowBest] = useState(false)
+    const [showBest, setShowBest] = useState(false);
+    const [showInfo, setShowInfo] = useState(false);
 
     const options = [];
     playerArray.forEach(e => {
@@ -17,16 +20,25 @@ export const MiddleStats = ({ selfBest, playerArray }) => {
         setSelectedOption(e.target.value);
         setShowBest(true)
     }
+    // console.log(showInfo)
+
+    let showInfoFunction = () => {
+        setShowInfo(!showInfo)
+    }
 
     if (!show) {
         return (
             <div className="container">
-                <section className="section-header-2">
+                <section className="section-header-2 section-flex">
                     <div class="text-theme" onClick={() => setShow(true)}>
                         <span>Лучшие результаты</span>
                         <img src="/images/client/right-arrow.svg" alt="right-arrow" className="client-menu-arrow"></img>
                     </div>
+                    <div className="test-info" onClick={showInfoFunction}>Подробнее о тестировании</div>
                 </section>
+                {
+                    showInfo ? <TestInfo togglePopUp={showInfoFunction}/> : null
+                }
             </div>
         );
     } else {
@@ -34,12 +46,17 @@ export const MiddleStats = ({ selfBest, playerArray }) => {
             <div className="container">
                 <section className="section-header-2">
                     <div>
-                        <div class="text-theme-show" onClick={() => {
-                            setShow(false);
-                            setShowBest(false);
-                        }} >
-                            <span class="text-theme-show">Лучшие результаты</span>
-                            <img src="/images/client/down-arrow.svg" alt="right-arrow" className="client-menu-arrow"></img>
+                        <div className="section-flex">
+                            <div class="text-theme-show" onClick={() => {
+                                setShow(false);
+                                setShowBest(false);
+                            }} >
+                                <div>
+                                    <span class="text-theme-show">Лучшие результаты</span>
+                                    <img src="/images/client/down-arrow.svg" alt="right-arrow" className="client-menu-arrow"></img>
+                                </div>
+                            </div>
+                        <div className="test-info" onClick={showInfoFunction}>Подробнее о тестировании</div>
                         </div>
                         <div class="middle_stats-container">
                             <div class="date-select">
@@ -57,6 +74,9 @@ export const MiddleStats = ({ selfBest, playerArray }) => {
                         </div>
                     </div>
                 </section>
+                {
+                    showInfo ? <TestInfo togglePopUp={showInfoFunction}/> : null
+                }
             </div>
         );
     }

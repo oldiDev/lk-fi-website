@@ -1,0 +1,179 @@
+.test-info{
+    font-family: 'GothamPro';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    color: #2D2D2D;
+    text-align: right;
+    cursor: pointer;
+}
+
+.test-info:hover{
+    color: #25BA00;
+}
+
+.section-flex{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.info-wrapper {
+    position: fixed;
+    z-index: 9998;
+    width: 100%;
+    min-height: 100vh;
+    height: auto;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    height: 500px;
+    /* overflow: scroll; */
+    /* margin-top: 5%; */
+    /* align-self: center; */
+    background-color: white;
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.close-button {
+    position: absolute;
+    right: 24px;
+    top: 22px;
+    width: 32px;
+    height: 32px;
+    opacity: 0.3;
+}
+
+.close-button:hover {
+    opacity: 1;
+}
+
+.close-button:before,
+.close-button:after {
+    position: absolute;
+    left: 15px;
+    content: ' ';
+    height: 33px;
+    width: 2px;
+    background-color: #333;
+}
+
+.close-button:before {
+    transform: rotate(45deg);
+}
+
+.close-button:after {
+    transform: rotate(-45deg);
+}
+
+.info-header{
+    font-family: 'GothamPro';
+    font-size: 30px;
+    text-transform: uppercase;
+    border-bottom: 1px solid #25BA00;
+    margin-top: 0.5em;
+}
+
+.info-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin: 1em 0px;
+    width: 90%;
+    height: calc(100% - 30px);
+    overflow: scroll;
+}
+
+.info-content-element {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin: 0.5em 0px;
+}
+
+.test-point {
+    display: inline-block;
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    border: #25BA00;
+    background-color: #25BA00;
+    margin: 8px 5px;
+}
+
+.info-content-text{
+    font-family: 'GothamPro';
+    font-size: 18px;
+}
+
+@media screen and (max-width: 576px) {
+    .close-button {
+        right: 20px;
+        top: 15px;
+        width: 16px;
+        height: 16px;
+    }
+
+    .close-button:before,
+    .close-button:after {
+        height: 20px;
+    }
+}
+
+
+@media screen and (max-width: 430px) {
+    .close-button {
+        right: 32px;
+        top: 16px;
+        width: 10px;
+        height: 10px;
+    }
+}
+
+@media screen and (max-width: 567px) {
+    .section-flex{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .test-info{
+        margin: 10px 0px;
+    }
+
+    .info-wrapper {
+        align-items: baseline;
+    }
+
+    .info-container {
+        width: calc(100% - 32px);
+        margin-top: 20%;
+    }
+
+    .info-header{
+        font-size: 16px;
+        margin-top: 14px;
+    }
+
+    .info-content-text {
+        font-size: 15px;
+    }
+
+    .test-point{
+        margin: 7px 5px;
+    }
+}
