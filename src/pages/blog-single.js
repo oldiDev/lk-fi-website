@@ -80,8 +80,8 @@ export const Blog_Single = () => {
     return (
         <>
             <SiteHeader />
-            <section>
-                <div class="container">
+            <section style={{minHeight: "100vh"}}>
+                <div class="container" style={{margin: "0px auto"}}>
                     <div class="blog-title">
                         <span>{post_title_text}</span>
                     </div >
@@ -91,7 +91,7 @@ export const Blog_Single = () => {
                     </div>
                     <div class="single-blog-img-container">
                         {
-                            (post_img.length == 1) ?
+                            (post_img.length <= 1) ?
                                 <img class="single-blog-img" src={"https://cdn.lk-ft.ru" + post_img[0]?.url} alt="blog-img"></img>
                                 :
                                 <div className="slide-container">
