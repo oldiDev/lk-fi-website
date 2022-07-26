@@ -34,8 +34,9 @@ const Post_Component = ({ posts, it_number }) => {
 
     const history = useHistory()
     // console.log("proverka0 ",posts)
-    JSON.stringify(posts);
+    // JSON.stringify(posts);
     // console.log("proverka1 ",posts )
+    // console.log(posts)
     return (
         <>
             {
@@ -56,7 +57,7 @@ const Post_Component = ({ posts, it_number }) => {
                                     <div>{e.Post_Date.split('-').reverse().join('.')}</div>
                                 </div>
                             </div>
-                            <img class="blog-img" src={"https://cdn.lk-ft.ru" + e.Post_image[0]?.url} alt="blog-img"/>
+                            <img class="blog-img" src={e.Post_image.length != 0 ? "https://cdn.lk-ft.ru" + e.Post_image[0]?.url : "/images/banner/banner.png"} alt="blog-img"/>
                         </div>
                     </div>
                 )

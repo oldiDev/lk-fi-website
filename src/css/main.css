@@ -6227,7 +6227,7 @@ div[class*="col"]:nth-of-type(4n + 4) .info-inner {
     }
 
     .section-blog-content{
-        margin-left: .5em;
+        margin-left: .3em;
     }
 }
 
@@ -6273,7 +6273,7 @@ div[class*="col"]:nth-of-type(4n + 4) .info-inner {
 
 @media screen and (max-width: 576px) {
     .blog-body-footer{
-        margin-top: 903px;
+        margin-top: 0px;
     }
 }
 
@@ -6353,6 +6353,7 @@ div[class*="col"]:nth-of-type(4n + 4) .info-inner {
     width: 70%;
     margin: .5em auto;
     align-items: center;
+    min-height: calc(100vh - 30px);
 }
 
 .single-blog-img{

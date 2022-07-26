@@ -91,7 +91,7 @@ export const Blog_Single = () => {
                     </div>
                     <div class="single-blog-img-container">
                         {
-                            (post_img.length == 1) ?
+                            (post_img.length <= 1) ?
                                 <img class="single-blog-img" src={"https://cdn.lk-ft.ru" + post_img[0]?.url} alt="blog-img"></img>
                                 :
                                 <div className="slide-container">
