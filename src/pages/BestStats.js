@@ -2,19 +2,6 @@ import React from "react";
 
 export const BestStats = ({ show, year, playerArray, selfBest }) => {
 
-    let middleHitArray = [];
-    let middleJumpArray = [];
-    let middleJump_2_Array = [];
-    let middleReactionArray = [];
-    let middleSpeedArray = [];
-    let middleSpeed_2_Array = [];
-    let middleSpeed_s_razbegu_Array = [];
-    let middleSpeed_s_razbegu_2_Array = [];
-    let middleSharpshootingArray = [];
-    let middleAgilityArray = [];
-    let middleFootSkillArray = [];
-    let middleFootSkill_hitsArray = [];
-
     var hit = 0;
     var jump = 0;
     var jump2 = 0;
@@ -28,46 +15,46 @@ export const BestStats = ({ show, year, playerArray, selfBest }) => {
     let footSkill = 99999;
     let footSkill_hits = 0;
 
+    let middleHitNotNull = 0;
+    let middleHit = 0;
+
+    let middleJumpNotNull = 0;
+    let middleJump = 0;
+
+    let middleJump_2_NotNull = 0;
+    let middleJump2 = 0;
+
+    let middleReactionNotNull = 0;
+    let middleReaction = 0;
+
+    let middleSpeedNotNull = 0;
+    let middleSpeed = 0;
+
+    let middleSpeed_2_NotNull = 0;
+    let middleSpeed2 = 0;
+
+    let middleSpeed_s_razbegu_NotNull = 0;
+    let middleSpeed_s_razbegu = 0;
+
+    let middleSpeed_s_razbegu_2_NotNull = 0;
+    let middleSpeed_s_razbegu2 = 0;
+
+    let middleSharpshootingNotNull = 0;
+    let middleSharpshooting = 0;
+
+    let middleAgilityNotNull = 0;
+    let middleAgility = 0;
+
+    let middleFootSkillNotNull = 0;
+    let middleFootSkill = 0;
+
+    let middleFootSkill_hitsNotNull = 0;
+    let middleFootSkill_hits = 0;
+
 
     const result = playerArray.filter(e => e.birthday.split('-')[0] == year)
     // console.log(result);
     result.map(e => {
-
-        let middleHitNotNull = 0;
-        let middleHit = 0;
-
-        let middleJumpNotNull = 0;
-        let middleJump = 0;
-
-        let middleJump_2_NotNull = 0;
-        let middleJump2 = 0;
-
-        let middleReactionNotNull = 0;
-        let middleReaction = 0;
-
-        let middleSpeedNotNull = 0;
-        let middleSpeed = 0;
-
-        let middleSpeed_2_NotNull = 0;
-        let middleSpeed2 = 0;
-
-        let middleSpeed_s_razbegu_NotNull = 0;
-        let middleSpeed_s_razbegu = 0;
-
-        let middleSpeed_s_razbegu_2_NotNull = 0;
-        let middleSpeed_s_razbegu2 = 0;
-
-        let middleSharpshootingNotNull = 0;
-        let middleSharpshooting = 0;
-
-        let middleAgilityNotNull = 0;
-        let middleAgility = 0;
-
-        let middleFootSkillNotNull = 0;
-        let middleFootSkill = 0;
-
-        let middleFootSkill_hitsNotNull = 0;
-        let middleFootSkill_hits = 0;
 
         e.Statistics.map(f => {
 
@@ -124,104 +111,22 @@ export const BestStats = ({ show, year, playerArray, selfBest }) => {
             if (f.FootSkill2 != 0)
                 footSkill_hits = (Number(footSkill_hits) > Number(f.FootSkill2)) ? Number(footSkill_hits) : Number(f.FootSkill2);
         })
-
-        if (middleHitNotNull != 0) {
-            middleHit = middleHit / middleHitNotNull;
-            middleHitArray.push(middleHit);
-        }
-        if (middleJumpNotNull != 0) {
-            middleJump = middleJump / middleJumpNotNull;
-            middleJumpArray.push(middleJump);
-        }
-        if (middleJump_2_NotNull != 0) {
-            middleJump2 = middleJump2 / middleJump_2_NotNull;
-            middleJump_2_Array.push(middleJump2);
-        }
-        if (middleReactionNotNull != 0) {
-            middleReaction = middleReaction / middleReactionNotNull
-            middleReactionArray.push(middleReaction);
-        }
-        if (middleSpeedNotNull != 0) {
-            middleSpeed = middleSpeed / middleSpeedNotNull;
-            middleSpeedArray.push(middleSpeed)
-        }
-        if (middleSpeed_2_NotNull != 0) {
-            middleSpeed2 = middleSpeed2 / middleSpeed_2_NotNull;
-            middleSpeed_2_Array.push(middleSpeed2);
-        }
-        if (middleSpeed_s_razbegu_NotNull != 0) {
-            middleSpeed_s_razbegu = middleSpeed_s_razbegu / middleSpeed_s_razbegu_NotNull;
-            middleSpeed_s_razbegu_Array.push(middleSpeed_s_razbegu);
-        }
-        if (middleSpeed_s_razbegu_2_NotNull != 0) {
-            middleSpeed_s_razbegu2 = middleSpeed_s_razbegu2 / middleSpeed_s_razbegu_2_NotNull;
-            middleSpeed_s_razbegu_2_Array.push(middleSpeed_s_razbegu2)
-        }
-        if (middleSharpshootingNotNull != 0) {
-            middleSharpshooting = middleSharpshooting / middleSharpshootingNotNull;
-            middleSharpshootingArray.push(middleSharpshooting);
-        }
-        if (middleAgilityNotNull != 0){
-            middleAgility = middleAgility / middleAgilityNotNull;
-            middleAgilityArray.push(middleAgility);
-        }
-        if (middleFootSkillNotNull != 0){
-            middleFootSkill = middleFootSkill / middleFootSkillNotNull;
-            middleFootSkillArray.push(middleFootSkill)
-        }
-        if (middleFootSkill_hitsNotNull != 0){
-            middleFootSkill_hits = middleFootSkill_hits / middleFootSkill_hitsNotNull;
-            middleFootSkill_hitsArray.push(middleFootSkill_hits);
-        }
-        // console.log(middleReactionArray)
     })
 
-    let middleHit = middleHitArray != 0 ? middleHitArray.reduce((sum, el) => {
-        return sum += el
-    }, 0) / middleHitArray.length : 0;
 
-    let middleJump = (middleJumpArray.length != 0) ? middleJumpArray.reduce((sum, el) => {
-        return sum += el;
-    }, 0) / middleJumpArray.length : 0;
-
-    let middleJump2 = (middleJump_2_Array.length != 0) ? middleJump_2_Array.reduce((sum, el) => {
-        return sum += el;
-    }, 0) / middleJump_2_Array.length : 0;
-
-    let middleReaction = (middleReactionArray.length != 0) ? middleReactionArray.reduce((sum, el) => {
-        return sum += el
-    }, 0) / middleReactionArray.length : 0;
-
-    let middleSpeed = (middleSpeedArray.length != 0) ? middleSpeedArray.reduce((sum, el) => {
-        return sum += el;
-    }, 0) / middleSpeedArray.length : 0;
-
-    let middleSpeed2 = (middleSpeed_2_Array.length != 0) ? middleSpeed_2_Array.reduce((sum, el) => {
-        return sum += el;
-    }, 0) / middleSpeed_2_Array.length : 0;
-
-    let middleSpeed_s_razbegu = (middleSpeed_s_razbegu_Array.length != 0) ? middleSpeed_s_razbegu_Array.reduce((sum, el) => {
-        return sum += el;
-    }, 0) / middleSpeed_s_razbegu_Array.length : 0;
-
-    let middleSpeed_s_razbegu2 = (middleSpeed_s_razbegu_2_Array.length != 0) ? middleSpeed_s_razbegu_2_Array.reduce((sum, el) => {
-        return sum += el;
-    }, 0) / middleSpeed_s_razbegu_2_Array.length : 0;
-
-    let middleSharpshooting = (middleSharpshootingArray.length != 0) ? middleSharpshootingArray.reduce((sum, el) => {
-        return sum += el;
-    }, 0) / middleSharpshootingArray.length : 0;
-
-    let middleAgility = (middleAgilityArray.length != 0) ? middleAgilityArray.reduce((sum, el) => {
-        return sum += el;
-    }, 0) / middleAgilityArray.length : 0;
-
-    let middleFootSkill = (middleFootSkillArray.length != 0) ? middleFootSkillArray.reduce((sum, el) => {
-        return sum += el;
-    }, 0) / middleFootSkillArray.length : 0;
-    let middleFootSkill_hits = (middleFootSkill_hitsArray.length != 0) ? middleFootSkill_hitsArray.reduce((sum, el) => {
-        return sum += el;
-    }, 0) / middleFootSkill_hitsArray.length : 0;
+    // console.log(middleJump2, middleJump_2_NotNull)
+    middleHit = middleHitNotNull != 0 ? middleHit / middleHitNotNull : 0
+    middleJump = middleJumpNotNull != 0 ? middleJump / middleJumpNotNull : 0
+    middleJump2 = middleJump_2_NotNull != 0 ? middleJump2 / middleJump_2_NotNull : 0
+    middleReaction = middleReactionNotNull != 0 ? middleReaction / middleReactionNotNull : 0
+    middleSpeed = middleSpeedNotNull != 0 ? middleSpeed / middleSpeedNotNull : 0;
+    middleSpeed2 = middleSpeed_2_NotNull != 0 ? middleSpeed2 / middleSpeed_2_NotNull : 0;
+    middleSpeed_s_razbegu = middleSpeed_s_razbegu_NotNull != 0 ? middleSpeed_s_razbegu / middleSpeed_s_razbegu_NotNull : 0;
+    middleSpeed_s_razbegu2 = middleSpeed_s_razbegu_2_NotNull != 0 ? middleSpeed_s_razbegu2 / middleSpeed_s_razbegu_2_NotNull : 0;
+    middleSharpshooting = middleSharpshootingNotNull != 0 ? middleSharpshooting / middleSharpshootingNotNull : 0;
+    middleAgility = middleAgilityNotNull != 0 ? middleAgility / middleAgilityNotNull : 0;
+    middleFootSkill = middleFootSkillNotNull != 0 ? middleFootSkill / middleFootSkillNotNull : 0;
+    middleFootSkill_hits = middleFootSkill_hitsNotNull != 0 ? middleFootSkill_hits / middleFootSkill_hitsNotNull : 0;
 
     let bestHit = 0;
     let bestJump = 0;
@@ -255,7 +160,7 @@ export const BestStats = ({ show, year, playerArray, selfBest }) => {
             bestSpeed_s_razbegu2 = (bestSpeed_s_razbegu2 < Number(e.Speed_s_razbega2)) ? bestSpeed_s_razbegu2 : Number(e.Speed_s_razbega2);
         if (e.sharpshooting != 0)
             bestSharpshooting = (bestSharpshooting > Number(e.sharpshooting)) ? bestSharpshooting : Number(e.sharpshooting);
-        if (e.Agility !=0 )
+        if (e.Agility != 0)
             bestAgility = (bestAgility < Number(e.Agility)) ? bestAgility : Number(e.Agility);
         if (e.FootSkill != 0)
             bestFootSkill = (bestFootSkill < Number(e.FootSkill)) ? bestFootSkill : Number(e.FootSkill);
