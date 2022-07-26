@@ -29,16 +29,12 @@ export const MiddleStats = ({ selfBest, playerArray }) => {
     if (!show) {
         return (
             <div className="container">
-                <section className="section-header-2 section-flex">
+                <section className="section-header-2">
                     <div class="text-theme" onClick={() => setShow(true)}>
                         <span>Лучшие результаты</span>
                         <img src="/images/client/right-arrow.svg" alt="right-arrow" className="client-menu-arrow"></img>
                     </div>
-                    <div className="test-info" onClick={showInfoFunction}>Подробнее о тестировании</div>
                 </section>
-                {
-                    showInfo ? <TestInfo togglePopUp={showInfoFunction}/> : null
-                }
             </div>
         );
     } else {
@@ -46,17 +42,14 @@ export const MiddleStats = ({ selfBest, playerArray }) => {
             <div className="container">
                 <section className="section-header-2">
                     <div>
-                        <div className="section-flex">
-                            <div class="text-theme-show" onClick={() => {
-                                setShow(false);
-                                setShowBest(false);
-                            }} >
-                                <div>
-                                    <span class="text-theme-show">Лучшие результаты</span>
-                                    <img src="/images/client/down-arrow.svg" alt="right-arrow" className="client-menu-arrow"></img>
-                                </div>
+                        <div class="text-theme-show" onClick={() => {
+                            setShow(false);
+                            setShowBest(false);
+                        }} >
+                            <div>
+                                <span class="text-theme-show">Лучшие результаты</span>
+                                <img src="/images/client/down-arrow.svg" alt="right-arrow" className="client-menu-arrow"></img>
                             </div>
-                        <div className="test-info" onClick={showInfoFunction}>Подробнее о тестировании</div>
                         </div>
                         <div class="middle_stats-container">
                             <div class="date-select">
@@ -74,9 +67,6 @@ export const MiddleStats = ({ selfBest, playerArray }) => {
                         </div>
                     </div>
                 </section>
-                {
-                    showInfo ? <TestInfo togglePopUp={showInfoFunction}/> : null
-                }
             </div>
         );
     }

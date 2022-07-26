@@ -145,11 +145,18 @@
     }
 }
 
-@media screen and (max-width: 567px) {
+@media screen and (max-width: 767px) {
     .section-flex{
         flex-direction: column;
         align-items: flex-start;
     }
+
+    .info-container {
+        width: calc(100% - 32px);
+    }
+}
+
+@media screen and (max-width: 567px) {
 
     .test-info{
         margin: 10px 0px;

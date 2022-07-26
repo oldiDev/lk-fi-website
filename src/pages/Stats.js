@@ -2,13 +2,16 @@ import React, { useState } from "react";
 import { Chart } from "react-google-charts";
 import { useStatistics } from "./components/hooks/useStat";
 import './switcher.css'
+import TestInfo from "./TestInfo";
 
 export const Stats = ({ stats }) => {
     const { get, set } = useStatistics();
     const [show, setShow] = useState(false);
     const [speedSwitcher, setSpeedSwitcher] = useState(false);
     const [speed_s_razbegaSwitcher, setSpeed_s_razbegaSwitcher] = useState(false);
-    const [footSkillSwitcher, setFootSkillSwitcher] = useState(false)
+    const [footSkillSwitcher, setFootSkillSwitcher] = useState(false);
+    const [showInfo, setShowInfo] = useState(false);
+
 
     const handleChangeSpeed = () => {
         setSpeedSwitcher(!speedSwitcher);
@@ -22,6 +25,10 @@ export const Stats = ({ stats }) => {
         setFootSkillSwitcher(!footSkillSwitcher)
     }
 
+    let showInfoFunction = () => {
+        setShowInfo(!showInfo)
+    }
+
     React.useEffect(() => {
         if (typeof stats == "object" && typeof stats[0] != "number") {
             set(stats);
@@ -32,10 +39,14 @@ export const Stats = ({ stats }) => {
         return (
             <div className="container">
                 <section className="section-header-2">
-                    <h2 class="title" onClick={() => setShow(false)}>
-                        <span class="text-theme-show">Моя статистика</span>
-                        <img src="/images/client/down-arrow.svg" alt="right-arrow" className="client-menu-arrow"></img>
-                    </h2>
+                    <div className="section-flex">
+                        <h2 class="title" onClick={() => setShow(false)}>
+                            <span class="text-theme-show">Моя статистика</span>
+                            <img src="/images/client/down-arrow.svg" alt="right-arrow" className="client-menu-arrow arrow-margin-bottom"></img>
+                        </h2>
+                        <div className="test-info" onClick={showInfoFunction}>Подробнее о тестировании</div>
+                    </div>
+
                     <div className="my-stats-chart">
                         <div>
                             <span className="my-stats-label">Сила удара</span>
@@ -362,17 +373,24 @@ export const Stats = ({ stats }) => {
                         </div>
                     </div>
                 </section>
+                {
+                    showInfo ? <TestInfo togglePopUp={showInfoFunction} /> : null
+                }
             </div>
         );
     } else {
         return (
             <div className="container">
-                <section className="section-header-2">
+                <section className="section-header-2 section-flex">
                     <h2 class="title" onClick={() => setShow(true)} style={{ cursor: "pointer" }}>
                         <span class="text-theme">Моя статистика</span>
-                        <img src="/images/client/right-arrow.svg" alt="right-arrow" className="client-menu-arrow"></img>
+                        <img src="/images/client/right-arrow.svg" alt="right-arrow" className="client-menu-arrow arrow-margin-bottom " ></img>
                     </h2>
+                    <div className="test-info" onClick={showInfoFunction}>Подробнее о тестировании</div>
                 </section>
+                {
+                    showInfo ? <TestInfo togglePopUp={showInfoFunction} /> : null
+                }
             </div>
         );
     }

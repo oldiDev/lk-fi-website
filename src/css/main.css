@@ -1721,6 +1721,7 @@ section {
     margin-bottom: 5px;
 }
 
+
 @media (max-width: 575px) {
     .section-header-2 {
         padding: 15px 0;
@@ -1729,6 +1730,10 @@ section {
 
     .section-header-2 .stroke-text {
         font-size: 80px;
+    }
+
+    .arrow-margin-bottom {
+        margin-bottom: 0px;
     }
 }
 
