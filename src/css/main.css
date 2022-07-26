@@ -263,6 +263,7 @@ html {
     .middle_stats-container ul li div{
         font-size: 17px;
         margin: 5px 0px;
+        width: 100%;
     }
 }
 
