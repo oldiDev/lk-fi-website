@@ -81,7 +81,7 @@ export const Home = () => {
         <>
 
             <SiteHeader />
-            <body style={{minHeight: "100vh"}}>
+            <body style={{minHeight: "calc(100vh - 100px)"}}>
                 <BannerPlayer
                     firstname={firstname}
                     lastname={lastname}

@@ -26,7 +26,7 @@ export const Contact = () => {
 
         <html>
             <SiteHeader />
-            <body>
+            <body style={{minHeight: "calc(100vh - 100px)"}}>
                 <div class="container" id="container-shedule">
                     <div class="history-wrapper">
                         <div id="schedule-label">
@@ -386,7 +386,6 @@ export const Contact = () => {
                         </table>
                     </div>
                 </div>
-                <div className="before-footer"></div>
             </body >
             <SiteFooter />
         </html >

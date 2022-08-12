@@ -100,7 +100,7 @@ export const Award = () => {
     return (
         <>
             <SiteHeader />
-            <body>
+            <body style={{minHeight: "calc(100vh - 100px)"}}>
                 <div class="container">
                     <div class="single-tournament-content">
                         {/* <div class="achivements-header">
@@ -110,10 +110,9 @@ export const Award = () => {
                         <Camp countCamps={countCamps} />
                         <Events dva={twoVSTwo} tre={threeVsThree} penal={penalty} /> */}
                         <FullGradde two={two} tre={tre} camp={countCamps} test={test} training={countTraining} minusPoints={minusPoints} />
-                        <div className="before-footer"></div>
+                        {/* <div className="before-footer"></div> */}
                     </div>
                 </div>
-                <div class="before-footer"></div>
             </body>
             <SiteFooter />
         </>
