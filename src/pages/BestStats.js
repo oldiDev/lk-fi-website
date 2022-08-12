@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
+import axios from "axios";
 
-export const BestStats = ({ show, year, playerArray, selfBest }) => {
+export const BestStats = ({ show, year, selfBest }) => {
 
     var hit = 0;
     var jump = 0;
@@ -51,82 +52,94 @@ export const BestStats = ({ show, year, playerArray, selfBest }) => {
     let middleFootSkill_hitsNotNull = 0;
     let middleFootSkill_hits = 0;
 
+    const [resultByYear, setResultByYear] = useState([]);
 
-    const result = playerArray.filter(e => e.birthday.split('-')[0] == year)
+    React.useEffect(() => {
+        // fetchDataPlayer();
+        const fetchStat = async () => {
+            const res = await axios.get(`https://cdn.lk-ft.ru/footballers?birthday_gte=${year}-01-01&birthday_lte=${year}-12-31`);
+            setResultByYear(res.data)
+        }
+        if (year)
+            fetchStat();
+    }, [year]);
+
     // console.log(result);
-    result.map(e => {
+    if (year && resultByYear) {
+        resultByYear.map(e => {
 
-        e.Statistics.map(f => {
-
-
-            middleHit += Number(f.Hit);
-            middleJump += Number(f.Jump);
-            middleJump2 += Number(f.Jump2);
-            middleReaction += Number(f.Reaction)
-            middleSpeed += Number(f.Speed);
-            middleSpeed2 += Number(f.Speed2);
-            middleSpeed_s_razbegu += Number(f.Speed_s_razbega);
-            middleSpeed_s_razbegu2 += Number(f.Speed_s_razbega2);
-            middleSharpshooting += Number(f.sharpshooting);
-            middleAgility += Number(f.Agility);
-            middleFootSkill += Number(f.FootSkill);
-            middleFootSkill_hits += Number(f.FootSkill2);
-
-            middleHitNotNull = (f.Hit == 0) ? middleHitNotNull : middleHitNotNull + 1;
-            middleJumpNotNull = (f.Jump == 0) ? middleJumpNotNull : middleJumpNotNull + 1;
-            middleJump_2_NotNull = (f.Jump2 == 0) ? middleJump_2_NotNull : middleJump_2_NotNull + 1;
-            middleReactionNotNull = (f.Reaction == 0) ? middleReactionNotNull : middleReactionNotNull + 1;
-            middleSpeedNotNull = (f.Speed == 0) ? middleSpeedNotNull : middleSpeedNotNull + 1;
-            middleSpeed_2_NotNull = (f.Speed2 == 0) ? middleSpeed_2_NotNull : middleSpeed_2_NotNull + 1;
-            middleSpeed_s_razbegu_NotNull = (f.Speed_s_razbega == 0) ? middleSpeed_s_razbegu_NotNull : middleSpeed_s_razbegu_NotNull + 1;
-            middleSpeed_s_razbegu_2_NotNull = (f.Speed_s_razbega2 == 0) ? middleSpeed_s_razbegu_2_NotNull : middleSpeed_s_razbegu_2_NotNull + 1;
-            middleSharpshootingNotNull = (f.sharpshooting == 0) ? middleSharpshootingNotNull : middleSharpshootingNotNull + 1;
-            middleAgilityNotNull = (f.Agility == 0) ? middleAgilityNotNull : middleAgilityNotNull + 1;
-            middleFootSkillNotNull = (f.FootSkill == 0) ? middleFootSkillNotNull : middleFootSkillNotNull + 1;
-            middleFootSkill_hitsNotNull = (f.FootSkill2 == 0) ? middleFootSkill_hitsNotNull : middleFootSkill_hitsNotNull + 1;
+            e.Statistics.map(f => {
 
 
-            if (f.Hit != 0)
-                hit = (Number(hit) > Number(f.Hit)) ? Number(hit) : Number(f.Hit);
-            if (f.Jump != 0)
-                jump = (Number(jump) > Number(f.Jump)) ? Number(jump) : Number(f.Jump);
-            if (f.Jump2 != 0)
-                jump2 = (Number(jump2) > Number(f.Jump2)) ? Number(jump2) : Number(f.Jump2);
-            if (f.Reaction != 0)
-                reaction = (Number(reaction) < Number(f.Reaction)) ? Number(reaction) : Number(f.Reaction);
-            if (f.Speed != 0)
-                speed = (Number(speed) > Number(f.Speed)) ? Number(speed) : Number(f.Speed);
-            if (f.Speed2 != 0)
-                speed2 = (Number(speed2) < Number(f.Speed2)) ? Number(speed2) : Number(f.Speed2);
-            if (f.Speed_s_razbega != 0)
-                speed_s_razbegu = (Number(speed_s_razbegu) > Number(f.Speed_s_razbega)) ? Number(speed_s_razbegu) : Number(f.Speed_s_razbega);
-            if (f.Speed_s_razbega2 != 0)
-                speed_s_razbegu2 = (Number(speed_s_razbegu2) < Number(f.Speed_s_razbega2)) ? Number(speed_s_razbegu2) : Number(f.Speed_s_razbega2);
-            if (f.sharpshooting != 0)
-                sharpshooting = (Number(sharpshooting) > Number(f.sharpshooting)) ? Number(sharpshooting) : Number(f.sharpshooting);
-            if (f.Agility != 0)
-                agility = (Number(agility) < Number(f.Agility)) ? Number(agility) : Number(f.Agility);
-            if (f.FootSkill != 0)
-                footSkill = (Number(footSkill) < Number(f.FootSkill)) ? Number(footSkill) : Number(f.FootSkill);
-            if (f.FootSkill2 != 0)
-                footSkill_hits = (Number(footSkill_hits) > Number(f.FootSkill2)) ? Number(footSkill_hits) : Number(f.FootSkill2);
+                middleHit += Number(f.Hit);
+                middleJump += Number(f.Jump);
+                middleJump2 += Number(f.Jump2);
+                middleReaction += Number(f.Reaction)
+                middleSpeed += Number(f.Speed);
+                middleSpeed2 += Number(f.Speed2);
+                middleSpeed_s_razbegu += Number(f.Speed_s_razbega);
+                middleSpeed_s_razbegu2 += Number(f.Speed_s_razbega2);
+                middleSharpshooting += Number(f.sharpshooting);
+                middleAgility += Number(f.Agility);
+                middleFootSkill += Number(f.FootSkill);
+                middleFootSkill_hits += Number(f.FootSkill2);
+
+                middleHitNotNull = (f.Hit == 0) ? middleHitNotNull : middleHitNotNull + 1;
+                middleJumpNotNull = (f.Jump == 0) ? middleJumpNotNull : middleJumpNotNull + 1;
+                middleJump_2_NotNull = (f.Jump2 == 0) ? middleJump_2_NotNull : middleJump_2_NotNull + 1;
+                middleReactionNotNull = (f.Reaction == 0) ? middleReactionNotNull : middleReactionNotNull + 1;
+                middleSpeedNotNull = (f.Speed == 0) ? middleSpeedNotNull : middleSpeedNotNull + 1;
+                middleSpeed_2_NotNull = (f.Speed2 == 0) ? middleSpeed_2_NotNull : middleSpeed_2_NotNull + 1;
+                middleSpeed_s_razbegu_NotNull = (f.Speed_s_razbega == 0) ? middleSpeed_s_razbegu_NotNull : middleSpeed_s_razbegu_NotNull + 1;
+                middleSpeed_s_razbegu_2_NotNull = (f.Speed_s_razbega2 == 0) ? middleSpeed_s_razbegu_2_NotNull : middleSpeed_s_razbegu_2_NotNull + 1;
+                middleSharpshootingNotNull = (f.sharpshooting == 0) ? middleSharpshootingNotNull : middleSharpshootingNotNull + 1;
+                middleAgilityNotNull = (f.Agility == 0) ? middleAgilityNotNull : middleAgilityNotNull + 1;
+                middleFootSkillNotNull = (f.FootSkill == 0) ? middleFootSkillNotNull : middleFootSkillNotNull + 1;
+                middleFootSkill_hitsNotNull = (f.FootSkill2 == 0) ? middleFootSkill_hitsNotNull : middleFootSkill_hitsNotNull + 1;
+
+
+                if (f.Hit != 0)
+                    hit = (Number(hit) > Number(f.Hit)) ? Number(hit) : Number(f.Hit);
+                if (f.Jump != 0)
+                    jump = (Number(jump) > Number(f.Jump)) ? Number(jump) : Number(f.Jump);
+                if (f.Jump2 != 0)
+                    jump2 = (Number(jump2) > Number(f.Jump2)) ? Number(jump2) : Number(f.Jump2);
+                if (f.Reaction != 0)
+                    reaction = (Number(reaction) < Number(f.Reaction)) ? Number(reaction) : Number(f.Reaction);
+                if (f.Speed != 0)
+                    speed = (Number(speed) > Number(f.Speed)) ? Number(speed) : Number(f.Speed);
+                if (f.Speed2 != 0)
+                    speed2 = (Number(speed2) < Number(f.Speed2)) ? Number(speed2) : Number(f.Speed2);
+                if (f.Speed_s_razbega != 0)
+                    speed_s_razbegu = (Number(speed_s_razbegu) > Number(f.Speed_s_razbega)) ? Number(speed_s_razbegu) : Number(f.Speed_s_razbega);
+                if (f.Speed_s_razbega2 != 0)
+                    speed_s_razbegu2 = (Number(speed_s_razbegu2) < Number(f.Speed_s_razbega2)) ? Number(speed_s_razbegu2) : Number(f.Speed_s_razbega2);
+                if (f.sharpshooting != 0)
+                    sharpshooting = (Number(sharpshooting) > Number(f.sharpshooting)) ? Number(sharpshooting) : Number(f.sharpshooting);
+                if (f.Agility != 0)
+                    agility = (Number(agility) < Number(f.Agility)) ? Number(agility) : Number(f.Agility);
+                if (f.FootSkill != 0)
+                    footSkill = (Number(footSkill) < Number(f.FootSkill)) ? Number(footSkill) : Number(f.FootSkill);
+                if (f.FootSkill2 != 0)
+                    footSkill_hits = (Number(footSkill_hits) > Number(f.FootSkill2)) ? Number(footSkill_hits) : Number(f.FootSkill2);
+            })
         })
-    })
 
 
-    // console.log(middleJump2, middleJump_2_NotNull)
-    middleHit = middleHitNotNull != 0 ? middleHit / middleHitNotNull : 0
-    middleJump = middleJumpNotNull != 0 ? middleJump / middleJumpNotNull : 0
-    middleJump2 = middleJump_2_NotNull != 0 ? middleJump2 / middleJump_2_NotNull : 0
-    middleReaction = middleReactionNotNull != 0 ? middleReaction / middleReactionNotNull : 0
-    middleSpeed = middleSpeedNotNull != 0 ? middleSpeed / middleSpeedNotNull : 0;
-    middleSpeed2 = middleSpeed_2_NotNull != 0 ? middleSpeed2 / middleSpeed_2_NotNull : 0;
-    middleSpeed_s_razbegu = middleSpeed_s_razbegu_NotNull != 0 ? middleSpeed_s_razbegu / middleSpeed_s_razbegu_NotNull : 0;
-    middleSpeed_s_razbegu2 = middleSpeed_s_razbegu_2_NotNull != 0 ? middleSpeed_s_razbegu2 / middleSpeed_s_razbegu_2_NotNull : 0;
-    middleSharpshooting = middleSharpshootingNotNull != 0 ? middleSharpshooting / middleSharpshootingNotNull : 0;
-    middleAgility = middleAgilityNotNull != 0 ? middleAgility / middleAgilityNotNull : 0;
-    middleFootSkill = middleFootSkillNotNull != 0 ? middleFootSkill / middleFootSkillNotNull : 0;
-    middleFootSkill_hits = middleFootSkill_hitsNotNull != 0 ? middleFootSkill_hits / middleFootSkill_hitsNotNull : 0;
+        // console.log(middleJump2, middleJump_2_NotNull)
+        middleHit = middleHitNotNull != 0 ? middleHit / middleHitNotNull : 0
+        middleJump = middleJumpNotNull != 0 ? middleJump / middleJumpNotNull : 0
+        middleJump2 = middleJump_2_NotNull != 0 ? middleJump2 / middleJump_2_NotNull : 0
+        middleReaction = middleReactionNotNull != 0 ? middleReaction / middleReactionNotNull : 0
+        middleSpeed = middleSpeedNotNull != 0 ? middleSpeed / middleSpeedNotNull : 0;
+        middleSpeed2 = middleSpeed_2_NotNull != 0 ? middleSpeed2 / middleSpeed_2_NotNull : 0;
+        middleSpeed_s_razbegu = middleSpeed_s_razbegu_NotNull != 0 ? middleSpeed_s_razbegu / middleSpeed_s_razbegu_NotNull : 0;
+        middleSpeed_s_razbegu2 = middleSpeed_s_razbegu_2_NotNull != 0 ? middleSpeed_s_razbegu2 / middleSpeed_s_razbegu_2_NotNull : 0;
+        middleSharpshooting = middleSharpshootingNotNull != 0 ? middleSharpshooting / middleSharpshootingNotNull : 0;
+        middleAgility = middleAgilityNotNull != 0 ? middleAgility / middleAgilityNotNull : 0;
+        middleFootSkill = middleFootSkillNotNull != 0 ? middleFootSkill / middleFootSkillNotNull : 0;
+        middleFootSkill_hits = middleFootSkill_hitsNotNull != 0 ? middleFootSkill_hits / middleFootSkill_hitsNotNull : 0;
+    }
 
     let bestHit = 0;
     let bestJump = 0;
@@ -183,7 +196,7 @@ export const BestStats = ({ show, year, playerArray, selfBest }) => {
         sharpshooting = (sharpshooting > 100) ? Math.round(sharpshooting - 100) : Math.round(sharpshooting);
     }
 
-    if (show) {
+    if (show && resultByYear) {
         return (
             <div>
                 <table class="best-stat-table">

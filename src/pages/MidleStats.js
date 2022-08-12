@@ -57,13 +57,13 @@ export const MiddleStats = ({ selfBest, playerArray }) => {
                                 <select value={selectedOption} name="Выберите год рождения" onChange={handleChange}>
                                     <option selected disabled>Выберите год</option>
                                     {
-                                        options.sort((a, b) => a - b).map((e) =>
-                                            <option>{e}</option>
+                                        options.sort((a, b) => a - b).map((e, i) =>
+                                            <option key={i}>{e}</option>
                                         )
                                     }
                                 </select>
                             </div>
-                            <BestStats show={showBest} year={selectedOption} playerArray={playerArray} selfBest={selfBest} />
+                            <BestStats show={showBest} year={selectedOption} selfBest={selfBest} />
                         </div>
                     </div>
                 </section>

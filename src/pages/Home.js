@@ -23,7 +23,7 @@ export const Home = () => {
 
         const fetchStat = async () => {
             setLoading(true);
-            const res = await axios.get('https://cdn.lk-ft.ru/footballers');
+            const res = await axios.get(`https://cdn.lk-ft.ru/footballers`);
             setPlayer(res.data)
             setLoading(false);
         }
@@ -35,6 +35,8 @@ export const Home = () => {
 
     var star = [];
     var name_id;
+
+    // console.log(player);
 
     player.map((e, i) => {
         if (e.id == it_number) {
@@ -48,20 +50,21 @@ export const Home = () => {
             lead_leg = e.lead_leg;
             team = e.team;
         }
-    })  
-   
+    })
 
-    star.sort(function(a, b) {
+    star?.sort(function (a, b) {
         if (a.date > b.date) {
-          return 1; }
+            return 1;
+        }
         if (a.date < b.date) {
-          return -1; }
+            return -1;
+        }
         return 0;
-      });
-     
-      
+    });
 
-    star.sort(function (a, b) {
+
+
+    star?.sort(function (a, b) {
         if (a.date > b.date) {
             return 1;
         }
@@ -78,7 +81,7 @@ export const Home = () => {
         <>
 
             <SiteHeader />
-            <body>
+            <body style={{minHeight: "100vh"}}>
                 <BannerPlayer
                     firstname={firstname}
                     lastname={lastname}
@@ -96,9 +99,9 @@ export const Home = () => {
                     <div className="long-green-line"></div>
                 </div>
                 <MiddleStats selfBest={star} playerArray={player} />
-                {/* <div className="container">
+                <div className="container">
                     <div className="long-green-line"></div>
-                </div> */}
+                </div>
             </body>
             <SiteFooter />
         </>
