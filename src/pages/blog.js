@@ -12,7 +12,7 @@ const PostList = () => {
     return (
         <>
             <SiteHeader />
-            <body>
+            <body style={{minHeight: "calc(100vh - 100px)"}}>
                 <div class="blog-body-container">
                     <div class="blog-title">
                         <span>Все новости</span>
@@ -20,7 +20,6 @@ const PostList = () => {
                     <div class="blog-array">
                         <Pagination_Post it_number={it_number} />
                     </div>
-                    <div className="before-footer"></div>
                 </div>
 
             </body>
