@@ -8,44 +8,51 @@ export const Auth = () => {
     const isLogin = location.pathname === AUTH_ROUTE;
     const [showFalse, setShowFalse] = useState(false)
 
+    const [loginData, setLoginData] = useState([]);
+
     const [player, setPlayer] = React.useState([]);
-    const fetchDataPlayer = () => {
-        fetch("https://cdn.lk-ft.ru/footballers")
+    const fetchDataPlayer = (email) => {
+        fetch(`https://cdn.lk-ft.ru/footballers?f_email_eq=${email[0]}`)
             .then((response) => response.json())
             .then((data) => {
                 setPlayer(data);
-            });
+            })
     };
     React.useEffect(() => {
-        fetchDataPlayer();
-    }, []);
+        if (loginData != []) { fetchDataPlayer(loginData); }
+        // console.log(player)
+    }, [loginData]);
 
-    const handleSubmit = (event) => {
-        let email_user = [];
-        const formData = new FormData(event.currentTarget);
-        event.preventDefault();
-        for (let [key, value] of formData.entries()) {
-            email_user.push(value);
+    React.useEffect(() => {
+        if (player.length == 0 && loginData.length != 0) {
+            setShowFalse(true);
         }
-
-        player.map((e, i) => {
-            //console.log(e);
-            if (email_user[0] == "support" && email_user[1] == "Support1234") {
+        if (player.length != 0 && loginData.length != 0) {
+            if (loginData[0] == "support" && loginData[1] == "Support1234") {
                 window.open("https://admin.lk-ft.ru/login", "_self");
             }
-
-            if (email_user[0] == e.f_email && email_user[1] == e.f_password) {
-                //console.log("Найдено совпадение ", e.id , " Пользователь :", e.lastname )
+            if (loginData[1] == player[0]?.f_password) {
+                // console.log("Найдено совпадение ", player[0]?.id, " Пользователь :", player[0]?.lastname)
                 //console.log(HOMEPAGE_ROUTE)
-                window.open(HOMEPAGE_ROUTE + "/" + e.id, "_self");
+                window.open(HOMEPAGE_ROUTE + "/" + player[0].id, "_self");
                 setShowFalse(false);
             }
             else {
                 setShowFalse(true);
             }
-        });
+        }
+    }, [player])
+
+    const handleSubmit = (event) => {
+        let email_user = [];
+        const formData = new FormData(event.currentTarget);
+        for (let [key, value] of formData.entries()) {
+            email_user.push(value);
+        }
+        setLoginData(email_user);
+        event.preventDefault();
     };
-    // console.log(player)
+
 
     return (
         <section class="auth-backround">
