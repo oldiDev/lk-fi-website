@@ -15,14 +15,14 @@ export const Award = () => {
     const params = useParams()
     const it_number = params.id;
 
-    const [footballPlayer, setFootballPlayer] = React.useState([]);
+    const [footballPlayer, setFootballPlayer] = React.useState();
     const [loading, setLoading] = React.useState([])
     const [player, setPlayer] = React.useState([]);
 
     React.useEffect(() => {
         const fetchStat = async () => {
             setLoading(true)
-            const res = await axios.get('https://cdn.lk-ft.ru/footballers');
+            const res = await axios.get(`https://cdn.lk-ft.ru/footballers/${it_number}`);
             setFootballPlayer(res.data)
             setLoading(false)
         }
@@ -30,18 +30,20 @@ export const Award = () => {
         fetchStat();
     }, []);
 
-    let name_id;
-    let countTraining;
-    let countCamps;
-    let minusPoints;
-    footballPlayer.map((e, i) => {
-        if (e.id == it_number) {
-            name_id = e.lastname + ' ' + e.firstname + ' ' + e.id + ' ';
-            countCamps = Number(e.count_of_camps);
-            countTraining = Number(e.count_of_training);
-            minusPoints = Number(e.count_of_minus_points)
+    const [name_id, setNameId] = React.useState('');
+    const [countTraining, setCountTraining] = React.useState(0);
+    const [countCamps, setCountCamps] = React.useState(0);
+    const [minusPoints, setMinusPoints] = React.useState(0);
+
+    React.useEffect(() => {
+        if (footballPlayer) {
+            setNameId(footballPlayer?.lastname + ' ' + footballPlayer?.firstname + ' ' + footballPlayer?.id + ' ');
+            setCountCamps(Number(footballPlayer?.count_of_camps));
+            setCountTraining(Number(footballPlayer?.count_of_training));
+            setMinusPoints(Number(footballPlayer?.count_of_minus_points))
         }
-    })
+    }, [footballPlayer])
+
 
     React.useEffect(() => {
         const fetchStat = async () => {
@@ -94,13 +96,13 @@ export const Award = () => {
                     propush: e.insta,
                     mark: e.adresse
                 })
-                test += Number(e.adresse)
+            test += Number(e.adresse)
         }
     })
     return (
         <>
             <SiteHeader />
-            <body style={{minHeight: "calc(100vh - 100px)"}}>
+            <body style={{ minHeight: "calc(100vh - 100px)" }}>
                 <div class="container">
                     <div class="single-tournament-content">
                         {/* <div class="achivements-header">
@@ -110,7 +112,6 @@ export const Award = () => {
                         <Camp countCamps={countCamps} />
                         <Events dva={twoVSTwo} tre={threeVsThree} penal={penalty} /> */}
                         <FullGradde two={two} tre={tre} camp={countCamps} test={test} training={countTraining} minusPoints={minusPoints} />
-                        {/* <div className="before-footer"></div> */}
                     </div>
                 </div>
             </body>
